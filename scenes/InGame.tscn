@@ -1,5 +1,82 @@
-[gd_scene format=1]
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://scenes/Building.tscn" type="PackedScene" id=1]
 
 [node name="InGame" type="Node"]
+
+[node name="SquareBuilding" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 210.314, 212.547 )
+transform/scale = Vector2( 2.60769, 2.60769 )
+
+[node name="SquareBuilding1" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 199.036, 873.848 )
+transform/scale = Vector2( 2.38341, 2.38341 )
+
+[node name="SquareBuilding2" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 554.806, 210.497 )
+transform/scale = Vector2( 2.60769, 2.60769 )
+
+[node name="SquareBuilding3" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 1380, 210 )
+transform/scale = Vector2( 2.60769, 2.60769 )
+
+[node name="SquareBuilding4" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 1710, 210 )
+transform/scale = Vector2( 2.60769, 2.60769 )
+
+[node name="SquareBuilding5" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 1380, 890 )
+transform/scale = Vector2( 2.60769, 2.60769 )
+
+[node name="SquareBuilding6" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 1720, 880 )
+transform/scale = Vector2( 2.60769, 2.60769 )
+
+[node name="SquareBuilding7" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 520, 870 )
+transform/scale = Vector2( 2.60769, 2.60769 )
+
+[node name="TallBuilding" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 161.945, 553.6 )
+transform/scale = Vector2( 1.44704, -2.90739 )
+
+[node name="TallBuilding4" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 490, 540 )
+transform/scale = Vector2( 1.44704, -2.90739 )
+
+[node name="TallBuilding1" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 850, 220 )
+transform/scale = Vector2( 1.44704, -2.90739 )
+
+[node name="TallBuilding2" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 1080, 220 )
+transform/scale = Vector2( 1.44704, -2.90739 )
+
+[node name="TallBuilding3" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 1650, 530 )
+transform/scale = Vector2( 1.44704, -2.90739 )
+
+[node name="WildBuilding" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 970, 520 )
+transform/scale = Vector2( 4.36266, 1.53791 )
+
+[node name="WildBuilding1" parent="." instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 960, 930 )
+transform/scale = Vector2( 4.36266, 1.53791 )
 
 

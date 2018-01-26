@@ -1,12 +1,11 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=3 format=1]
 
 [ext_resource path="res://scenes/Building.gd" type="Script" id=1]
-[ext_resource path="res://resources/images/building_default.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 10, 10 )
+extents = Vector2( 12.8911, 12.8789 )
 
 [node name="Building" type="StaticBody2D"]
 
@@ -28,9 +27,5 @@ transform/scale = Vector2( 3.87846, 3.87846 )
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
-
-[node name="Sprite" type="Sprite" parent="."]
-
-texture = ExtResource( 2 )
 
 
