@@ -1,13 +1,10 @@
 extends StaticBody2D
 
-var loyalty_node
-var loyalty #int
+export var loyalty = 5
 
 func _ready():
 	set_process(true)
-	loyalty_node = get_node("Loyalty")
-	loyalty = int (loyalty_node.get_text())
+	get_node("Loyalty").set_text(str(loyalty))
 
-func _set_process(delta):
-	if(str(loyalty) != loyalty_node.get_text()):
-		loyalty -= 1;
+func _process(delta):
+	 get_node("Loyalty").set_text(str(loyalty))
