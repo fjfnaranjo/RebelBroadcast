@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=1]
+[gd_scene load_steps=3 format=1]
 
 [ext_resource path="res://scenes/Building.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/RebelGuy.tscn" type="PackedScene" id=2]
 
 [node name="InGame" type="Node"]
 
@@ -78,5 +79,10 @@ transform/scale = Vector2( 4.36266, 1.53791 )
 
 transform/pos = Vector2( 960, 930 )
 transform/scale = Vector2( 4.36266, 1.53791 )
+
+[node name="KinematicBody2D1" parent="." instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 941.225, 724.252 )
+transform/scale = Vector2( 1.3536, 1.63756 )
 
 
