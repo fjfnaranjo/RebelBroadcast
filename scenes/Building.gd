@@ -1,4 +1,4 @@
-extends CollisionShape2D
+extends StaticBody2D
 
 var loyalty_node
 var loyalty #int
