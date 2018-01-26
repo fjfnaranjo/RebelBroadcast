@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=1]
+
+[ext_resource path="res://scenes/RebelGuy.gd" type="Script" id=1]
+[ext_resource path="res://resources/images/V.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10, 10 )
+
+[node name="KinematicBody2D" type="KinematicBody2D"]
+
+transform/pos = Vector2( -452.326, -603.983 )
+transform/scale = Vector2( 187.589, 224.228 )
+input/pickable = false
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 2.55035, 0, 0, 2.18566, 1.08199, -0.532005 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+script/script = ExtResource( 1 )
+speed = Vector2( 0, 0 )
+
+[node name="Sprite" type="Sprite" parent="."]
+
+transform/scale = Vector2( 0.267474, 0.255455 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+transform/pos = Vector2( 1.08199, -0.532005 )
+transform/scale = Vector2( 2.55035, 2.18566 )
+shape = SubResource( 1 )
+trigger = false
+_update_shape_index = 0
+
+

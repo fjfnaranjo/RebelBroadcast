@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=5 format=1]
 
 [ext_resource path="res://scenes/Building.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/RoutePoint.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Badguy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/RebelGuy.tscn" type="PackedScene" id=4]
 
 [node name="InGame" type="Node"]
 
@@ -93,5 +94,10 @@ transform/pos = Vector2( 365.474, 713.888 )
 
 transform/pos = Vector2( 840.338, 688.895 )
 _route = [ "RP1", "RP2" ]
+
+[node name="KinematicBody2D" parent="." instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 985.361, 739.394 )
+transform/scale = Vector2( 0.878064, 1.03407 )
 
 
