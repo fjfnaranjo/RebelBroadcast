@@ -90,10 +90,14 @@ transform/pos = Vector2( 376.835, 370.805 )
 
 transform/pos = Vector2( 365.474, 713.888 )
 
+[node name="RP3" parent="." instance=ExtResource( 2 )]
+
+transform/pos = Vector2( 269.429, 546.448 )
+
 [node name="Badguy" parent="." instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 840.338, 688.895 )
-_route = [ "RP1", "RP2" ]
+transform/pos = Vector2( 306.272, 669.251 )
+_route = [ "RP1", "RP2", "RP3" ]
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 4 )]
 
