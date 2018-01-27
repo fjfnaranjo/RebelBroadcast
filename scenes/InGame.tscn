@@ -72,25 +72,23 @@ transform/pos = Vector2( 907.419, 699.406 )
 [node name="Badguy" parent="." instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 747.923, 715.979 )
-_route = [ "RG1/RP1", "RG1/RP2", "RG1/RP3", "RG1/RP4" ]
+_route = [ "RP/RP1", "RP/RP2", "RP/RP3", "RP/RP4" ]
 
-[node name="RG1" type="Node" parent="."]
+[node name="RP" type="Node" parent="."]
 
-editor/display_folded = true
-
-[node name="RP1" parent="RG1" instance=ExtResource( 7 )]
+[node name="RP1" parent="RP" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 748.338, 599.33 )
 
-[node name="RP2" parent="RG1" instance=ExtResource( 7 )]
+[node name="RP2" parent="RP" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 1064.18, 441.65 )
 
-[node name="RP3" parent="RG1" instance=ExtResource( 7 )]
+[node name="RP3" parent="RP" instance=ExtResource( 7 )]
 
-transform/pos = Vector2( 1066.81, 249.502 )
+transform/pos = Vector2( 1066.81, 223.502 )
 
-[node name="RP4" parent="RG1" instance=ExtResource( 7 )]
+[node name="RP4" parent="RP" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 738.212, 260.053 )
 
