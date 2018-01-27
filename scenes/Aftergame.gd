@@ -9,6 +9,7 @@ func _ready():
 		result = "VICTORY!!"
 		text = "Congratulations! You have liberated the Mother Land!"
 	else:
+		State.play_sample("spotted_plus_gameover")
 		result = "FAILURE!!"
 		text = "You have been capture, tortured and murdered! The revolution has died!"
 	

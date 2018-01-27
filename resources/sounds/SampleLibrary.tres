@@ -1,8 +1,9 @@
-[gd_resource type="SampleLibrary" load_steps=4 format=1]
+[gd_resource type="SampleLibrary" load_steps=5 format=1]
 
 [ext_resource path="res://resources/sounds/building_converted.wav" type="Sample" id=1]
 [ext_resource path="res://resources/sounds/radio_chatter.wav" type="Sample" id=2]
 [ext_resource path="res://resources/sounds/radio_destruction.wav" type="Sample" id=3]
+[ext_resource path="res://resources/sounds/spotted_plus_gameover.wav" type="Sample" id=4]
 
 [resource]
 
@@ -24,5 +25,11 @@ samples/radio_destruction = {
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 3 )
+}
+samples/spotted_plus_gameover = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 4 )
 }
 
