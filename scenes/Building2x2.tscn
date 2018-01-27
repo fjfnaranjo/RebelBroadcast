@@ -36,23 +36,6 @@ shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
 
-[node name="Loyalty" type="Label" parent="."]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-size_flags/stretch_ratio = 0.0
-margin/left = -10.0
-margin/top = -10.0
-margin/right = 10.0
-margin/bottom = 10.0
-align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-
 [node name="Flags" type="Node2D" parent="."]
 
 [node name="Flag" parent="Flags" instance=ExtResource( 3 )]
