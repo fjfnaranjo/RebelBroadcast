@@ -29,6 +29,8 @@ texture = ExtResource( 2 )
 
 [node name="Buildings" type="Node" parent="."]
 
+editor/display_folded = true
+
 [node name="B1" parent="Buildings" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 1386.51, 520.002 )
@@ -170,19 +172,19 @@ _route = [ "RG1/RP1", "RG1/RP2", "RG1/RP3", "RG1/RP4" ]
 
 [node name="RP1" parent="RG1" instance=ExtResource( 12 )]
 
-transform/pos = Vector2( 748.338, 599.33 )
+transform/pos = Vector2( 752.338, 634.33 )
 
 [node name="RP2" parent="RG1" instance=ExtResource( 12 )]
 
-transform/pos = Vector2( 878.625, 635.285 )
+transform/pos = Vector2( 749.625, 310.285 )
 
 [node name="RP3" parent="RG1" instance=ExtResource( 12 )]
 
-transform/pos = Vector2( 1070, 500 )
+transform/pos = Vector2( 423, 312 )
 
 [node name="RP4" parent="RG1" instance=ExtResource( 12 )]
 
-transform/pos = Vector2( 873.615, 717.124 )
+transform/pos = Vector2( 425.615, 639.124 )
 
 [node name="RebelGuy" parent="." instance=ExtResource( 13 )]
 
