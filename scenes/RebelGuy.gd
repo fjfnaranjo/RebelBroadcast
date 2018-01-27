@@ -23,7 +23,8 @@ func _process(delta):
 	_check_controls()
 	_check_collisions()
 
-	self.move( speed*delta )
+	move( speed*delta )
+	get_node("Sprite").update_animation(speed.normalized(), delta)
 
 func _check_controls():
 	if(Input.is_action_pressed(_UI_UP)):
