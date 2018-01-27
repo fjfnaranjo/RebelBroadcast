@@ -46,7 +46,7 @@ func _place_radio():
 	get_parent().add_child(radio_instance)
 	radio_instance.set_pos(get_pos())
 	has_radio = false
-	State.play_sample("radio_on")
+	State.play_sample("radio_chatter")
 
 func obtain_radio():
 	has_radio = true

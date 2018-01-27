@@ -6,8 +6,6 @@ var alert_state = 0
 var win = false
 var active_scene
 
-var player
-
 func add_score_point():
 	score+=1
 
@@ -25,6 +23,5 @@ func change_scene(scene_path):
 	get_tree().get_root().get_node("Game").add_child(scene_instance)
 
 func play_sample(sample_name):
-	if player == null:
-		player = get_tree().get_root().get_node("Game").get_node("SamplePlayer2D")
+	var player = get_tree().get_root().get_node("Game").get_node("SamplePlayer2D")
 	player.play(sample_name)
