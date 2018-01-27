@@ -6,6 +6,7 @@ func _ready():
 	var text = ""
 	var result = ""
 	if (State.win):
+		State.play_sample("victory_theme")
 		result = "VICTORY!!"
 		text = "Congratulations! You have liberated the Mother Land!"
 	else:

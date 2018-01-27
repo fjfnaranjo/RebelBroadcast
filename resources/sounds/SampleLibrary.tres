@@ -1,10 +1,11 @@
-[gd_resource type="SampleLibrary" load_steps=6 format=1]
+[gd_resource type="SampleLibrary" load_steps=7 format=1]
 
 [ext_resource path="res://resources/sounds/building_converted.wav" type="Sample" id=1]
 [ext_resource path="res://resources/sounds/pick_radio.wav" type="Sample" id=2]
 [ext_resource path="res://resources/sounds/radio_chatter.wav" type="Sample" id=3]
 [ext_resource path="res://resources/sounds/radio_destruction.wav" type="Sample" id=4]
 [ext_resource path="res://resources/sounds/spotted_plus_gameover.wav" type="Sample" id=5]
+[ext_resource path="res://resources/sounds/victory_theme.wav" type="Sample" id=6]
 
 [resource]
 
@@ -38,5 +39,11 @@ samples/spotted_plus_gameover = {
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 5 )
+}
+samples/victory_theme = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 6 )
 }
 
