@@ -38,7 +38,7 @@ func show_message():
 	if(not broadcasting):
 		broadcasting = true
 		var player = get_tree().get_root().get_node("Game").get_node("SamplePlayer2D")
-		player.play("radio_on")
+		player.play("radio_on") # radio_broadcast
 
 func hide_message():
 	set_text('')

@@ -4,6 +4,8 @@ export var speed = Vector2(0,0)
 
 export var has_radio = false
 
+var radio_waking_up = false
+
 const _UI_UP = "ui_up"
 const _UI_DOWN = "ui_down"  
 const _UI_RIGHT = "ui_right"
@@ -21,7 +23,8 @@ func _process(delta):
 	_check_controls()
 	_check_collisions()
 
-	self.move( speed*delta )
+	move( speed*delta )
+	get_node("Sprite").update_animation(speed.normalized(), delta)
 
 func _check_controls():
 	if(Input.is_action_pressed(_UI_UP)):
@@ -45,6 +48,12 @@ func _place_radio():
 	get_parent().add_child(radio_instance)
 	radio_instance.set_pos(get_pos())
 	has_radio = false
+	
+	if(not radio_waking_up):
+		radio_waking_up = true
+		var player = get_tree().get_root().get_node("Game").get_node("SamplePlayer2D")
+		player.play("radio_on")
+		radio_waking_up = false
 
 func obtain_radio():
 	has_radio = true
