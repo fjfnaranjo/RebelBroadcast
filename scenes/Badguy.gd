@@ -13,6 +13,8 @@ func _ready():
 	set_process(true)
 
 func _process(delta):
+	if(not State.active_scene.has_node(_route[_current_destination_idx])):
+		return
 	var destination_RP = State.active_scene.get_node(_route[_current_destination_idx])
 	var remain = move((destination_RP.get_pos()-get_pos()).normalized()*delta*MAX_SPEED)
 	
