@@ -1,10 +1,10 @@
 extends RichTextLabel
 
-const MAX_EXPOSED_SECONDS = 2
+const MAX_EXPOSED_SECONDS = 6
 
-export var remaining_exposed_seconds = MAX_EXPOSED_SECONDS
+var remaining_exposed_seconds 
 
-const MESSAGES = ["[b]ATTENTION:[/b] The revolution is near, it is time to stand up to your opressors and reclaim your land!",
+const MESSAGES = ["The revolution is near, it is time to stand up to your opressors and reclaim your land!",
 "They will not convince us because convincing means persuading. And to persuade they need something that they lack in this struggle, reason and right. It seems useless to ask them to think about the nation.",
 "(...) They considered us an impotent and submissive herd and they are beginning to be frightened of that herd, a giant flock in which the 'Dictator' warns its gravediggers. (...)",
 "(...) There will be a blood bath; we will not shun it; there will be someone who has to die: we will kill him because it is necessary; there will be a lot of destruction; we will do it to free the world from its tyrannical institutions. (...)",
@@ -13,8 +13,6 @@ const MESSAGES = ["[b]ATTENTION:[/b] The revolution is near, it is time to stand
 ]
 
 func _ready():
-	set_process(true)
-	new_broadcast()
 	pass
 	
 func _process(delta):
@@ -23,6 +21,8 @@ func _process(delta):
 		set_text('')
 
 func new_broadcast():
+	set_process(true)
+	remaining_exposed_seconds = MAX_EXPOSED_SECONDS	
 	var num_messages = MESSAGES.size()
 	randomize()
 	var num_rand_message = randi()%num_messages;
