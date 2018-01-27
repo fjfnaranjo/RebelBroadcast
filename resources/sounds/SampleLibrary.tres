@@ -1,0 +1,14 @@
+[gd_resource type="SampleLibrary" load_steps=2 format=1]
+
+[ext_resource path="res://resources/sounds/radio_on.wav" type="Sample" id=1]
+
+[resource]
+
+resource/name = "SampleLibrary"
+samples/radio_on = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 1 )
+}
+

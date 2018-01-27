@@ -2,7 +2,7 @@ extends RichTextLabel
 
 const MAX_EXPOSED_SECONDS = 6
 
-var remaining_exposed_seconds 
+var remaining_exposed_seconds = MAX_EXPOSED_SECONDS
 
 const MESSAGES = ["The revolution is near, it is time to stand up to your opressors and reclaim your land!",
 "They will not convince us because convincing means persuading. And to persuade they need something that they lack in this struggle, reason and right. It seems useless to ask them to think about the nation.",
@@ -12,18 +12,30 @@ const MESSAGES = ["The revolution is near, it is time to stand up to your opress
 "(...) The 'Regime' demands that you renounce your interests, your aspirations, your ideals; in a word: servile subordination to civil peace. (...)"
 ]
 
+var current_message
+
 func _ready():
-	pass
+	new_broadcast()
+	set_process(true)
 	
 func _process(delta):
 	remaining_exposed_seconds -= delta
 	if (remaining_exposed_seconds < 0):
-		set_text('')
+		new_broadcast()
 
 func new_broadcast():
-	set_process(true)
 	remaining_exposed_seconds = MAX_EXPOSED_SECONDS	
 	var num_messages = MESSAGES.size()
 	randomize()
 	var num_rand_message = randi()%num_messages;
-	set_text(MESSAGES[num_rand_message])
+	current_message = MESSAGES[num_rand_message]
+
+func show_message():
+	set_text(current_message)
+	var player = get_tree().get_root().get_node("Game").get_node("SamplePlayer2D")
+	print("sonidooooo")
+	player.play("radio_on")
+	
+	
+func hide_message():
+	set_text('')

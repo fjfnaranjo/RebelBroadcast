@@ -20,6 +20,7 @@ collision/mask = 1
 collision/margin = 0.08
 script/script = ExtResource( 1 )
 speed = Vector2( 0, 0 )
+has_radio = false
 
 [node name="Sprite" type="Sprite" parent="."]
 
