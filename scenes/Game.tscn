@@ -24,24 +24,4 @@ config/polyphony = 1
 config/samples = ExtResource( 4 )
 config/pitch_random = 0.0
 
-[node name="Sprite" type="Sprite" parent="."]
-
-transform/pos = Vector2( 940.005, 535.011 )
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Sprite"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -117.0
-margin/top = -18.0
-margin/right = 159.0
-margin/bottom = 208.0
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam semper orci interdum ornare sagittis. Nullam ut molestie metus, eget pellentesque urna. Morbi sit amet iaculis tellus. Aliquam erat volutpat. Nunc rutrum tincidunt tristique. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc bibendum leo lacinia diam rhoncus, a interdum eros aliquam. Aliquam auctor odio vel tristique faucibus. Duis efficitur et augue eget euismod. Duis id placerat arcu. Etiam quis velit nec turpis dapibus viverra eu at felis. Praesent tincidunt pulvinar tortor, vestibulum convallis mauris lobortis eget."
-visible_characters = -1
-percent_visible = 1.0
-
 
