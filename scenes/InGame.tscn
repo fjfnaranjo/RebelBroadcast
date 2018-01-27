@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=1]
+[gd_scene load_steps=8 format=1]
 
 [ext_resource path="res://scenes/InGame.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Building.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://scenes/Badguy.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/RebelGuy.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/RadioPickUpArea.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/BroadcastMessage.tscn" type="PackedScene" id=7]
 
 [node name="InGame" type="Node"]
 
@@ -112,5 +113,10 @@ has_radio = false
 
 transform/pos = Vector2( 815.989, 713.648 )
 transform/scale = Vector2( 1, 2.5843 )
+
+[node name="BroadcastMessage" parent="." instance=ExtResource( 7 )]
+
+margin/right = 703.0
+margin/bottom = 78.0
 
 
