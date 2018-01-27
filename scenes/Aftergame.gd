@@ -6,11 +6,11 @@ func _ready():
 	var text = ""
 	var result = ""
 	if (State.win):
-		State.play_sample("victory_theme")
+		State.play_song("victory_theme")
 		result = "VICTORY!!"
 		text = "Congratulations! You have liberated the Mother Land!"
 	else:
-		State.play_sample("spotted_plus_gameover")
+		State.play_song("spotted_plus_gameover")
 		result = "FAILURE!!"
 		text = "You have been capture, tortured and murdered! The revolution has died!"
 	
