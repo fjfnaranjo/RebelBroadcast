@@ -21,7 +21,9 @@ func _process(delta):
 		target = spotted_radio.get_ref()
 	else:
 		target = State.active_scene.get_node(_route[_next_destination_idx])
-	move((target.get_pos()-get_pos()).normalized()*delta*MAX_SPEED)
+	var direction = (target.get_pos()-get_pos()).normalized()
+	move(direction*delta*MAX_SPEED)
+	get_node("Sprite").update_animation(direction, delta)
 	
 	var radio_spotted = false
 	var rebel_spotted = false
