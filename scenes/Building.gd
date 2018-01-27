@@ -3,6 +3,8 @@ extends StaticBody2D
 export var loyalty = 5
 var still_loyal = true
 
+var broadcasting = false
+
 func _ready():
 	set_process(true)
 	add_to_group("buildings")
@@ -14,8 +16,13 @@ func _process(delta):
 
 func hurt():
 	if (loyalty > 0):
+#		State.play_sample("radio_on") # radio_converts
+		var player = get_tree().get_root().get_node("Game").get_node("SamplePlayer2D")
+		player.play("radio_on") 
+		
 		loyalty -= 1
 		get_node("Loyalty").set_text(str(loyalty))
+		
 	elif(still_loyal):
 		get_node("Loyalty").set_text(":)")
 		State.active_scene.reduce_victory_points()

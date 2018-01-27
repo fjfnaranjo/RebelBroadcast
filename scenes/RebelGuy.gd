@@ -4,8 +4,6 @@ export var speed = Vector2(0,0)
 
 export var has_radio = false
 
-var radio_waking_up = false
-
 const _UI_UP = "ui_up"
 const _UI_DOWN = "ui_down"  
 const _UI_RIGHT = "ui_right"
@@ -49,11 +47,8 @@ func _place_radio():
 	radio_instance.set_pos(get_pos())
 	has_radio = false
 	
-	if(not radio_waking_up):
-		radio_waking_up = true
-		var player = get_tree().get_root().get_node("Game").get_node("SamplePlayer2D")
-		player.play("radio_on")
-		radio_waking_up = false
+	var player = get_tree().get_root().get_node("Game").get_node("SamplePlayer2D")
+	player.play("radio_on")
 
 func obtain_radio():
 	has_radio = true
