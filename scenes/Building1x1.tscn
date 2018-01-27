@@ -57,11 +57,11 @@ max_lines_visible = -1
 
 [node name="Flag" parent="Flags" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( -22.9431, -31.1883 )
+transform/pos = Vector2( -9.80362, -39.072 )
 
 [node name="Flag 2" parent="Flags" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 37.2825, 16.4904 )
+transform/pos = Vector2( 40, -0.291992 )
 
 [node name="FlagRebels" type="Node2D" parent="."]
 
@@ -69,6 +69,6 @@ visibility/visible = false
 
 [node name="FlagRebels" parent="FlagRebels" instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 4.66031, -8.60367 )
+transform/pos = Vector2( 39.6989, -29.9188 )
 
 

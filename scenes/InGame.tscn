@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=1]
+[gd_scene load_steps=23 format=1]
 
 [ext_resource path="res://scenes/InGame.gd" type="Script" id=1]
 [ext_resource path="res://resources/images/bglevel1.png" type="Texture" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://resources/images/radio-icon.png" type="Texture" id=17]
 [ext_resource path="res://scenes/Timer.tscn" type="PackedScene" id=18]
 [ext_resource path="res://scenes/Badguy.tscn" type="PackedScene" id=19]
+[ext_resource path="res://scenes/DangerBar.tscn" type="PackedScene" id=20]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -64,46 +65,57 @@ transform/pos = Vector2( 224.001, 17 )
 [node name="B1" parent="Buildings" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1386.51, 520.002 )
+loyalty = 5
 
 [node name="B2" parent="Buildings" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1928.33, 1080.75 )
+loyalty = 5
 
 [node name="B3" parent="Buildings" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 840.339, 887.929 )
+loyalty = 5
 
 [node name="B4" parent="Buildings" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1384.27, 1017.75 )
+loyalty = 5
 
 [node name="B5" parent="Buildings" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1927.75, 888.324 )
+loyalty = 5
 
 [node name="B6" parent="Buildings" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 1926.17, 584.024 )
+loyalty = 5
 
 [node name="B7" parent="Buildings" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 326.177, 822.251 )
+loyalty = 5
 
 [node name="B8" parent="Buildings" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 1267.88, 263.513 )
+loyalty = 5
 
 [node name="B9" parent="Buildings" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 1015.77, 70.2063 )
+loyalty = 5
 
 [node name="B10" parent="Buildings" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 1524.4, 262.218 )
+loyalty = 5
 
 [node name="B11" parent="Buildings" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 1847.96, 262.219 )
+loyalty = 5
 
 [node name="B12" parent="Buildings" instance=ExtResource( 7 )]
 
@@ -140,10 +152,12 @@ transform/pos = Vector2( 1096.21, 951.925 )
 [node name="Building 5" parent="Buildings" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 842.459, 1079.53 )
+loyalty = 5
 
 [node name="Building 6" parent="Buildings" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 583.3, 822.759 )
+loyalty = 5
 
 [node name="Building 7" parent="Buildings" instance=ExtResource( 7 )]
 
@@ -156,22 +170,27 @@ transform/pos = Vector2( 265.965, 1079.71 )
 [node name="Building 9" parent="Buildings" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 9.09891, 1078.8 )
+loyalty = 5
 
 [node name="Building 10" parent="Buildings" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 71.4267, 820.989 )
+loyalty = 5
 
 [node name="Building 12" parent="Buildings" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 71.9277, 470.53 )
+loyalty = 5
 
 [node name="Building 13" parent="Buildings" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 326.932, 471.344 )
+loyalty = 5
 
 [node name="Building 14" parent="Buildings" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 853.722, 534.659 )
+loyalty = 5
 
 [node name="Building 15" parent="Buildings" instance=ExtResource( 7 )]
 
@@ -188,6 +207,7 @@ transform/pos = Vector2( 377, 88.0001 )
 [node name="Building 18" parent="Buildings" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 72.0001, 88.0001 )
+loyalty = 5
 
 [node name="Building 11" parent="Buildings" instance=ExtResource( 12 )]
 
@@ -195,11 +215,8 @@ transform/pos = Vector2( 582.894, 469.322 )
 
 [node name="Limits" type="Node" parent="."]
 
-editor/display_folded = true
-
 [node name="StaticBody2D" type="StaticBody2D" parent="Limits"]
 
-editor/display_folded = true
 transform/pos = Vector2( 1005.45, -133.615 )
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
@@ -479,5 +496,9 @@ transform/pos = Vector2( 1271.34, 513.041 )
 collision/layers = 32
 collision/mask = 32
 _route = [ "RG1/RP25", "RG1/RP26", "RG1/RP27", "RG1/RP28" ]
+
+[node name="DangerBar" parent="." instance=ExtResource( 20 )]
+
+transform/pos = Vector2( 21.0524, 4.76657 )
 
 
