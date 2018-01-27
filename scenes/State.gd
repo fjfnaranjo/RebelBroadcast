@@ -2,6 +2,7 @@ extends Node
 
 var level = 1
 var score = 0
+var alert_state = 0
 var win = false
 var active_scene
 
