@@ -12,4 +12,5 @@ func _process(delta):
 	var bodies = get_overlapping_bodies()
 	for body in bodies:
 		if(body.is_in_group("badguys")):
+			State.play_sample("radio_destruction")
 			queue_free()

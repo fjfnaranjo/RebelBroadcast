@@ -77,23 +77,21 @@ _route = [ "RG1/RP1", "RG1/RP2", "RG1/RP3", "RG1/RP4" ]
 
 [node name="RG1" type="Node" parent="."]
 
-editor/display_folded = true
-
 [node name="RP1" parent="RG1" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 748.338, 599.33 )
 
 [node name="RP2" parent="RG1" instance=ExtResource( 7 )]
 
-transform/pos = Vector2( 1064.18, 441.65 )
+transform/pos = Vector2( 740, 500 )
 
 [node name="RP3" parent="RG1" instance=ExtResource( 7 )]
 
-transform/pos = Vector2( 1066.81, 249.502 )
+transform/pos = Vector2( 1070, 500 )
 
 [node name="RP4" parent="RG1" instance=ExtResource( 7 )]
 
-transform/pos = Vector2( 738.212, 260.053 )
+transform/pos = Vector2( 740, 500 )
 
 [node name="RebelGuy" parent="." instance=ExtResource( 8 )]
 
