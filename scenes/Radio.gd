@@ -1,5 +1,7 @@
 extends Area2D
 
+const FINDING_RADIO_ALERT = 10
+
 func _ready():
 	add_to_group("radios")
 	set_process(true)
@@ -13,4 +15,6 @@ func _process(delta):
 	for body in bodies:
 		if(body.is_in_group("badguys")):
 			State.play_sample("radio_destruction")
+			if(State.active_scene.has_method("increase_alert")):
+				State.active_scene.increase_alert(FINDING_RADIO_ALERT)
 			queue_free()
