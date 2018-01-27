@@ -18,14 +18,14 @@ func _ready():
 		still_loyal = false
 
 func _process(delta):
-	pass
+	if get_node("Flags").get_children().size() > loyalty:
+		get_node("Flags").get_children()[0].queue_free()
+	if(loyalty <= 0 and still_loyal):
+		_capture_building()
 
 func hurt():
 	if (loyalty > 0):
 		loyalty -= 1
-		get_node("Flags").get_children()[0].queue_free()
-	elif(still_loyal):
-		_capture_building()
 
 func _capture_building():
 	get_node("FlagRebels").show()
