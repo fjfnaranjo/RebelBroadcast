@@ -14,6 +14,7 @@ script/script = ExtResource( 1 )
 
 stream/stream = ExtResource( 3 )
 stream/volume_db = 10.0
+stream/autoplay = false
 
 [node name="Menu" parent="." instance=ExtResource( 4 )]
 
