@@ -30,5 +30,7 @@ func increase_alert(points):
 func get_alert_state():
 	return alert_state
 
+func get_max_alert_state():
+	return MAX_ALERT
 
 
