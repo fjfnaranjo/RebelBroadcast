@@ -24,21 +24,23 @@ func _process(delta):
 
 func _check_controls():
 	if(Input.is_action_pressed(_UI_UP)):
-		speed = Vector2(0,-MAX_SPEED)
-	elif(Input.is_action_pressed(_UI_LEFT)):
-		speed = Vector2(-MAX_SPEED,0)
-	elif(Input.is_action_pressed(_UI_RIGHT)):
-		speed = Vector2(MAX_SPEED,0)
+		speed.y = -MAX_SPEED
 	elif(Input.is_action_pressed(_UI_DOWN)):
-		speed = Vector2(0,MAX_SPEED)
+		speed.y = MAX_SPEED
 	else:
-		speed = Vector2(0,0)
+		speed.y = 0
+	if(Input.is_action_pressed(_UI_LEFT)):
+		speed.x = -MAX_SPEED
+	elif(Input.is_action_pressed(_UI_RIGHT)):
+		speed.x = MAX_SPEED
+	else:
+		speed.x = 0
 	
-	if(Input.is_action_pressed("pick_radio")):
-		_try_picking_radio()
+	if(Input.is_action_pressed("place_radio") && has_radio):
+		_place_radio()
 
-func _try_picking_radio():
-	has_radio = true
-
-func is_in_radio_store():
-	pass
+func _place_radio():
+	var radio_instance = load("res://scenes/Radio.tscn").instance()
+	get_parent().add_child(radio_instance)
+	radio_instance.set_pos(get_pos())
+	has_radio = false
