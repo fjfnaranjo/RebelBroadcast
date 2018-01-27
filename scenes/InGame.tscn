@@ -61,8 +61,6 @@ transform/pos = Vector2( 224.001, 17 )
 
 [node name="Buildings" type="Node" parent="."]
 
-editor/display_folded = true
-
 [node name="B1" parent="Buildings" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1386.51, 520.002 )
@@ -432,26 +430,15 @@ transform/scale = Vector2( 0.859353, 1.00015 )
 
 [node name="BroadcastMessage" parent="." instance=ExtResource( 16 )]
 
-focus/ignore_mouse = true
-margin/left = 341.0
-margin/top = 1054.0
-margin/right = 1565.0
-margin/bottom = 1081.0
-custom_colors/default_color = Color( 1, 1, 1, 1 )
-bbcode/bbcode = "dasjda sjdhka jhsdkah skdjadjka hkdjsahsk ah kdah kdjahksd jahksdjhaksdha kjsdhkasdhakjsdhka hsdkajhsdkadhkajhd akjsdh kajsdhkajsdhkad hkjahdj hj haksjdhaksjdh kajhkjhkajhsdk ahkdsa"
-
 [node name="RadioIcon" type="Sprite" parent="."]
 
-transform/pos = Vector2( 27.0104, 49.1295 )
+transform/pos = Vector2( 39.0104, 84.1295 )
 texture = ExtResource( 17 )
 
 [node name="Timer" parent="." instance=ExtResource( 18 )]
 
-focus/ignore_mouse = true
-margin/left = 12.0
-margin/top = 10.0
-margin/right = 115.0
-margin/bottom = 35.0
+transform/pos = Vector2( 83, 41 )
+transform/scale = Vector2( 2.0625, 0.78125 )
 
 [node name="Badguy" parent="." instance=ExtResource( 19 )]
 
