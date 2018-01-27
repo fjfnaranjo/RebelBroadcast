@@ -37,7 +37,7 @@ func show_message():
 	set_text(current_message)
 	if(not broadcasting):
 		broadcasting = true
-		State.play_sample("radio_on") # radio_broadcast
+		State.play_sample("radio_chatter") 
 
 func hide_message():
 	set_text('')
