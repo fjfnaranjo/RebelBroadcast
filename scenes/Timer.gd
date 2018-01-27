@@ -2,8 +2,8 @@ extends RichTextLabel
 
 var timer
 
-const MAX_TIME = 300
-const ALMOST_OVER = 10
+const MAX_TIME = 120
+const ALMOST_OVER = 30
 var ALMOST_OVER_COLOR = 'red'
 var NORMAL_COLOR ='white'
 
