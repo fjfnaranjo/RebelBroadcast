@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=1]
+[gd_scene load_steps=19 format=1]
 
 [ext_resource path="res://scenes/InGame.gd" type="Script" id=1]
 [ext_resource path="res://resources/images/bglevel1.png" type="Texture" id=2]
@@ -10,13 +10,14 @@
 [ext_resource path="res://scenes/Building2x2-dr.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/Building2x2-tl.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/Building2x2-tr.tscn" type="PackedScene" id=10]
-[ext_resource path="res://scenes/Badguy.tscn" type="PackedScene" id=11]
-[ext_resource path="res://scenes/RoutePoint.tscn" type="PackedScene" id=12]
-[ext_resource path="res://scenes/RebelGuy.tscn" type="PackedScene" id=13]
-[ext_resource path="res://scenes/RadioPickUpArea.tscn" type="PackedScene" id=14]
-[ext_resource path="res://scenes/BroadcastMessage.tscn" type="PackedScene" id=15]
-[ext_resource path="res://resources/images/radio-icon.png" type="Texture" id=16]
-[ext_resource path="res://scenes/Timer.tscn" type="PackedScene" id=17]
+[ext_resource path="res://scenes/Building2x2-s1.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/Badguy.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenes/RoutePoint.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scenes/RebelGuy.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scenes/RadioPickUpArea.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/BroadcastMessage.tscn" type="PackedScene" id=16]
+[ext_resource path="res://resources/images/radio-icon.png" type="Texture" id=17]
+[ext_resource path="res://scenes/Timer.tscn" type="PackedScene" id=18]
 
 [node name="InGame" type="Node"]
 
@@ -28,8 +29,6 @@ transform/pos = Vector2( 960, 539 )
 texture = ExtResource( 2 )
 
 [node name="Buildings" type="Node" parent="."]
-
-editor/display_folded = true
 
 [node name="B1" parent="Buildings" instance=ExtResource( 3 )]
 
@@ -131,10 +130,6 @@ transform/pos = Vector2( 9.09891, 1078.8 )
 
 transform/pos = Vector2( 71.4267, 820.989 )
 
-[node name="Building 11" parent="Buildings" instance=ExtResource( 5 )]
-
-transform/pos = Vector2( 585.265, 470.651 )
-
 [node name="Building 12" parent="Buildings" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 71.9277, 470.53 )
@@ -163,54 +158,58 @@ transform/pos = Vector2( 377, 88.0001 )
 
 transform/pos = Vector2( 72.0001, 88.0001 )
 
-[node name="Badguy" parent="." instance=ExtResource( 11 )]
+[node name="Building 11" parent="Buildings" instance=ExtResource( 11 )]
+
+transform/pos = Vector2( 582.894, 469.322 )
+
+[node name="Badguy" parent="." instance=ExtResource( 12 )]
 
 transform/pos = Vector2( 747.923, 715.979 )
 _route = [ "RG1/RP1", "RG1/RP2", "RG1/RP3", "RG1/RP4" ]
 
 [node name="RG1" type="Node" parent="."]
 
-[node name="RP1" parent="RG1" instance=ExtResource( 12 )]
+[node name="RP1" parent="RG1" instance=ExtResource( 13 )]
 
 transform/pos = Vector2( 752.338, 634.33 )
 
-[node name="RP2" parent="RG1" instance=ExtResource( 12 )]
+[node name="RP2" parent="RG1" instance=ExtResource( 13 )]
 
 transform/pos = Vector2( 749.625, 310.285 )
 
-[node name="RP3" parent="RG1" instance=ExtResource( 12 )]
+[node name="RP3" parent="RG1" instance=ExtResource( 13 )]
 
 transform/pos = Vector2( 423, 312 )
 
-[node name="RP4" parent="RG1" instance=ExtResource( 12 )]
+[node name="RP4" parent="RG1" instance=ExtResource( 13 )]
 
 transform/pos = Vector2( 425.615, 639.124 )
 
-[node name="RebelGuy" parent="." instance=ExtResource( 13 )]
+[node name="RebelGuy" parent="." instance=ExtResource( 14 )]
 
 transform/pos = Vector2( 1393.13, 762.664 )
 
-[node name="RadioPickUpArea 2" parent="." instance=ExtResource( 14 )]
+[node name="RadioPickUpArea 2" parent="." instance=ExtResource( 15 )]
 
 transform/pos = Vector2( 1875.3, 1031.31 )
 transform/scale = Vector2( 1.28071, 1.48432 )
 
-[node name="RadioPickUpArea 2 2" parent="." instance=ExtResource( 14 )]
+[node name="RadioPickUpArea 2 2" parent="." instance=ExtResource( 15 )]
 
 transform/pos = Vector2( 62.4453, 1030.45 )
 transform/scale = Vector2( 1.28071, 1.48432 )
 
-[node name="RadioPickUpArea 3" parent="." instance=ExtResource( 14 )]
+[node name="RadioPickUpArea 3" parent="." instance=ExtResource( 15 )]
 
 transform/pos = Vector2( 223.169, 28.9266 )
 transform/scale = Vector2( 1.19295, 1.16348 )
 
-[node name="RadioPickUpArea" parent="." instance=ExtResource( 14 )]
+[node name="RadioPickUpArea" parent="." instance=ExtResource( 15 )]
 
 transform/pos = Vector2( 1771.59, 7.17999 )
 transform/scale = Vector2( 0.859353, 1.00015 )
 
-[node name="BroadcastMessage" parent="." instance=ExtResource( 15 )]
+[node name="BroadcastMessage" parent="." instance=ExtResource( 16 )]
 
 margin/left = 0.0
 margin/right = 705.0
@@ -219,9 +218,9 @@ margin/bottom = 78.0
 [node name="RadioIcon" type="Sprite" parent="."]
 
 transform/pos = Vector2( 1870, 30 )
-texture = ExtResource( 16 )
+texture = ExtResource( 17 )
 
-[node name="Timer" parent="." instance=ExtResource( 17 )]
+[node name="Timer" parent="." instance=ExtResource( 18 )]
 
 margin/left = 1523.0
 margin/top = 6.0
