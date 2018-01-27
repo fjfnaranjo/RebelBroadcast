@@ -39,7 +39,6 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 script/script = ExtResource( 1 )
-loyalty = 5
 
 [node name="Sprite" type="Sprite" parent="."]
 
@@ -52,23 +51,6 @@ build_mode = 0
 polygon = Vector2Array( 127.979, -127.267, 127.979, 91.0391, 86.3715, 129.405, -72.4945, 129.405, -129.232, 86.1758, -127.611, -120.782, -118.966, -127.807, -50.8801, -127.267, -51.9608, -49.995, 56.6516, -50.5354, 54.4902, -108.894, 72.3221, -128.888 )
 shape_range = Vector2( 0, 2 )
 trigger = false
-
-[node name="Loyalty" type="Label" parent="."]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-size_flags/stretch_ratio = 0.0
-margin/left = -10.0
-margin/top = -10.0
-margin/right = 10.0
-margin/bottom = 10.0
-align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
 [node name="Flags" type="Node2D" parent="."]
 
