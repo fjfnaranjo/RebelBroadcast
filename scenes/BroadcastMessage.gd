@@ -1,4 +1,4 @@
-extends RichTextLabel
+extends Node2D
 
 const MAX_EXPOSED_SECONDS = 6
 
@@ -20,6 +20,7 @@ func _ready():
 	new_broadcast()
 	set_process(true)
 	broadcasting = false
+	get_node("Panel").hide()
 	
 func _process(delta):
 	remaining_exposed_seconds -= delta
@@ -34,11 +35,13 @@ func new_broadcast():
 	current_message = MESSAGES[num_rand_message]
 
 func show_message():
-	set_text(current_message)
+	get_node("Panel").show()
+	get_node("Text").set_text(current_message)
 	if(not broadcasting):
 		broadcasting = true
 #		State.play_sample("radio_chatter") # too much noise 
 
 func hide_message():
-	set_text('')
+	get_node("Text").set_text('')
+	get_node("Panel").hide()
 	broadcasting = false
