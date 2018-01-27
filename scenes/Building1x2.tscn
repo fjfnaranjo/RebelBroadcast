@@ -27,7 +27,7 @@ loyalty = 5
 
 [node name="Sprite" type="Sprite" parent="."]
 
-transform/pos = Vector2( 0, -5 )
+transform/pos = Vector2( 5.36443, 1.9507 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
