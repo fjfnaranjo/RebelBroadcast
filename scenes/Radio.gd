@@ -1,6 +1,6 @@
 extends Area2D
 
-const FINDING_RADIO_ALERT = 3
+const FINDING_RADIO_ALERT = 5
 
 func _ready():
 	add_to_group("radios")

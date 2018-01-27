@@ -3,12 +3,15 @@ extends Node
 var victory_points = 0
 var alert_state = 0.0
 
+const ALERT_RELAXATION = 0.5 / 60
 const MAX_ALERT = 100
 
 func _ready():
 	set_process(true)
 
 func _process(delta):
+	if alert_state > 0:
+		alert_state -= ALERT_RELAXATION
 	if(get_node("RebelGuy").has_radio):
 		get_node("RadioIcon").set_texture(load("res://resources/images/radio-icon.png"))
 	else:
