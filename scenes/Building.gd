@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-export var loyalty = 5
+var loyalty
 var still_loyal = true
 
 var broadcasting = false
@@ -12,6 +12,12 @@ func _ready():
 	add_to_group("buildings")
 	get_node("Loyalty").set_text(str(loyalty))
 	State.active_scene.add_victory_points()
+	if has_node("Flags"):
+		loyalty = get_node("Flags").get_children().size()
+	else:
+		loyalty = 0
+		still_loyal = false
+	get_node("Loyalty").set_text(str(loyalty))
 
 func _process(delta):
 	pass
