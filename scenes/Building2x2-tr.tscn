@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=1]
+[gd_scene load_steps=8 format=1]
 
 [ext_resource path="res://scenes/Building.gd" type="Script" id=1]
 [ext_resource path="res://resources/images/building2x2-tr.png" type="Texture" id=2]
+[ext_resource path="res://scenes/Flag.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/FlagRebels.tscn" type="PackedScene" id=4]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 
@@ -67,5 +69,27 @@ valign = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
+
+[node name="Flags" type="Node2D" parent="."]
+
+[node name="Flag" parent="Flags" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 112.118, 83.591 )
+
+[node name="Flag 2" parent="Flags" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( -15.2587, 14.5952 )
+
+[node name="Flag 3" parent="Flags" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( -91.552, -106.147 )
+
+[node name="FlagRebels" type="Node2D" parent="."]
+
+visibility/visible = false
+
+[node name="FlagRebels" parent="FlagRebels" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( -55.7273, 47.1028 )
 
 
