@@ -13,7 +13,7 @@ script/script = ExtResource( 1 )
 [node name="Music" parent="." instance=ExtResource( 2 )]
 
 stream/stream = ExtResource( 3 )
-stream/volume_db = 10.0
+stream/volume_db = 1.0
 stream/autoplay = false
 
 [node name="Menu" parent="." instance=ExtResource( 4 )]
