@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=1]
+[gd_scene load_steps=13 format=1]
 
 [ext_resource path="res://scenes/InGame.gd" type="Script" id=1]
 [ext_resource path="res://resources/images/bglevel1.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://scenes/RadioPickUpArea.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/BroadcastMessage.tscn" type="PackedScene" id=10]
 [ext_resource path="res://resources/images/radio-icon.png" type="Texture" id=11]
+[ext_resource path="res://scenes/Timer.tscn" type="PackedScene" id=12]
 
 [node name="InGame" type="Node"]
 
@@ -72,30 +73,31 @@ transform/pos = Vector2( 907.419, 699.406 )
 [node name="Badguy" parent="." instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 747.923, 715.979 )
-_route = [ "RP/RP1", "RP/RP2", "RP/RP3", "RP/RP4" ]
+_route = [ "RG1/RP1", "RG1/RP2", "RG1/RP3", "RG1/RP4" ]
 
-[node name="RP" type="Node" parent="."]
+[node name="RG1" type="Node" parent="."]
 
-[node name="RP1" parent="RP" instance=ExtResource( 7 )]
+editor/display_folded = true
+
+[node name="RP1" parent="RG1" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 748.338, 599.33 )
 
-[node name="RP2" parent="RP" instance=ExtResource( 7 )]
+[node name="RP2" parent="RG1" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 1064.18, 441.65 )
 
-[node name="RP3" parent="RP" instance=ExtResource( 7 )]
+[node name="RP3" parent="RG1" instance=ExtResource( 7 )]
 
-transform/pos = Vector2( 1066.81, 223.502 )
+transform/pos = Vector2( 1066.81, 249.502 )
 
-[node name="RP4" parent="RP" instance=ExtResource( 7 )]
+[node name="RP4" parent="RG1" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 738.212, 260.053 )
 
 [node name="RebelGuy" parent="." instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 985.544, 486.484 )
-has_radio = false
 
 [node name="RadioPickUpArea" parent="." instance=ExtResource( 9 )]
 
@@ -112,5 +114,12 @@ margin/bottom = 78.0
 
 transform/pos = Vector2( 1870, 30 )
 texture = ExtResource( 11 )
+
+[node name="Timer" parent="." instance=ExtResource( 12 )]
+
+margin/left = 1523.0
+margin/top = 6.0
+margin/right = 1758.0
+margin/bottom = 102.0
 
 
