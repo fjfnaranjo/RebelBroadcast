@@ -10,7 +10,7 @@ const _UI_RIGHT = "ui_right"
 const _UI_LEFT = "ui_left"
 const _EXIT = "exit"
 
-const MAX_SPEED = 100
+const MAX_SPEED = 130
 
 func _ready():
 	add_to_group("rebel_guys")

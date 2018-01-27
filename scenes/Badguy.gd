@@ -5,7 +5,7 @@ var _next_destination_idx
 var _vision
 var spotted_radio = null
 
-const MAX_SPEED = 100
+const MAX_SPEED = 130
 
 func _ready():
 	add_to_group("badguys")
