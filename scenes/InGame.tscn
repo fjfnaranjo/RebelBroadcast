@@ -99,9 +99,8 @@ transform/pos = Vector2( 269.429, 546.448 )
 transform/pos = Vector2( 306.272, 669.251 )
 _route = [ "RP1", "RP2", "RP3" ]
 
-[node name="KinematicBody2D" parent="." instance=ExtResource( 4 )]
+[node name="RebelGuy" parent="." instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 985.361, 739.394 )
-transform/scale = Vector2( 0.878064, 1.03407 )
+transform/pos = Vector2( 937.309, 702.034 )
 
 

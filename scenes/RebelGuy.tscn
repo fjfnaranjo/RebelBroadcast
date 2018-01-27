@@ -8,10 +8,9 @@
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="KinematicBody2D" type="KinematicBody2D"]
+[node name="RebelGuy" type="KinematicBody2D"]
 
-transform/pos = Vector2( -452.326, -603.983 )
-transform/scale = Vector2( 187.589, 224.228 )
+transform/scale = Vector2( 0.648604, 0.775286 )
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 2.55035, 0, 0, 2.18566, 1.08199, -0.532005 )
