@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=5 format=1]
 
 [ext_resource path="res://scenes/Badguy.gd" type="Script" id=1]
 [ext_resource path="res://resources/images/building_default.png" type="Texture" id=2]
@@ -8,12 +8,16 @@
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
+[sub_resource type="CircleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 10.0
+
 [node name="Badguy" type="KinematicBody2D"]
 
-transform/scale = Vector2( 0.150724, 0.374281 )
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 5.05491, 0, 0, 5.05491, 0, 0 )
+shapes/0/transform = Matrix32( 0.609495, 0, 0, 1.24993, 0, 0 )
 shapes/0/trigger = false
 collision/layers = 1
 collision/mask = 1
@@ -23,13 +27,32 @@ _route = [ "" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
-transform/scale = Vector2( 5.05491, 5.05491 )
+transform/scale = Vector2( 0.609495, 1.24993 )
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
 
 [node name="Sprite" type="Sprite" parent="."]
 
+transform/scale = Vector2( 0.121576, 0.256467 )
 texture = ExtResource( 2 )
+
+[node name="Vision" type="Area2D" parent="."]
+
+input/pickable = true
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 6.74267, 0, 0, 6.74267, 0, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Vision"]
+
+transform/scale = Vector2( 6.74267, 6.74267 )
+shape = SubResource( 2 )
+trigger = false
+_update_shape_index = 0
 
 

@@ -9,6 +9,9 @@ var active_scene
 func add_score_point():
 	score+=1
 
+func game_over():
+	change_scene("res://scenes/Aftergame.tscn")
+
 func change_scene(scene_path):
 	var scene_instance = load(scene_path).instance()
 	if active_scene != null:
