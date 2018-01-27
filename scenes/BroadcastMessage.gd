@@ -2,6 +2,8 @@ extends RichTextLabel
 
 const MAX_EXPOSED_SECONDS = 6
 
+var broadcasting
+
 var remaining_exposed_seconds = MAX_EXPOSED_SECONDS
 
 const MESSAGES = ["The revolution is near, it is time to stand up to your opressors and reclaim your land!",
@@ -17,6 +19,7 @@ var current_message
 func _ready():
 	new_broadcast()
 	set_process(true)
+	broadcasting = false
 	
 func _process(delta):
 	remaining_exposed_seconds -= delta
@@ -32,10 +35,9 @@ func new_broadcast():
 
 func show_message():
 	set_text(current_message)
-	var player = get_tree().get_root().get_node("Game").get_node("SamplePlayer2D")
-	print("sonidooooo")
-	player.play("radio_on")
-	
-	
+	if(not broadcasting):
+		var player = get_tree().get_root().get_node("Game").get_node("SamplePlayer2D")
+		player.play("radio_on")
+
 func hide_message():
 	set_text('')
