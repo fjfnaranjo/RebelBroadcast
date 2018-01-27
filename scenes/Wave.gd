@@ -23,3 +23,5 @@ func _check_collisions():
 	for thing in things:
 		if(thing.is_in_group("buildings") and thing.has_method("hurt")):
 			thing.hurt()
+		elif(thing.is_in_group("rebel_guys") and thing.has_method("hurt")):
+			pass

@@ -14,6 +14,8 @@ func _ready():
 	set_process(true)
 
 func _process(delta):
+	if(not State.active_scene.has_node(_route[_current_destination_idx])):
+		return
 	var target
 	if spotted_radio and spotted_radio.get_ref():
 		target = spotted_radio.get_ref()
@@ -21,6 +23,7 @@ func _process(delta):
 		target = State.active_scene.get_node(_route[_next_destination_idx])
 	move((target.get_pos()-get_pos()).normalized()*delta*MAX_SPEED)
 	
+	var radio_spotted = false
 	var rebel_spotted = false
 	for area in _vision.get_overlapping_areas():
 		if area.is_in_group("radios"):
