@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=1]
+[gd_scene load_steps=9 format=1]
 
 [ext_resource path="res://scenes/InGame.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Building.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://scenes/RebelGuy.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/RadioPickUpArea.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/BroadcastMessage.tscn" type="PackedScene" id=7]
+[ext_resource path="res://resources/images/radio-icon.png" type="Texture" id=8]
 
 [node name="InGame" type="Node"]
 
@@ -118,5 +119,10 @@ transform/scale = Vector2( 1, 2.5843 )
 
 margin/right = 703.0
 margin/bottom = 78.0
+
+[node name="RadioIcon" type="Sprite" parent="."]
+
+transform/pos = Vector2( 1870, 30 )
+texture = ExtResource( 8 )
 
 
