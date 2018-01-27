@@ -23,7 +23,6 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 script/script = ExtResource( 1 )
-loyalty = 5
 
 [node name="Sprite" type="Sprite" parent="."]
 
@@ -54,21 +53,21 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Node" type="Node2D" parent="."]
+[node name="Flags" type="Node2D" parent="."]
 
-[node name="Flag" parent="Node" instance=ExtResource( 3 )]
+[node name="Flag" parent="Flags" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( -74.8422, 63.4662 )
 
-[node name="Flag 2" parent="Node" instance=ExtResource( 3 )]
+[node name="Flag 2" parent="Flags" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 90.4093, 62.2687 )
 
-[node name="Flag 3" parent="Node" instance=ExtResource( 3 )]
+[node name="Flag 3" parent="Flags" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( -72.4472, -87.4156 )
 
-[node name="Flag 4" parent="Node" instance=ExtResource( 3 )]
+[node name="Flag 4" parent="Flags" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 91.6068, -88.6131 )
 
