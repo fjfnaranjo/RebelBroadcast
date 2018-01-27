@@ -58,7 +58,9 @@ func _check_collisions():
 		for thing in things:
 			if(thing.is_in_group("rebel_guys") ):
 				broadcast_recived = true
-			
+	
+	if(not State.active_scene.has_node("BroadcastMessage")):
+		return
 	var broadcasting_message = State.active_scene.get_node("BroadcastMessage")
 	if (broadcast_recived):
 		broadcasting_message.show_message()
