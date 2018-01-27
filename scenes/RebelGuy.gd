@@ -19,6 +19,7 @@ func _ready():
 
 func _process(delta):
 	_check_controls()
+	_check_collisions()
 
 	self.move( speed*delta )
 
@@ -47,3 +48,22 @@ func _place_radio():
 
 func obtain_radio():
 	has_radio = true
+	
+	
+func _check_collisions():
+
+	var broadcast_recived = false	
+	for wave in get_tree().get_nodes_in_group("waves"):
+		var things = wave.get_overlapping_bodies()
+		for thing in things:
+			if(thing.is_in_group("rebel_guys") ):
+				broadcast_recived = true
+			
+	var broadcasting_message = State.active_scene.get_node("BroadcastMessage")
+	if (broadcast_recived):
+		broadcasting_message.show_message()
+	else:
+		broadcasting_message.hide_message()
+	
+	
+	
