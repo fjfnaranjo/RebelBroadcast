@@ -49,6 +49,7 @@ func _place_radio():
 	State.play_sample("radio_chatter")
 
 func obtain_radio():
+	State.play_sample("pick_radio")
 	has_radio = true
 	
 	
