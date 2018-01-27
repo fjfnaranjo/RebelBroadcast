@@ -1,19 +1,27 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=5 format=1]
 
 [ext_resource path="res://scenes/Building.gd" type="Script" id=1]
 [ext_resource path="res://resources/images/building2x2-dr.png" type="Texture" id=2]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="ConvexPolygonShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 12.8911, 12.8789 )
+points = Vector2Array( -127.175, -126.293, 128.194, -127.52, 128.194, 2.61978, 2.96478, 2.61978 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+
+custom_solver_bias = 0.0
+points = Vector2Array( -127.175, 129.077, -127.175, -126.293, 2.96478, 2.61978, 2.96478, 129.077 )
 
 [node name="Building" type="StaticBody2D"]
 
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 10, 0, 0, 10, 0, 0 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
 shapes/0/trigger = false
+shapes/1/shape = SubResource( 2 )
+shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/1/trigger = false
 collision/layers = 1
 collision/mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -28,12 +36,12 @@ loyalty = 5
 transform/pos = Vector2( 0, -5 )
 texture = ExtResource( 2 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 
-transform/scale = Vector2( 10, 10 )
-shape = SubResource( 1 )
+build_mode = 0
+polygon = Vector2Array( -127.175, -126.293, 128.194, -127.52, 128.194, 2.61978, 2.96478, 2.61978, 2.96478, 129.077, -127.175, 129.077 )
+shape_range = Vector2( 0, 1 )
 trigger = false
-_update_shape_index = 0
 
 [node name="Loyalty" type="Label" parent="."]
 
