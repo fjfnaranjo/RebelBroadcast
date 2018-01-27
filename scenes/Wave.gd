@@ -9,6 +9,8 @@ var countdown
 func _ready():
 	set_process(true)
 	countdown = SECONDS
+	
+	add_to_group("waves")
 	var sprite_radius = get_node("Sprite").get_texture().get_width() / 2.0
 	get_parent().set_scale(Vector2(radius,radius)/sprite_radius)
 	
