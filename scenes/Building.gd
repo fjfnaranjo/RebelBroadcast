@@ -16,9 +16,8 @@ func _process(delta):
 
 func hurt():
 	if (loyalty > 0):
-#		State.play_sample("radio_on") # radio_converts
-		var player = get_tree().get_root().get_node("Game").get_node("SamplePlayer2D")
-		player.play("radio_on") 
+		State.play_sample("radio_on") # radio_converts
+
 		
 		loyalty -= 1
 		get_node("Loyalty").set_text(str(loyalty))

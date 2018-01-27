@@ -46,9 +46,7 @@ func _place_radio():
 	get_parent().add_child(radio_instance)
 	radio_instance.set_pos(get_pos())
 	has_radio = false
-	
-	var player = get_tree().get_root().get_node("Game").get_node("SamplePlayer2D")
-	player.play("radio_on")
+	State.play_sample("radio_on")
 
 func obtain_radio():
 	has_radio = true
