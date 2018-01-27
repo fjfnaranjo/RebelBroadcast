@@ -16,13 +16,11 @@ func _process(delta):
 
 func hurt():
 	if (loyalty > 0):
-		State.play_sample("radio_on") # radio_converts
-
-		
 		loyalty -= 1
 		get_node("Loyalty").set_text(str(loyalty))
 		
 	elif(still_loyal):
 		get_node("Loyalty").set_text(":)")
+		State.play_sample("building_converted") 
 		State.active_scene.reduce_victory_points()
 		still_loyal = false

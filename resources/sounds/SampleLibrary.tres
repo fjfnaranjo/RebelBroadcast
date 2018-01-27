@@ -1,21 +1,28 @@
-[gd_resource type="SampleLibrary" load_steps=3 format=1]
+[gd_resource type="SampleLibrary" load_steps=4 format=1]
 
-[ext_resource path="res://resources/sounds/radio_chatter.wav" type="Sample" id=1]
-[ext_resource path="res://resources/sounds/radio_on.wav" type="Sample" id=2]
+[ext_resource path="res://resources/sounds/building_converted.wav" type="Sample" id=1]
+[ext_resource path="res://resources/sounds/radio_chatter.wav" type="Sample" id=2]
+[ext_resource path="res://resources/sounds/radio_on.wav" type="Sample" id=3]
 
 [resource]
 
 resource/name = "SampleLibrary"
-samples/radio_chatter = {
+samples/building_converted = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 1 )
 }
-samples/radio_on = {
+samples/radio_chatter = {
 "db": 0.0,
 "pitch": 1.0,
 "priority": 0,
 "sample": ExtResource( 2 )
+}
+samples/radio_on = {
+"db": 0.0,
+"pitch": 1.0,
+"priority": 0,
+"sample": ExtResource( 3 )
 }
 
