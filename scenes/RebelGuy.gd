@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 export var speed = Vector2(0,0)
 
-var has_radio
+export var has_radio = false
 
 const _UI_UP = "ui_up"
 const _UI_DOWN = "ui_down"  
@@ -13,9 +13,9 @@ const _EXIT = "exit"
 const MAX_SPEED = 100
 
 func _ready():
+	add_to_group("rebel_guys")
 	set_process(true)
 	set_process_input(true)
-	has_radio = false
 
 func _process(delta):
 	_check_controls()
@@ -44,3 +44,6 @@ func _place_radio():
 	get_parent().add_child(radio_instance)
 	radio_instance.set_pos(get_pos())
 	has_radio = false
+
+func obtain_radio():
+	has_radio = true
