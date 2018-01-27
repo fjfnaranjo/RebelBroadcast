@@ -2,7 +2,10 @@ extends RichTextLabel
 
 var timer
 
-const MAX_TIME = 100
+const MAX_TIME = 12
+const ALMOST_OVER = 10
+var ALMOST_OVER_COLOR = 'red'
+var NORMAL_COLOR ='white'
 
 func _ready():
 	set_process(true)
@@ -18,6 +21,8 @@ func update():
 	var time_left = timer.get_time_left()
 	var minutes = time_left / 60
 	var seconds = int(time_left) % 60
-	var str_elapsed = "%02d : %02d" % [minutes, seconds]
-	self.set_text(str_elapsed)
-
+	var color = ALMOST_OVER_COLOR if (timer.get_time_left() < ALMOST_OVER) else NORMAL_COLOR
+	var str_elapsed = "[color=%s]%02d : %02d[/color]" % [color, minutes, seconds]
+	if (timer.get_time_left() < 0.1):
+		State.game_over()	
+	self.set_bbcode(str_elapsed)
