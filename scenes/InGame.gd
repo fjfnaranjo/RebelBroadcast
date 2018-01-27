@@ -24,9 +24,11 @@ func reduce_victory_points():
 	victory_points -= 1
 
 func increase_alert(points):
-	alert_state += points
-	if(alert_state >= MAX_ALERT):
-		State.game_over()
+	if(alert_state <= MAX_ALERT):
+		alert_state += points
+
+func get_alert_state():
+	return alert_state
 
 
 

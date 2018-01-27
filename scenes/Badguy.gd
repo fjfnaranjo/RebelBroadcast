@@ -39,6 +39,8 @@ func _process(delta):
 			rebel_spotted = true
 			if(State.active_scene.has_method("increase_alert")):
 				State.active_scene.increase_alert(SEEING_REBEL_ALERT)
+			if(State.active_scene.has_method("get_alert_state") and State.active_scene.alert_state >= State.active_scene.MAX_ALERT):
+				State.game_over()
 			break
 	if (spotted_radio and spotted_radio.get_ref()):
 		if rebel_spotted:
