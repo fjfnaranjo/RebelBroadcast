@@ -13,6 +13,8 @@ func _ready():
 
 func _input(event):
 	if(event.is_action_pressed("ui_accept")):
+		if(music_on == false):
+			State.play_song("main_theme")
 		State.change_scene("res://scenes/InGame.tscn")
 
 func _process(delta):
