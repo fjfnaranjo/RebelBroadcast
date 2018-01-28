@@ -21,7 +21,7 @@ texture = ExtResource( 2 )
 
 [node name="Result" type="Node2D" parent="."]
 
-transform/pos = Vector2( 940, 100 )
+transform/pos = Vector2( 936.299, 3.76785 )
 transform/scale = Vector2( 3, 3 )
 
 [node name="Panel" type="Panel" parent="Result"]
@@ -43,9 +43,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -29.0
-margin/top = 10.0
+margin/top = 11.0
 margin/right = 56.0
-margin/bottom = 26.0
+margin/bottom = 27.0
 custom_colors/default_color = Color( 0.929412, 0.105882, 0.141176, 1 )
 bbcode/enabled = false
 bbcode/bbcode = ""
@@ -87,7 +87,7 @@ percent_visible = 1.0
 
 [node name="Score" type="Node2D" parent="."]
 
-transform/pos = Vector2( 960, 570.714 )
+transform/pos = Vector2( 958.149, 455.976 )
 transform/scale = Vector2( 1.8, 1.8 )
 
 [node name="Panel" type="Panel" parent="Score"]
