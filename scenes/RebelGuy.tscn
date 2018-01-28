@@ -42,8 +42,8 @@ script/script = ExtResource( 3 )
 [node name="Bubble" type="Sprite" parent="."]
 
 visibility/visible = false
-transform/pos = Vector2( 10.6526, -42.6407 )
-transform/scale = Vector2( 0.458911, 0.458911 )
+transform/pos = Vector2( 13.956, -44.1547 )
+transform/scale = Vector2( 0.513174, 0.513174 )
 texture = ExtResource( 4 )
 
 
