@@ -12,7 +12,7 @@ const RIGHT = Vector2(1, 0)
 const WIDTH = 64
 const HEIGHT = 64
 
-const TIME_BETWEEN_FRAMES = 0.2
+const TIME_BETWEEN_FRAMES = 0.1
 
 func update_animation(direction, delta):
 	var new_proyected_direction = Vector2(round(direction.x), round(direction.y))
