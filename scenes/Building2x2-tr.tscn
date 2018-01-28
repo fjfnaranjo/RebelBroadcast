@@ -57,15 +57,15 @@ trigger = false
 
 [node name="Flag" parent="Flags" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 112.118, 83.591 )
+transform/pos = Vector2( 50.7058, 28.2395 )
 
 [node name="Flag 2" parent="Flags" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( -15.2587, 14.5952 )
+transform/pos = Vector2( -25.3816, -8.73152 )
 
 [node name="Flag 3" parent="Flags" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( -91.552, -106.147 )
+transform/pos = Vector2( -72.1864, -72.6974 )
 
 [node name="FlagRebels" type="Node2D" parent="."]
 
@@ -73,6 +73,6 @@ visibility/visible = false
 
 [node name="FlagRebels" parent="FlagRebels" instance=ExtResource( 4 )]
 
-transform/pos = Vector2( -55.7273, 47.1028 )
+transform/pos = Vector2( -25.3586, -9.67354 )
 
 

@@ -41,19 +41,19 @@ _update_shape_index = 0
 
 [node name="Flag" parent="Flags" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( -59.4395, 82.1346 )
+transform/pos = Vector2( -24.6114, -9.82147 )
 
 [node name="Flag 2" parent="Flags" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 76.1907, 83.7557 )
+transform/pos = Vector2( 105.529, -9.64727 )
 
 [node name="Flag 3" parent="Flags" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 96.184, -96.184 )
+transform/pos = Vector2( 55.4699, -73.432 )
 
 [node name="Flag 4" parent="Flags" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( -85.3768, -95.1033 )
+transform/pos = Vector2( -72.8033, -76.5425 )
 
 [node name="FlagRebels" type="Node2D" parent="."]
 
@@ -61,6 +61,6 @@ visibility/visible = false
 
 [node name="FlagRebels" parent="FlagRebels" instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 6.48431, -11.8879 )
+transform/pos = Vector2( -24.65, -10.6904 )
 
 
