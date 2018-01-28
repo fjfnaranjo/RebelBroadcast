@@ -39,11 +39,11 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 script/script = ExtResource( 1 )
-base_diff = 128
+base_diff = 0
 
 [node name="Sprite" type="Sprite" parent="."]
 
-transform/pos = Vector2( 0, -5 )
+transform/pos = Vector2( 11.2782, -3.00974 )
 texture = ExtResource( 2 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
