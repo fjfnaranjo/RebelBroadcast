@@ -32,6 +32,6 @@ _update_shape_index = 0
 
 visibility/opacity = 0.3
 texture = ExtResource( 2 )
-modulate = Color( 0.533234, 0.277405, 0.789062, 1 )
+modulate = Color( 0.531219, 0.586768, 0.804688, 1 )
 
 

@@ -24,6 +24,7 @@ func _input(event):
 		get_node("Helper").show()
 	elif(event.is_action_released("ui_help")):
 		get_node("Helper").hide()
+		get_node("Controls").get_node("Text").set_text("Press ENTER to join the revolution.\nPress H read again the message")
 
 func _process(delta):
 	time += delta
