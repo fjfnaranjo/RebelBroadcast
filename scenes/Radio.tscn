@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scenes/Radio.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Wave.tscn" type="PackedScene" id=2]
-[ext_resource path="res://resources/images/radio.png" type="Texture" id=3]
+[ext_resource path="res://resources/images/radio-item.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 

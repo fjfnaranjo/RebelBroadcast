@@ -1,6 +1,6 @@
 extends Area2D
 
-const MAX_COOLDOWN = 1.0
+const MAX_COOLDOWN = 3.0
 var cooldown
 var radio_available = true
 
@@ -21,3 +21,8 @@ func _process(delta):
 			if (body.is_in_group("rebel_guys") && body.has_method("obtain_radio")):
 				body.obtain_radio()
 				radio_available = false
+	
+	if(not radio_available):
+		get_node("Sprite").hide()
+	elif(radio_available):
+		get_node("Sprite").show()

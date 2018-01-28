@@ -42,22 +42,24 @@ texture = ExtResource( 2 )
 
 [node name="RadioPlaceholders" type="Node" parent="."]
 
-editor/display_folded = true
-
 [node name="RadioPlaceholder" parent="RadioPlaceholders" instance=ExtResource( 3 )]
 
+visibility/visible = false
 transform/pos = Vector2( 1850.96, 1006.85 )
 
 [node name="RadioPlaceholder 2" parent="RadioPlaceholders" instance=ExtResource( 3 )]
 
+visibility/visible = false
 transform/pos = Vector2( 92.0873, 1002.48 )
 
 [node name="RadioPlaceholder 3" parent="RadioPlaceholders" instance=ExtResource( 3 )]
 
+visibility/visible = false
 transform/pos = Vector2( 1767.99, 14.6178 )
 
 [node name="RadioPlaceholder 4" parent="RadioPlaceholders" instance=ExtResource( 3 )]
 
+visibility/visible = false
 transform/pos = Vector2( 224.001, 17 )
 
 [node name="Perspective" type="Node2D" parent="."]
@@ -505,12 +507,12 @@ transform/pos = Vector2( 1273.39, 918.993 )
 
 [node name="RadioPickUpArea 2" parent="." instance=ExtResource( 20 )]
 
-transform/pos = Vector2( 1875.3, 1031.31 )
+transform/pos = Vector2( 1850, 1000 )
 transform/scale = Vector2( 1.28071, 1.48432 )
 
 [node name="RadioPickUpArea 2 2" parent="." instance=ExtResource( 20 )]
 
-transform/pos = Vector2( 71.0698, 1030.45 )
+transform/pos = Vector2( 100, 1030 )
 transform/scale = Vector2( 1.28071, 1.48432 )
 
 [node name="RadioPickUpArea 3" parent="." instance=ExtResource( 20 )]
@@ -520,7 +522,7 @@ transform/scale = Vector2( 1.19295, 1.16348 )
 
 [node name="RadioPickUpArea" parent="." instance=ExtResource( 20 )]
 
-transform/pos = Vector2( 1771.59, 7.17999 )
+transform/pos = Vector2( 1770, 10 )
 transform/scale = Vector2( 0.859353, 1.00015 )
 
 
