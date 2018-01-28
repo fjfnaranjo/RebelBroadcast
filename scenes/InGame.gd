@@ -17,6 +17,8 @@ func _process(delta):
 	else:
 		get_node("Interface/RadioIcon").set_texture(load("res://resources/images/no-radio-icon.png"))
 	if(victory_points <= 0):
+		var remaining_time = get_node("Interface/Timer").get_remaining_time()
+		State.set_remaining_time(remaining_time)
 		State.win = true
 		State.you_win_mf()
 
@@ -25,6 +27,9 @@ func add_victory_points():
 
 func reduce_victory_points(): 
 	victory_points -= 1
+	
+func get_points():
+	return victory_points
 
 func increase_alert(points):
 	if(alert_state <= MAX_ALERT):

@@ -2,6 +2,7 @@ extends Node
 
 var level = 1
 var score = 0
+var remaining_seconds = 0
 
 var win = false
 var active_scene
@@ -11,6 +12,15 @@ const MUSIC_EXTENSION = ".ogg"
 
 func add_score_point():
 	score+=1
+	
+func get_score_point():
+	return score
+	
+func set_remaining_time(remaining):
+	remaining_seconds = remaining
+	
+func get_remaining_time():
+	return remaining_seconds
 
 func game_over():
 	change_scene("res://scenes/Aftergame.tscn")

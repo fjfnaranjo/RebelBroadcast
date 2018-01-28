@@ -41,3 +41,6 @@ func show_time():
 		get_node("GraphicTimer/TensMinutes").set_modulate(ALMOST_OVER_COLOR)
 		get_node("GraphicTimer/Minutes").set_modulate(ALMOST_OVER_COLOR)
 
+func get_remaining_time():
+	return get_node("Timer").get_time_left()
+	
