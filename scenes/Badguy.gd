@@ -1,6 +1,9 @@
 extends KinematicBody2D
 
 export var _route = [""]
+
+const base_diff = 24
+
 var _next_destination_idx
 var _vision
 var spotted_radio = null
@@ -14,6 +17,7 @@ func _ready():
 	_next_destination_idx = 0
 	_vision = get_node("Vision")
 	set_process(true)
+	set_z(get_pos().y+base_diff)
 
 func _process(delta):
 	if(not State.active_scene.has_node(_route[_next_destination_idx])):
@@ -27,6 +31,8 @@ func _process(delta):
 	var direction = (target.get_pos()-get_pos()).normalized()
 	move(direction*delta*speed)
 	get_node("Sprite").update_animation(direction, delta)
+
+	set_z(get_pos().y+base_diff)
 	
 	var radio_spotted = false
 	var rebel_spotted = false
