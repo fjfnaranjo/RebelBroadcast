@@ -44,15 +44,22 @@ texture = ExtResource( 2 )
 
 [node name="Buildings" type="Node" parent="Perspective"]
 
-editor/display_folded = true
-
 [node name="B1" parent="Perspective/Buildings" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 1386.51, 520.002 )
 
 [node name="B2" parent="Perspective/Buildings" instance=ExtResource( 3 )]
 
+editor/display_folded = true
 transform/pos = Vector2( 1928.33, 1080.75 )
+
+[node name="Flag" parent="Perspective/Buildings/B2/Flags"]
+
+transform/pos = Vector2( -23, -39.072 )
+
+[node name="Flag 2" parent="Perspective/Buildings/B2/Flags"]
+
+transform/pos = Vector2( -23, -15 )
 
 [node name="B3" parent="Perspective/Buildings" instance=ExtResource( 3 )]
 
@@ -64,11 +71,32 @@ transform/pos = Vector2( 1384.27, 1017.75 )
 
 [node name="B5" parent="Perspective/Buildings" instance=ExtResource( 3 )]
 
+editor/display_folded = true
 transform/pos = Vector2( 1927.75, 888.324 )
+
+[node name="Flag" parent="Perspective/Buildings/B5/Flags"]
+
+transform/pos = Vector2( -20, -39.072 )
+
+[node name="Flag 2" parent="Perspective/Buildings/B5/Flags"]
+
+transform/pos = Vector2( -20, -15 )
 
 [node name="B6" parent="Perspective/Buildings" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1926.17, 584.024 )
+
+[node name="Flag" parent="Perspective/Buildings/B6/Flags"]
+
+transform/pos = Vector2( -25, -9.51889 )
+
+[node name="Flag 2" parent="Perspective/Buildings/B6/Flags"]
+
+transform/pos = Vector2( -25, 20 )
+
+[node name="Flag 3" parent="Perspective/Buildings/B6/Flags"]
+
+transform/pos = Vector2( -25, -70.061 )
 
 [node name="B7" parent="Perspective/Buildings" instance=ExtResource( 4 )]
 
@@ -102,9 +130,25 @@ transform/pos = Vector2( 1015.57, 327.943 )
 
 transform/pos = Vector2( 1336.93, 6.3881 )
 
+[node name="Flag" parent="Perspective/Buildings/B14/Flags"]
+
+transform/pos = Vector2( 10.0343, 10 )
+
+[node name="Flag 3" parent="Perspective/Buildings/B14/Flags"]
+
+transform/pos = Vector2( -50.2802, 0 )
+
 [node name="B15" parent="Perspective/Buildings" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 1625.05, 7.04678 )
+
+[node name="Flag" parent="Perspective/Buildings/B15/Flags"]
+
+transform/pos = Vector2( 10.0343, 10 )
+
+[node name="Flag 3" parent="Perspective/Buildings/B15/Flags"]
+
+transform/pos = Vector2( -50.2802, 0 )
 
 [node name="Building" parent="Perspective/Buildings" instance=ExtResource( 7 )]
 
@@ -161,6 +205,14 @@ transform/pos = Vector2( 853.722, 534.659 )
 [node name="Building 15" parent="Perspective/Buildings" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 695, 23 )
+
+[node name="Flag" parent="Perspective/Buildings/Building 15/Flags"]
+
+transform/pos = Vector2( 10.0343, 10 )
+
+[node name="Flag 3" parent="Perspective/Buildings/Building 15/Flags"]
+
+transform/pos = Vector2( -50.2802, 0 )
 
 [node name="Building 16" parent="Perspective/Buildings" instance=ExtResource( 6 )]
 
@@ -349,7 +401,6 @@ _update_shape_index = 0
 
 [node name="StaticBody2D 3" type="StaticBody2D" parent="Limits"]
 
-editor/display_folded = true
 transform/pos = Vector2( 1930.95, 40.2806 )
 input/pickable = false
 shapes/0/shape = SubResource( 2 )
@@ -488,12 +539,12 @@ transform/pos = Vector2( 1273.39, 918.993 )
 
 [node name="RadioPickUpArea 2" parent="." instance=ExtResource( 20 )]
 
-transform/pos = Vector2( 1875.3, 1031.31 )
+transform/pos = Vector2( 1835.18, 1046.88 )
 transform/scale = Vector2( 1.28071, 1.48432 )
 
 [node name="RadioPickUpArea 2 2" parent="." instance=ExtResource( 20 )]
 
-transform/pos = Vector2( 71.0698, 1030.45 )
+transform/pos = Vector2( 103.401, 1052.6 )
 transform/scale = Vector2( 1.28071, 1.48432 )
 
 [node name="RadioPickUpArea 3" parent="." instance=ExtResource( 20 )]
@@ -503,7 +554,13 @@ transform/scale = Vector2( 1.19295, 1.16348 )
 
 [node name="RadioPickUpArea" parent="." instance=ExtResource( 20 )]
 
-transform/pos = Vector2( 1771.59, 7.17999 )
+transform/pos = Vector2( 1769.2, 10.1737 )
 transform/scale = Vector2( 0.859353, 1.00015 )
 
 
+[editable path="Perspective/Buildings/B2"]
+[editable path="Perspective/Buildings/B5"]
+[editable path="Perspective/Buildings/B6"]
+[editable path="Perspective/Buildings/B14"]
+[editable path="Perspective/Buildings/B15"]
+[editable path="Perspective/Buildings/Building 15"]
