@@ -12,10 +12,10 @@ func _ready():
 func _process(delta):
 	if alert_state > 0:
 		alert_state -= ALERT_RELAXATION
-	if(get_node("RebelGuy").has_radio):
-		get_node("RadioIcon").set_texture(load("res://resources/images/radio-icon.png"))
+	if(get_node("Perspective/RebelGuy").has_radio):
+		get_node("Interface/RadioIcon").set_texture(load("res://resources/images/radio-icon.png"))
 	else:
-		get_node("RadioIcon").set_texture(load("res://resources/images/no-radio-icon.png"))
+		get_node("Interface/RadioIcon").set_texture(load("res://resources/images/no-radio-icon.png"))
 	if(victory_points <= 0):
 		State.win = true
 		State.you_win_mf()

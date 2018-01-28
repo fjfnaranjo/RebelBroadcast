@@ -2,24 +2,24 @@
 
 [ext_resource path="res://scenes/InGame.gd" type="Script" id=1]
 [ext_resource path="res://resources/images/bglevel1.png" type="Texture" id=2]
-[ext_resource path="res://scenes/RadioPlaceholder.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/Building1x1.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/Building1x2.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/Building2x2.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scenes/Building2x1.tscn" type="PackedScene" id=7]
-[ext_resource path="res://scenes/Building2x2-dl.tscn" type="PackedScene" id=8]
-[ext_resource path="res://scenes/Building2x2-dr.tscn" type="PackedScene" id=9]
-[ext_resource path="res://scenes/Building2x2-tl.tscn" type="PackedScene" id=10]
-[ext_resource path="res://scenes/Building2x2-tr.tscn" type="PackedScene" id=11]
-[ext_resource path="res://scenes/Building2x2-s1.tscn" type="PackedScene" id=12]
-[ext_resource path="res://scenes/RoutePoint.tscn" type="PackedScene" id=13]
-[ext_resource path="res://scenes/RebelGuy.tscn" type="PackedScene" id=14]
-[ext_resource path="res://scenes/RadioPickUpArea.tscn" type="PackedScene" id=15]
-[ext_resource path="res://scenes/BroadcastMessage.tscn" type="PackedScene" id=16]
-[ext_resource path="res://resources/images/radio-icon.png" type="Texture" id=17]
+[ext_resource path="res://scenes/Building1x1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Building1x2.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Building2x2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/Building2x1.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/Building2x2-dl.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/Building2x2-dr.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/Building2x2-tl.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/Building2x2-tr.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/Building2x2-s1.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/RebelGuy.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenes/Badguy.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scenes/RadioPlaceholder.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scenes/BroadcastMessage.tscn" type="PackedScene" id=15]
+[ext_resource path="res://resources/images/radio-icon.png" type="Texture" id=16]
+[ext_resource path="res://scenes/DangerBar.tscn" type="PackedScene" id=17]
 [ext_resource path="res://scenes/Timer.tscn" type="PackedScene" id=18]
-[ext_resource path="res://scenes/Badguy.tscn" type="PackedScene" id=19]
-[ext_resource path="res://scenes/DangerBar.tscn" type="PackedScene" id=20]
+[ext_resource path="res://scenes/RoutePoint.tscn" type="PackedScene" id=19]
+[ext_resource path="res://scenes/RadioPickUpArea.tscn" type="PackedScene" id=20]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -40,161 +40,233 @@ script/script = ExtResource( 1 )
 transform/pos = Vector2( 960, 539 )
 texture = ExtResource( 2 )
 
-[node name="RadioPlaceholders" type="Node" parent="."]
+[node name="Perspective" type="Node2D" parent="."]
 
 editor/display_folded = true
 
-[node name="RadioPlaceholder" parent="RadioPlaceholders" instance=ExtResource( 3 )]
+[node name="Buildings" type="Node" parent="Perspective"]
 
-transform/pos = Vector2( 1850.96, 1006.85 )
+editor/display_folded = true
 
-[node name="RadioPlaceholder 2" parent="RadioPlaceholders" instance=ExtResource( 3 )]
-
-transform/pos = Vector2( 92.0873, 1002.48 )
-
-[node name="RadioPlaceholder 3" parent="RadioPlaceholders" instance=ExtResource( 3 )]
-
-transform/pos = Vector2( 1767.99, 14.6178 )
-
-[node name="RadioPlaceholder 4" parent="RadioPlaceholders" instance=ExtResource( 3 )]
-
-transform/pos = Vector2( 224.001, 17 )
-
-[node name="Buildings" type="Node" parent="."]
-
-[node name="B1" parent="Buildings" instance=ExtResource( 4 )]
+[node name="B1" parent="Perspective/Buildings" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 1386.51, 520.002 )
 
-[node name="B2" parent="Buildings" instance=ExtResource( 4 )]
+[node name="B2" parent="Perspective/Buildings" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 1928.33, 1080.75 )
 
-[node name="B3" parent="Buildings" instance=ExtResource( 4 )]
+[node name="B3" parent="Perspective/Buildings" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 840.339, 887.929 )
 
-[node name="B4" parent="Buildings" instance=ExtResource( 4 )]
+[node name="B4" parent="Perspective/Buildings" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 1384.27, 1017.75 )
 
-[node name="B5" parent="Buildings" instance=ExtResource( 4 )]
+[node name="B5" parent="Perspective/Buildings" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 1927.75, 888.324 )
 
-[node name="B6" parent="Buildings" instance=ExtResource( 5 )]
+[node name="B6" parent="Perspective/Buildings" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1926.17, 584.024 )
 
-[node name="B7" parent="Buildings" instance=ExtResource( 5 )]
+[node name="B7" parent="Perspective/Buildings" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 326.177, 822.251 )
 
-[node name="B8" parent="Buildings" instance=ExtResource( 5 )]
+[node name="B8" parent="Perspective/Buildings" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 1267.88, 263.513 )
 
-[node name="B9" parent="Buildings" instance=ExtResource( 6 )]
+[node name="B9" parent="Perspective/Buildings" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 1015.77, 70.2063 )
 
-[node name="B10" parent="Buildings" instance=ExtResource( 6 )]
+[node name="B10" parent="Perspective/Buildings" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 1524.4, 262.218 )
 
-[node name="B11" parent="Buildings" instance=ExtResource( 6 )]
+[node name="B11" parent="Perspective/Buildings" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 1847.96, 262.219 )
 
-[node name="B12" parent="Buildings" instance=ExtResource( 7 )]
+[node name="B12" parent="Perspective/Buildings" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 1913.43, 8.02652 )
 
-[node name="B13" parent="Buildings" instance=ExtResource( 7 )]
+[node name="B13" parent="Perspective/Buildings" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 1015.57, 327.943 )
 
-[node name="B14" parent="Buildings" instance=ExtResource( 7 )]
+[node name="B14" parent="Perspective/Buildings" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 1336.93, 6.3881 )
 
-[node name="B15" parent="Buildings" instance=ExtResource( 7 )]
+[node name="B15" parent="Perspective/Buildings" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 1625.05, 7.04678 )
 
-[node name="Building" parent="Buildings" instance=ExtResource( 8 )]
+[node name="Building" parent="Perspective/Buildings" instance=ExtResource( 7 )]
 
 transform/pos = Vector2( 1672.78, 584.15 )
 
-[node name="Building 2" parent="Buildings" instance=ExtResource( 9 )]
+[node name="Building 2" parent="Perspective/Buildings" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 1098.16, 583.775 )
 
-[node name="Building 3" parent="Buildings" instance=ExtResource( 10 )]
+[node name="Building 3" parent="Perspective/Buildings" instance=ExtResource( 9 )]
 
 transform/pos = Vector2( 1673.34, 951.173 )
 
-[node name="Building 4" parent="Buildings" instance=ExtResource( 11 )]
+[node name="Building 4" parent="Perspective/Buildings" instance=ExtResource( 10 )]
 
 transform/pos = Vector2( 1096.21, 951.925 )
 
-[node name="Building 5" parent="Buildings" instance=ExtResource( 4 )]
+[node name="Building 5" parent="Perspective/Buildings" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 842.459, 1079.53 )
 
-[node name="Building 6" parent="Buildings" instance=ExtResource( 6 )]
+[node name="Building 6" parent="Perspective/Buildings" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 583.3, 822.759 )
 
-[node name="Building 7" parent="Buildings" instance=ExtResource( 7 )]
+[node name="Building 7" parent="Perspective/Buildings" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 586.058, 1080.16 )
 
-[node name="Building 8" parent="Buildings" instance=ExtResource( 7 )]
+[node name="Building 8" parent="Perspective/Buildings" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 265.965, 1079.71 )
 
-[node name="Building 9" parent="Buildings" instance=ExtResource( 4 )]
+[node name="Building 9" parent="Perspective/Buildings" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 9.09891, 1078.8 )
 
-[node name="Building 10" parent="Buildings" instance=ExtResource( 6 )]
+[node name="Building 10" parent="Perspective/Buildings" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 71.4267, 820.989 )
 
-[node name="Building 12" parent="Buildings" instance=ExtResource( 6 )]
+[node name="Building 12" parent="Perspective/Buildings" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 71.9277, 470.53 )
 
-[node name="Building 13" parent="Buildings" instance=ExtResource( 5 )]
+[node name="Building 13" parent="Perspective/Buildings" instance=ExtResource( 4 )]
 
 transform/pos = Vector2( 326.932, 471.344 )
 
-[node name="Building 14" parent="Buildings" instance=ExtResource( 4 )]
+[node name="Building 14" parent="Perspective/Buildings" instance=ExtResource( 3 )]
 
 transform/pos = Vector2( 853.722, 534.659 )
 
-[node name="Building 15" parent="Buildings" instance=ExtResource( 7 )]
+[node name="Building 15" parent="Perspective/Buildings" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 695, 23 )
 
-[node name="Building 16" parent="Buildings" instance=ExtResource( 7 )]
+[node name="Building 16" parent="Perspective/Buildings" instance=ExtResource( 6 )]
 
 transform/pos = Vector2( 697, 213 )
 
-[node name="Building 17" parent="Buildings" instance=ExtResource( 9 )]
+[node name="Building 17" parent="Perspective/Buildings" instance=ExtResource( 8 )]
 
 transform/pos = Vector2( 377, 88.0001 )
 
-[node name="Building 18" parent="Buildings" instance=ExtResource( 6 )]
+[node name="Building 18" parent="Perspective/Buildings" instance=ExtResource( 5 )]
 
 transform/pos = Vector2( 72.0001, 88.0001 )
 
-[node name="Building 11" parent="Buildings" instance=ExtResource( 12 )]
+[node name="Building 11" parent="Perspective/Buildings" instance=ExtResource( 11 )]
 
 transform/pos = Vector2( 582.894, 469.322 )
 
+[node name="RebelGuy" parent="Perspective" instance=ExtResource( 12 )]
+
+transform/pos = Vector2( 1393.13, 762.664 )
+
+[node name="Badguy" parent="Perspective" instance=ExtResource( 13 )]
+
+transform/pos = Vector2( 847.407, 978.256 )
+_route = [ "RG1/RP1", "RG1/RP2", "RG1/RP3", "RG1/RP4", "RG1/RP5", "RG1/RP6", "RG1/RP2" ]
+
+[node name="Badguy 2" parent="Perspective" instance=ExtResource( 13 )]
+
+transform/pos = Vector2( 596.122, 971.258 )
+collision/layers = 2
+collision/mask = 2
+_route = [ "RG1/RP1", "RG1/RP7", "RG1/RP8", "RG1/RP9", "RG1/RP10" ]
+
+[node name="Badguy 3" parent="Perspective" instance=ExtResource( 13 )]
+
+transform/pos = Vector2( 1015.09, 217.643 )
+collision/layers = 4
+collision/mask = 4
+_route = [ "RG1/RP11", "RG1/RP12", "RG1/RP13", "RG1/RP14", "RG1/RP15", "RG1/RP14", "RG1/RP13", "RG1/RP12" ]
+
+[node name="Badguy 4" parent="Perspective" instance=ExtResource( 13 )]
+
+transform/pos = Vector2( 472.325, 202.091 )
+collision/layers = 8
+collision/mask = 8
+_route = [ "RG1/RP18", "RG1/RP17", "RG1/RP16", "RG1/RP21", "RG1/RP20", "RG1/RP19", "RG1/RP21", "RG1/RP16" ]
+
+[node name="Badguy 5" parent="Perspective" instance=ExtResource( 13 )]
+
+transform/pos = Vector2( 419.216, 647.062 )
+collision/layers = 16
+collision/mask = 16
+_route = [ "RG1/RP23", "RG1/RP22", "RG1/RP24", "RG1/RP22" ]
+
+[node name="Badguy 6" parent="Perspective" instance=ExtResource( 13 )]
+
+transform/pos = Vector2( 1271.34, 513.041 )
+collision/layers = 32
+collision/mask = 32
+_route = [ "RG1/RP25", "RG1/RP26", "RG1/RP27", "RG1/RP28" ]
+
+[node name="Interface" type="Node2D" parent="."]
+
+editor/display_folded = true
+
+[node name="RadioPlaceholders" type="Node" parent="Interface"]
+
+editor/display_folded = true
+
+[node name="RadioPlaceholder" parent="Interface/RadioPlaceholders" instance=ExtResource( 14 )]
+
+transform/pos = Vector2( 1850.96, 1006.85 )
+
+[node name="RadioPlaceholder 2" parent="Interface/RadioPlaceholders" instance=ExtResource( 14 )]
+
+transform/pos = Vector2( 92.0873, 1002.48 )
+
+[node name="RadioPlaceholder 3" parent="Interface/RadioPlaceholders" instance=ExtResource( 14 )]
+
+transform/pos = Vector2( 1767.99, 14.6178 )
+
+[node name="RadioPlaceholder 4" parent="Interface/RadioPlaceholders" instance=ExtResource( 14 )]
+
+transform/pos = Vector2( 224.001, 17 )
+
+[node name="BroadcastMessage" parent="Interface" instance=ExtResource( 15 )]
+
+[node name="RadioIcon" type="Sprite" parent="Interface"]
+
+transform/pos = Vector2( 160.955, 44.408 )
+texture = ExtResource( 16 )
+
+[node name="DangerBar" parent="Interface" instance=ExtResource( 17 )]
+
+transform/pos = Vector2( 22.6412, 66.3349 )
+
+[node name="Timer" parent="Interface" instance=ExtResource( 18 )]
+
+transform/pos = Vector2( 83, 41 )
+transform/scale = Vector2( 2.0625, 0.78125 )
+
 [node name="Limits" type="Node" parent="."]
+
+editor/display_folded = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Limits"]
 
@@ -290,196 +362,136 @@ _update_shape_index = 0
 
 editor/display_folded = true
 
-[node name="RP1" parent="RG1" instance=ExtResource( 13 )]
+[node name="RP1" parent="RG1" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 745.266, 980.192 )
 
-[node name="RP2" parent="RG1" instance=ExtResource( 13 )]
+[node name="RP2" parent="RG1" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 935.013, 983.085 )
 
-[node name="RP3" parent="RG1" instance=ExtResource( 13 )]
+[node name="RP3" parent="RG1" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 944.788, 424.952 )
 
-[node name="RP4" parent="RG1" instance=ExtResource( 13 )]
+[node name="RP4" parent="RG1" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 1828.92, 424.27 )
 
-[node name="RP5" parent="RG1" instance=ExtResource( 13 )]
+[node name="RP5" parent="RG1" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 1837.43, 770.807 )
 
-[node name="RP6" parent="RG1" instance=ExtResource( 13 )]
+[node name="RP6" parent="RG1" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 935.497, 772.283 )
 
-[node name="RP7" parent="RG1" instance=ExtResource( 13 )]
+[node name="RP7" parent="RG1" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 427.234, 983.033 )
 
-[node name="RP8" parent="RG1" instance=ExtResource( 13 )]
+[node name="RP8" parent="RG1" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 412.083, 275.529 )
 
-[node name="RP9" parent="RG1" instance=ExtResource( 13 )]
+[node name="RP9" parent="RG1" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 231.963, 276.396 )
 
-[node name="RP10" parent="RG1" instance=ExtResource( 13 )]
+[node name="RP10" parent="RG1" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 229.914, 982.084 )
 
-[node name="RP11" parent="RG1" instance=ExtResource( 13 )]
+[node name="RP11" parent="RG1" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 853.444, 228.588 )
 
-[node name="RP12" parent="RG1" instance=ExtResource( 13 )]
+[node name="RP12" parent="RG1" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 1171.51, 231.883 )
 
-[node name="RP13" parent="RG1" instance=ExtResource( 13 )]
+[node name="RP13" parent="RG1" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 1178.29, 101.303 )
 
-[node name="RP14" parent="RG1" instance=ExtResource( 13 )]
+[node name="RP14" parent="RG1" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 1680.39, 103.324 )
 
-[node name="RP15" parent="RG1" instance=ExtResource( 13 )]
+[node name="RP15" parent="RG1" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 1687.96, 356.683 )
 
-[node name="RP16" parent="RG1" instance=ExtResource( 13 )]
+[node name="RP16" parent="RG1" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 501.939, 298.061 )
 
-[node name="RP17" parent="RG1" instance=ExtResource( 13 )]
+[node name="RP17" parent="RG1" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 527.424, 136.288 )
 
-[node name="RP18" parent="RG1" instance=ExtResource( 13 )]
+[node name="RP18" parent="RG1" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 418.837, 136.288 )
 
-[node name="RP19" parent="RG1" instance=ExtResource( 13 )]
+[node name="RP19" parent="RG1" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 766.759, 423.269 )
 
-[node name="RP20" parent="RG1" instance=ExtResource( 13 )]
+[node name="RP20" parent="RG1" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 828.809, 421.053 )
 
-[node name="RP21" parent="RG1" instance=ExtResource( 13 )]
+[node name="RP21" parent="RG1" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 763.435, 310.249 )
 
-[node name="RP22" parent="RG1" instance=ExtResource( 13 )]
+[node name="RP22" parent="RG1" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 749.473, 644.72 )
 
-[node name="RP23" parent="RG1" instance=ExtResource( 13 )]
+[node name="RP23" parent="RG1" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 31.8636, 648.536 )
 
-[node name="RP24" parent="RG1" instance=ExtResource( 13 )]
+[node name="RP24" parent="RG1" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 753.831, 783.297 )
 
-[node name="RP25" parent="RG1" instance=ExtResource( 13 )]
+[node name="RP25" parent="RG1" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 1268.47, 417.583 )
 
-[node name="RP26" parent="RG1" instance=ExtResource( 13 )]
+[node name="RP26" parent="RG1" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 1494.46, 417.947 )
 
-[node name="RP27" parent="RG1" instance=ExtResource( 13 )]
+[node name="RP27" parent="RG1" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 1494.27, 918.412 )
 
-[node name="RP28" parent="RG1" instance=ExtResource( 13 )]
+[node name="RP28" parent="RG1" instance=ExtResource( 19 )]
 
 transform/pos = Vector2( 1273.39, 918.993 )
 
-[node name="RebelGuy" parent="." instance=ExtResource( 14 )]
-
-transform/pos = Vector2( 1393.13, 762.664 )
-
-[node name="RadioPickUpArea 2" parent="." instance=ExtResource( 15 )]
+[node name="RadioPickUpArea 2" parent="." instance=ExtResource( 20 )]
 
 transform/pos = Vector2( 1875.3, 1031.31 )
 transform/scale = Vector2( 1.28071, 1.48432 )
 
-[node name="RadioPickUpArea 2 2" parent="." instance=ExtResource( 15 )]
+[node name="RadioPickUpArea 2 2" parent="." instance=ExtResource( 20 )]
 
 transform/pos = Vector2( 71.0698, 1030.45 )
 transform/scale = Vector2( 1.28071, 1.48432 )
 
-[node name="RadioPickUpArea 3" parent="." instance=ExtResource( 15 )]
+[node name="RadioPickUpArea 3" parent="." instance=ExtResource( 20 )]
 
 transform/pos = Vector2( 223.169, 28.9266 )
 transform/scale = Vector2( 1.19295, 1.16348 )
 
-[node name="RadioPickUpArea" parent="." instance=ExtResource( 15 )]
+[node name="RadioPickUpArea" parent="." instance=ExtResource( 20 )]
 
 transform/pos = Vector2( 1771.59, 7.17999 )
 transform/scale = Vector2( 0.859353, 1.00015 )
-
-[node name="BroadcastMessage" parent="." instance=ExtResource( 16 )]
-
-[node name="RadioIcon" type="Sprite" parent="."]
-
-transform/pos = Vector2( 160.955, 44.408 )
-texture = ExtResource( 17 )
-
-[node name="Timer" parent="." instance=ExtResource( 18 )]
-
-transform/pos = Vector2( 83, 41 )
-transform/scale = Vector2( 2.0625, 0.78125 )
-
-[node name="Badguy" parent="." instance=ExtResource( 19 )]
-
-transform/pos = Vector2( 847.407, 978.256 )
-_route = [ "RG1/RP1", "RG1/RP2", "RG1/RP3", "RG1/RP4", "RG1/RP5", "RG1/RP6", "RG1/RP2" ]
-
-[node name="Badguy 2" parent="." instance=ExtResource( 19 )]
-
-transform/pos = Vector2( 596.122, 971.258 )
-collision/layers = 2
-collision/mask = 2
-_route = [ "RG1/RP1", "RG1/RP7", "RG1/RP8", "RG1/RP9", "RG1/RP10" ]
-
-[node name="Badguy 3" parent="." instance=ExtResource( 19 )]
-
-transform/pos = Vector2( 1015.09, 217.643 )
-collision/layers = 4
-collision/mask = 4
-_route = [ "RG1/RP11", "RG1/RP12", "RG1/RP13", "RG1/RP14", "RG1/RP15", "RG1/RP14", "RG1/RP13", "RG1/RP12" ]
-
-[node name="Badguy 4" parent="." instance=ExtResource( 19 )]
-
-transform/pos = Vector2( 472.325, 202.091 )
-collision/layers = 8
-collision/mask = 8
-_route = [ "RG1/RP18", "RG1/RP17", "RG1/RP16", "RG1/RP21", "RG1/RP20", "RG1/RP19", "RG1/RP21", "RG1/RP16" ]
-
-[node name="Badguy 5" parent="." instance=ExtResource( 19 )]
-
-transform/pos = Vector2( 419.216, 647.062 )
-collision/layers = 16
-collision/mask = 16
-_route = [ "RG1/RP23", "RG1/RP22", "RG1/RP24", "RG1/RP22" ]
-
-[node name="Badguy 6" parent="." instance=ExtResource( 19 )]
-
-transform/pos = Vector2( 1271.34, 513.041 )
-collision/layers = 32
-collision/mask = 32
-_route = [ "RG1/RP25", "RG1/RP26", "RG1/RP27", "RG1/RP28" ]
-
-[node name="DangerBar" parent="." instance=ExtResource( 20 )]
-
-transform/pos = Vector2( 22.6412, 66.3349 )
 
 
