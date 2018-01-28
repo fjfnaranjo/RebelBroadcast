@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=4 format=1]
 
 [ext_resource path="res://scenes/Aftergame.gd" type="Script" id=1]
 [ext_resource path="res://resources/images/defeat.jpg" type="Texture" id=2]
+[ext_resource path="res://resources/images/victory_screen.jpg" type="Texture" id=3]
 
 [node name="Aftergame" type="Node"]
 
@@ -17,7 +18,7 @@ texture = ExtResource( 2 )
 
 visibility/visible = false
 transform/pos = Vector2( 960, 540 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="Result" type="Node2D" parent="."]
 
