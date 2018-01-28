@@ -304,6 +304,7 @@ transform/scale = Vector2( 0.859353, 1.00015 )
 
 [node name="Interface" type="CanvasLayer" parent="."]
 
+editor/display_folded = true
 layer = 1
 offset = Vector2( 0, 0 )
 rotation = 0.0
@@ -365,21 +366,22 @@ focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 442.0
+margin/left = 379.0
 margin/top = 985.0
-margin/right = 1581.0
+margin/right = 1641.0
 margin/bottom = 1061.0
 
 [node name="BroadcastMessage" type="RichTextLabel" parent="Interface"]
 
+rect/scale = Vector2( 1.5, 1.5 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 447.0
-margin/top = 987.0
-margin/right = 1583.0
-margin/bottom = 1060.0
+size_flags/horizontal = 1
+size_flags/vertical = 1
+margin/left = 397.0
+margin/top = 1002.0
+margin/right = 1225.0
+margin/bottom = 1032.0
 bbcode/enabled = false
 bbcode/bbcode = ""
 visible_characters = -1
@@ -387,6 +389,8 @@ percent_visible = 1.0
 script/script = ExtResource( 19 )
 
 [node name="Limits" type="Node" parent="."]
+
+editor/display_folded = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Limits"]
 
@@ -436,6 +440,7 @@ _update_shape_index = 0
 
 [node name="StaticBody2D 2" type="StaticBody2D" parent="Limits"]
 
+editor/display_folded = true
 transform/pos = Vector2( 468.997, 446.898 )
 input/pickable = false
 shapes/0/shape = SubResource( 2 )
