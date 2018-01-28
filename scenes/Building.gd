@@ -1,5 +1,7 @@
 extends StaticBody2D
 
+export var base_diff = 0
+
 var loyalty
 var still_loyal = true
 
