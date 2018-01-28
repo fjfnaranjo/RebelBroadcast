@@ -224,9 +224,13 @@ collision/layers = 32
 collision/mask = 32
 _route = [ "RG1/RP25", "RG1/RP26", "RG1/RP27", "RG1/RP28" ]
 
-[node name="Interface" type="Node2D" parent="."]
+[node name="Interface" type="CanvasLayer" parent="."]
 
 editor/display_folded = true
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
 
 [node name="RadioPlaceholders" type="Node" parent="Interface"]
 
