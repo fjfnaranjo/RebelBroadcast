@@ -24,10 +24,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 65.0
-margin/top = 15.0
-margin/right = 298.0
-margin/bottom = 59.0
+margin/left = 55.0
+margin/top = 18.0
+margin/right = 290.0
+margin/bottom = 58.0
 
 [node name="Text" type="RichTextLabel" parent="Controls"]
 
@@ -35,13 +35,13 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 72.0
-margin/top = 23.0
-margin/right = 309.0
-margin/bottom = 58.0
+margin/left = 58.0
+margin/top = 22.0
+margin/right = 305.0
+margin/bottom = 63.0
 custom_colors/default_color = Color( 0.843137, 0.294118, 0.294118, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "You have one message from de insurrection! Press H to read it"
+bbcode/enabled = true
+bbcode/bbcode = "[center]Press H for briefing[/center]"
 visible_characters = -1
 percent_visible = 1.0
 
@@ -57,10 +57,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 50.0
-margin/top = 6.0
-margin/right = 528.0
-margin/bottom = 164.0
+margin/left = 51.0
+margin/top = -54.0
+margin/right = 529.0
+margin/bottom = 308.0
 
 [node name="Text" type="RichTextLabel" parent="Helper"]
 
@@ -69,19 +69,23 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 67.0
-margin/top = 23.0
+margin/top = -40.0
 margin/right = 526.0
-margin/bottom = 157.0
+margin/bottom = 328.0
 custom_colors/default_color = Color( 0.843137, 0.294118, 0.294118, 1 )
 bbcode/enabled = true
-bbcode/bbcode = "To convert the population to your cause:
+bbcode/bbcode = "Rebel!
 
-	[b]1.[/b] Pick up a radio
-	[b]2.[/b] Place it (SPACEBAR) near a loyalist building (you know, red flags)
-	[b]3.[/b] Do not get seen or they will get aware of you
-	[b]4.[/b] Repeat
+We have managed to get you behind enemy lines, with an almost perfect disguise, but be careful! if the enemy spot you, it will increase the global alert level, and they will search the city faster. If it reach the maximum alert level, they will catch you as soon as they put eyes on you, and trust me, you wouldn’t like the Dictator hospitality.
 
-Good luck!"
+Your mission is to spread the rebel message. For that purpose, we have prepared for you an unlimited quantity of radio beacons deployed in the suburbs's sewer, but you could carry only one, they are heavy machines. Place it (SPACEBAR) near a loyalist building (the ones with red flags) to convert them (they will rise our flag). If they catch you near a radio beacon, you would be as good as dead.
+
+If you manage to convert all loyalist buildings to our cause, it would be a tremendous victory for our cause!
+
+You will only have until morning to carry out this mission, your disguise won’t hold with day light.
+
+Good luck soldier!
+"
 visible_characters = -1
 percent_visible = 1.0
 
