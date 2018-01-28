@@ -13,9 +13,9 @@ func _process(delta):
 	if alert_state > 0:
 		alert_state -= ALERT_RELAXATION
 	if(get_node("Perspective/RebelGuy").has_radio):
-		get_node("Interface/RadioIcon").set_texture(load("res://resources/images/radio-icon.png"))
+		get_node("Interface/RadioIcon").show()
 	else:
-		get_node("Interface/RadioIcon").set_texture(load("res://resources/images/no-radio-icon.png"))
+		get_node("Interface/RadioIcon").hide()
 	if(victory_points <= 0):
 		var remaining_time = get_node("Interface/Timer").get_remaining_time()
 		State.set_remaining_time(remaining_time)

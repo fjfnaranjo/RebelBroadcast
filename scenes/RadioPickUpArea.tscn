@@ -10,6 +10,8 @@ extents = Vector2( 10, 10 )
 
 [node name="RadioPickUpArea" type="Area2D"]
 
+transform/pos = Vector2( -0.989773, -0.413397 )
+transform/scale = Vector2( 1.45959, 1.30277 )
 input/pickable = true
 shapes/0/shape = SubResource( 1 )
 shapes/0/transform = Matrix32( 1.16694, 0, 0, 1.20755, 0.666451, -0.242971 )
@@ -30,6 +32,8 @@ _update_shape_index = 0
 
 [node name="Sprite" type="Sprite" parent="."]
 
+transform/pos = Vector2( 0.657797, 0.00810435 )
+transform/scale = Vector2( 0.567897, 0.536804 )
 texture = ExtResource( 2 )
 
 
