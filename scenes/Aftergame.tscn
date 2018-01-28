@@ -13,6 +13,12 @@ visibility/visible = false
 transform/pos = Vector2( 960, 540 )
 texture = ExtResource( 2 )
 
+[node name="VictorySprite" type="Sprite" parent="."]
+
+visibility/visible = false
+transform/pos = Vector2( 960, 540 )
+texture = ExtResource( 2 )
+
 [node name="Result" type="Node2D" parent="."]
 
 transform/pos = Vector2( 940, 100 )

@@ -11,6 +11,7 @@ func _ready():
 	var score = ""
 	
 	if (State.win):
+		get_node("VictorySprite").show()
 		State.play_song("victory_theme")
 		result = "   VICTORY!"
 		text = "There are people  in the streets asking for the resignation of the Dictator. The Revolution begins now"
