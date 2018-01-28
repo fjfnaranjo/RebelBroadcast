@@ -9,8 +9,8 @@ func _ready():
 	set_process(true)
 	
 func _process(delta):
-	var alert_level = get_parent().get_alert_state()
-	var max_alert = get_parent().get_max_alert_state()
+	var alert_level = get_parent().get_parent().get_alert_state()
+	var max_alert = get_parent().get_parent().get_max_alert_state()
 	var normal_showed_bar = alert_level/max_alert
 	
 	get_node("Bar").set_region_rect(Rect2(0,0,normal_showed_bar * MAX_REGION_SIZE,8))
