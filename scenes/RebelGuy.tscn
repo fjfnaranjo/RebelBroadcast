@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=1]
+[gd_scene load_steps=6 format=1]
 
 [ext_resource path="res://scenes/RebelGuy.gd" type="Script" id=1]
 [ext_resource path="res://resources/images/rebelguy-dark.png" type="Texture" id=2]
 [ext_resource path="res://scenes/GuyAnimation.gd" type="Script" id=3]
+[ext_resource path="res://resources/images/bubble.png" type="Texture" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -37,5 +38,12 @@ texture = ExtResource( 2 )
 region = true
 region_rect = Rect2( 0, 0, 64, 64 )
 script/script = ExtResource( 3 )
+
+[node name="Bubble" type="Sprite" parent="."]
+
+visibility/visible = false
+transform/pos = Vector2( 10.6526, -42.6407 )
+transform/scale = Vector2( 0.458911, 0.458911 )
+texture = ExtResource( 4 )
 
 

@@ -6,6 +6,10 @@ export var has_radio = false
 
 const base_diff = 24
 
+const BUBBLE_COUNTDOWN = 1
+var countdown = BUBBLE_COUNTDOWN
+var bubble_appears = false
+
 const _UI_UP = "ui_up"
 const _UI_DOWN = "ui_down"  
 const _UI_RIGHT = "ui_right"
@@ -28,6 +32,12 @@ func _process(delta):
 
 	move( speed*delta )
 	get_node("Sprite").update_animation(speed.normalized(), delta)
+	
+	if (bubble_appears and countdown > 0 ):
+		countdown -= delta
+	if (bubble_appears and countdown <= 0 ):
+		get_node("Bubble").hide()
+		bubble_appears = false
 
 func _check_controls():
 	if(Input.is_action_pressed(_UI_UP)):
@@ -55,6 +65,9 @@ func _place_radio():
 
 func obtain_radio():
 	State.play_sample("pick_radio")
+	get_node("Bubble").show()
+	bubble_appears = true
+	countdown = BUBBLE_COUNTDOWN
 	has_radio = true
 	
 	
