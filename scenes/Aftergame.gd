@@ -1,5 +1,8 @@
 extends Node
 
+const VICTORY_SENTENCES = [""]
+const DEFEAT_SENTENCES = [""]
+
 func _ready():
 	set_process_input(true)
 	
