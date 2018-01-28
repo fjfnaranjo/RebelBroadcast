@@ -4,6 +4,8 @@ export var speed = Vector2(0,0)
 
 export var has_radio = false
 
+const base_diff = 24
+
 const _UI_UP = "ui_up"
 const _UI_DOWN = "ui_down"  
 const _UI_RIGHT = "ui_right"
@@ -16,10 +18,13 @@ func _ready():
 	add_to_group("rebel_guys")
 	set_process(true)
 	set_process_input(true)
+	set_z(get_pos().y+base_diff)
 
 func _process(delta):
 	_check_controls()
 	_check_collisions()
+
+	set_z(get_pos().y+base_diff)
 
 	move( speed*delta )
 	get_node("Sprite").update_animation(speed.normalized(), delta)
