@@ -10,7 +10,6 @@ func _ready():
 	set_process(true)
 
 func _process(delta):
-	victory_points = 0 #debug
 	if alert_state > 0:
 		alert_state -= ALERT_RELAXATION
 	if(get_node("Perspective/RebelGuy").has_radio):
