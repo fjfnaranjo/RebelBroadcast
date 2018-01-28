@@ -18,6 +18,7 @@ func _ready():
 	_vision = get_node("Vision")
 	set_process(true)
 	set_z(get_pos().y+base_diff)
+	get_node("Exclamation").hide()
 
 func _process(delta):
 	if(not State.active_scene.has_node(_route[_next_destination_idx])):
@@ -49,6 +50,7 @@ func _process(delta):
 			if(State.active_scene.has_method("get_alert_state") and State.active_scene.alert_state >= State.active_scene.MAX_ALERT):
 				State.game_over()
 			break
+
 	for wave in get_tree().get_nodes_in_group("waves"):
 		var things = wave.get_overlapping_bodies()
 		for thing in things:
@@ -58,6 +60,10 @@ func _process(delta):
 		if rebel_spotted:
 			State.game_over()	
 	
+	if(rebel_spotted or radio_spotted):
+		get_node("Exclamation").show()
+	else:
+		get_node("Exclamation").hide()
 
 func point_reached(RP_name):
 	if(RP_name == _route[_next_destination_idx]):

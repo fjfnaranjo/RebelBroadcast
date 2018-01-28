@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=1]
+[gd_scene load_steps=7 format=1]
 
 [ext_resource path="res://scenes/Badguy.gd" type="Script" id=1]
 [ext_resource path="res://resources/images/bagguy-dark.png" type="Texture" id=2]
 [ext_resource path="res://scenes/GuyAnimation.gd" type="Script" id=3]
+[ext_resource path="res://resources/images/exclamation.png" type="Texture" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -59,5 +60,10 @@ texture = ExtResource( 2 )
 region = true
 region_rect = Rect2( 0, 0, 64, 64 )
 script/script = ExtResource( 3 )
+
+[node name="Exclamation" type="Sprite" parent="."]
+
+transform/pos = Vector2( 17.3209, -38.4625 )
+texture = ExtResource( 4 )
 
 
