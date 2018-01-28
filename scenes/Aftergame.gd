@@ -10,15 +10,16 @@ func _ready():
 	var result = ""
 	if (State.win):
 		State.play_song("victory_theme")
-		result = "VICTORY!"
+		result = "   VICTORY!"
 		text = "There are people  in the streets asking for the resignation of the Dictator. The Revolution begins now"
 	else:
+		get_node("DefeatSprite").show()
 		State.play_song("spotted_plus_gameover")
-		result = "DEFEAT!"
+		result = "    DEFEAT!"
 		text = "You are in the hands of the Political Police. The Revolution is over before it started.."
 	
-	get_node("Result").set_text(result)
-	get_node("Text").set_text(text)
+	get_node("Result").get_node("Text").set_text(result)
+	get_node("Text").get_node("Text").set_text(text)
 
 func _input(event):
 	if(event.is_action_pressed("reload")):

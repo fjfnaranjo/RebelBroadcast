@@ -1,59 +1,115 @@
-[gd_scene load_steps=2 format=1]
+[gd_scene load_steps=3 format=1]
 
 [ext_resource path="res://scenes/Aftergame.gd" type="Script" id=1]
+[ext_resource path="res://resources/images/defeat.jpg" type="Texture" id=2]
 
 [node name="Aftergame" type="Node"]
 
 script/script = ExtResource( 1 )
 
-[node name="Result" type="Label" parent="."]
+[node name="DefeatSprite" type="Sprite" parent="."]
 
-focus/ignore_mouse = true
+visibility/visible = false
+transform/pos = Vector2( 960, 540 )
+texture = ExtResource( 2 )
+
+[node name="Result" type="Node2D" parent="."]
+
+transform/pos = Vector2( 940, 100 )
+transform/scale = Vector2( 3, 3 )
+
+[node name="Panel" type="Panel" parent="Result"]
+
+visibility/opacity = 0.9
+focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 6.0
-margin/top = 151.0
-margin/right = 1919.0
-margin/bottom = 311.0
-align = 1
-valign = 1
-autowrap = true
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
+size_flags/vertical = 2
+margin/left = -43.0
+margin/top = 7.0
+margin/right = 70.0
+margin/bottom = 30.0
 
-[node name="Text" type="Label" parent="."]
+[node name="Text" type="RichTextLabel" parent="Result"]
 
-focus/ignore_mouse = true
+focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 613.0
-margin/top = 348.0
-margin/right = 1300.0
-margin/bottom = 669.0
-align = 1
-valign = 1
-autowrap = true
+size_flags/vertical = 2
+margin/left = -29.0
+margin/top = 10.0
+margin/right = 56.0
+margin/bottom = 26.0
+custom_colors/default_color = Color( 0.929412, 0.105882, 0.141176, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
 percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
-[node name="Controls" type="Label" parent="."]
+[node name="Text" type="Node2D" parent="."]
 
-focus/ignore_mouse = true
+transform/pos = Vector2( 960, 530 )
+transform/scale = Vector2( 1.8, 1.8 )
+
+[node name="Panel" type="Panel" parent="Text"]
+
+visibility/opacity = 0.9
+focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 3.0
-margin/top = 808.0
-margin/right = 1928.0
-margin/bottom = 878.0
-text = "R - Reload                                     ESC - Exit                           "
-align = 1
+size_flags/vertical = 2
+margin/left = -171.0
+margin/top = -5.0
+margin/right = 211.0
+margin/bottom = 45.0
+
+[node name="Text" type="RichTextLabel" parent="Text"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -133.0
+margin/top = 2.0
+margin/right = 172.0
+margin/bottom = 39.0
+custom_colors/default_color = Color( 0.741176, 0.282353, 0.4, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
 percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
+
+[node name="Controls" type="Node2D" parent="."]
+
+transform/pos = Vector2( 960, 900 )
+transform/scale = Vector2( 1.8, 1.8 )
+
+[node name="Panel" type="Panel" parent="Controls"]
+
+visibility/opacity = 0.9
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -159.0
+margin/top = 11.0
+margin/right = 200.0
+margin/bottom = 41.0
+
+[node name="Text" type="RichTextLabel" parent="Controls"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -288.0
+margin/top = 19.0
+margin/right = 328.0
+margin/bottom = 40.0
+custom_colors/default_color = Color( 0.929412, 0.105882, 0.141176, 1 )
+bbcode/enabled = false
+bbcode/bbcode = "                                          R - Reload                                     ESC - Exit                        "
+visible_characters = -1
+percent_visible = 1.0
 
 
