@@ -5,7 +5,7 @@ var timer
 const MAX_TIME = 300
 const ALMOST_OVER = 30
 var ALMOST_OVER_COLOR = Color(255,0,0)
-var NORMAL_COLOR =Color(255,255,255)
+var NORMAL_COLOR = Color(255,255,255)
 
 func _ready():
 	set_process(true)

@@ -15,6 +15,7 @@ script/script = ExtResource( 2 )
 transform/scale = Vector2( 1, 1 )
 texture = ExtResource( 3 )
 centered = false
+modulate = Color( 0.929688, 0.915161, 0.915161, 1 )
 region = true
 region_rect = Rect2( 0, 0, 90, 8 )
 
