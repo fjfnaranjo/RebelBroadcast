@@ -3,7 +3,7 @@ extends Node
 var victory_points = 0
 var alert_state = 0.0
 
-const ALERT_RELAXATION = 0.5 / 60
+const ALERT_RELAXATION = 0.3 / 60
 const MAX_ALERT = 100
 
 func _ready():

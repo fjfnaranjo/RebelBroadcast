@@ -7,7 +7,7 @@ var still_loyal = true
 
 var broadcasting = false
 
-const CAPTURED_BUILDING_ALERT = 0
+const CAPTURED_BUILDING_ALERT = 1
 
 func _ready():
 	set_process(true)
