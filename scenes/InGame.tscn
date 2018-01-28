@@ -226,11 +226,22 @@ _route = [ "RG1/RP25", "RG1/RP26", "RG1/RP27", "RG1/RP28" ]
 
 [node name="Interface" type="CanvasLayer" parent="."]
 
-editor/display_folded = true
 layer = 1
 offset = Vector2( 0, 0 )
 rotation = 0.0
 scale = Vector2( 1, 1 )
+
+[node name="Panel" type="Panel" parent="Interface"]
+
+visibility/self_opacity = 0.7
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 202.0
+margin/bottom = 99.0
 
 [node name="RadioPlaceholders" type="Node" parent="Interface"]
 
@@ -256,16 +267,17 @@ transform/pos = Vector2( 224.001, 17 )
 
 [node name="RadioIcon" type="Sprite" parent="Interface"]
 
-transform/pos = Vector2( 160.955, 44.408 )
+transform/pos = Vector2( 167.955, 44.408 )
 texture = ExtResource( 16 )
 
 [node name="DangerBar" parent="Interface" instance=ExtResource( 17 )]
 
-transform/pos = Vector2( 22.6412, 66.3349 )
+transform/pos = Vector2( 19.5599, 70.4401 )
+transform/scale = Vector2( 0.726611, 1 )
 
 [node name="Timer" parent="Interface" instance=ExtResource( 18 )]
 
-transform/pos = Vector2( 83, 41 )
+transform/pos = Vector2( 81.6796, 41 )
 transform/scale = Vector2( 2.0625, 0.78125 )
 
 [node name="Limits" type="Node" parent="."]
