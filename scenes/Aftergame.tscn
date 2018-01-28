@@ -13,9 +13,15 @@ visibility/visible = false
 transform/pos = Vector2( 960, 540 )
 texture = ExtResource( 2 )
 
+[node name="VictorySprite" type="Sprite" parent="."]
+
+visibility/visible = false
+transform/pos = Vector2( 960, 540 )
+texture = ExtResource( 2 )
+
 [node name="Result" type="Node2D" parent="."]
 
-transform/pos = Vector2( 940, 100 )
+transform/pos = Vector2( 936.299, 3.76785 )
 transform/scale = Vector2( 3, 3 )
 
 [node name="Panel" type="Panel" parent="Result"]
@@ -37,9 +43,9 @@ focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = -29.0
-margin/top = 10.0
+margin/top = 11.0
 margin/right = 56.0
-margin/bottom = 26.0
+margin/bottom = 27.0
 custom_colors/default_color = Color( 0.929412, 0.105882, 0.141176, 1 )
 bbcode/enabled = false
 bbcode/bbcode = ""
@@ -58,10 +64,10 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -171.0
-margin/top = -5.0
-margin/right = 211.0
-margin/bottom = 45.0
+margin/left = -175.0
+margin/top = 28.0
+margin/right = 207.0
+margin/bottom = 97.0
 
 [node name="Text" type="RichTextLabel" parent="Text"]
 
@@ -69,12 +75,45 @@ focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = -133.0
-margin/top = 2.0
-margin/right = 172.0
-margin/bottom = 39.0
+margin/left = -136.0
+margin/top = 36.0
+margin/right = 169.0
+margin/bottom = 88.0
 custom_colors/default_color = Color( 0.741176, 0.282353, 0.4, 1 )
 bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
+percent_visible = 1.0
+
+[node name="Score" type="Node2D" parent="."]
+
+transform/pos = Vector2( 958.149, 455.976 )
+transform/scale = Vector2( 1.8, 1.8 )
+
+[node name="Panel" type="Panel" parent="Score"]
+
+visibility/opacity = 0.9
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -81.0
+margin/top = -198.0
+margin/right = 104.0
+margin/bottom = -127.0
+
+[node name="Text" type="RichTextLabel" parent="Score"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -80.0
+margin/top = -189.0
+margin/right = 103.0
+margin/bottom = -127.0
+custom_colors/default_color = Color( 0.741176, 0.282353, 0.4, 1 )
+bbcode/enabled = true
 bbcode/bbcode = ""
 visible_characters = -1
 percent_visible = 1.0
