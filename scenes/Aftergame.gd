@@ -19,4 +19,5 @@ func _ready():
 
 func _input(event):
 	if(event.is_action_pressed("reload")):
+		State.play_song("main_theme")
 		State.change_scene("res://scenes/InGame.tscn")
