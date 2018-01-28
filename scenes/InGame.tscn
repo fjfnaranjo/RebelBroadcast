@@ -481,6 +481,5 @@ _route = [ "RG1/RP25", "RG1/RP26", "RG1/RP27", "RG1/RP28" ]
 [node name="DangerBar" parent="." instance=ExtResource( 20 )]
 
 transform/pos = Vector2( 22.6412, 66.3349 )
-region_rect = Rect2( 0, 0, 220, 8 )
 
 
