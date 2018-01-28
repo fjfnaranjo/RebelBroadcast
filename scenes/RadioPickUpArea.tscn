@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=5 format=1]
 
 [ext_resource path="res://scenes/RadioPickUpArea.gd" type="Script" id=1]
-[ext_resource path="res://resources/images/radio-item.png" type="Texture" id=2]
+[ext_resource path="res://resources/images/sewer.png" type="Texture" id=2]
+[ext_resource path="res://resources/images/radio-item.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -30,10 +31,16 @@ shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
 
+[node name="Background" type="Sprite" parent="."]
+
+transform/pos = Vector2( 0.241425, -0.241425 )
+transform/scale = Vector2( 1.01509, 1.01509 )
+texture = ExtResource( 2 )
+
 [node name="Sprite" type="Sprite" parent="."]
 
 transform/pos = Vector2( 0.657797, 0.00810435 )
 transform/scale = Vector2( 0.567897, 0.536804 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 
