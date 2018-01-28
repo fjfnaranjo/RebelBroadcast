@@ -28,4 +28,37 @@ max_lines_visible = -1
 transform/pos = Vector2( 960, 540 )
 texture = ExtResource( 2 )
 
+[node name="Node2D" type="Node2D" parent="."]
+
+transform/pos = Vector2( 670, 960 )
+transform/scale = Vector2( 1.8, 1.8 )
+
+[node name="Panel" type="Panel" parent="Node2D"]
+
+visibility/opacity = 0.8
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 61.0
+margin/top = 6.0
+margin/right = 294.0
+margin/bottom = 50.0
+
+[node name="Text" type="RichTextLabel" parent="Node2D"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 72.0
+margin/top = 23.0
+margin/right = 283.0
+margin/bottom = 41.0
+custom_colors/default_color = Color( 0.843137, 0.294118, 0.294118, 1 )
+bbcode/enabled = false
+bbcode/bbcode = ""
+visible_characters = -1
+percent_visible = 1.0
+
 
