@@ -27,7 +27,7 @@ base_diff = 128
 
 [node name="Sprite" type="Sprite" parent="."]
 
-transform/pos = Vector2( 0, -5 )
+transform/pos = Vector2( 3.59241, -5 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
