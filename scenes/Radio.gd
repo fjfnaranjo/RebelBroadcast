@@ -5,9 +5,7 @@ const FINDING_RADIO_ALERT = 5
 func _ready():
 	add_to_group("radios")
 	set_process(true)
-	var message_instance = load("res://scenes/BroadcastMessage.tscn").instance()
-	get_parent().add_child(message_instance)
-	message_instance.set_pos(get_pos())
+	var message_instance = State.active_scene.get_node("Interface/BroadcastMessage")
 	message_instance.new_broadcast()
 
 func _process(delta):
