@@ -18,6 +18,7 @@ func _ready():
 	else:
 		loyalty = 0
 		still_loyal = false
+	set_z(get_pos().y+base_diff)
 
 func _process(delta):
 	if get_node("Flags").get_children().size() > loyalty:
