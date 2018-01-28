@@ -30,6 +30,7 @@ func _process(delta):
 		target = State.active_scene.get_node(_route[_next_destination_idx])
 	var direction = (target.get_pos()-get_pos()).normalized()
 	move(direction*delta*speed)
+	get_node("Vision").set_rot(direction.angle() + PI)
 	get_node("Sprite").update_animation(direction, delta)
 
 	set_z(get_pos().y+base_diff)
@@ -38,7 +39,7 @@ func _process(delta):
 	var rebel_spotted = false
 	for area in _vision.get_overlapping_areas():
 		if area.is_in_group("radios"):
-			spotted_radio = weakref(area)
+			spot_radio(area)
 			break
 	for body in _vision.get_overlapping_bodies():
 		if body.is_in_group("rebel_guys"):
@@ -48,6 +49,11 @@ func _process(delta):
 			if(State.active_scene.has_method("get_alert_state") and State.active_scene.alert_state >= State.active_scene.MAX_ALERT):
 				State.game_over()
 			break
+	for wave in get_tree().get_nodes_in_group("waves"):
+		var things = wave.get_overlapping_bodies()
+		for thing in things:
+			if(thing == self ):
+				spot_radio(wave.get_parent())
 	if (spotted_radio and spotted_radio.get_ref()):
 		if rebel_spotted:
 			State.game_over()	
@@ -56,3 +62,6 @@ func _process(delta):
 func point_reached(RP_name):
 	if(RP_name == _route[_next_destination_idx]):
 		_next_destination_idx = (_next_destination_idx + 1) % _route.size()
+
+func spot_radio(radio):
+	spotted_radio = weakref(radio)
