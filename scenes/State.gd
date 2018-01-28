@@ -13,7 +13,7 @@ const MUSIC_EXTENSION = ".ogg"
 func add_score_point():
 	score+=1
 	
-func get_score_point():
+func get_score_points():
 	return score
 	
 func set_remaining_time(remaining):

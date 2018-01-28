@@ -35,7 +35,7 @@ func _capture_building():
 	State.play_sample("building_converted") 
 	if (State.active_scene.has_method("reduce_victory_points")):
 		State.active_scene.reduce_victory_points()
+		State.add_score_point()
 	if(State.active_scene.has_method("increase_alert")):
 		State.active_scene.increase_alert(CAPTURED_BUILDING_ALERT)
-
 	still_loyal = false
