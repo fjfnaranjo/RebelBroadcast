@@ -10,7 +10,7 @@ source_file="res://resources/images/bagguy-dark.png"
 source_md5="bbf75618d09e98abf2f0710775fda2a8"
 
 dest_files=[ "res://.import/bagguy-dark.png-82e3528af5c760290f371e0ee4224583.stex" ]
-dest_md5="7c53989d3cdfcb2b889df103bbc4234a"
+dest_md5="c3b4460969fe423b2a286d969423c09c"
 
 [params]
 
@@ -18,7 +18,7 @@ compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
-flags/repeat=0
+flags/repeat=1
 flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false

@@ -73,12 +73,15 @@ visible = false
 
 position = Vector2( 39.6989, -29.9188 )
 
-[node name="BuildingConverted" type="AudioStreamPlayer" parent="." index="5"]
+[node name="BuildingConverted" type="AudioStreamPlayer2D" parent="." index="5"]
 
 stream = ExtResource( 5 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = false
-mix_target = 0
+max_distance = 2000.0
+attenuation = 1.0
 bus = "Master"
+area_mask = 1
 
 

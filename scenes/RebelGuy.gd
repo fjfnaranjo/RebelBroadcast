@@ -64,11 +64,16 @@ func _place_radio():
 	get_node("RadioChatter").play()
 
 func obtain_radio():
-	get_node("PickRadio").play()
-	get_node("Bubble").show()
-	bubble_appears = true
-	countdown = BUBBLE_COUNTDOWN
-	has_radio = true
+	if has_radio:
+		return false
+	else:
+		get_node("PickRadio").play()
+		get_node("Bubble").show()
+		bubble_appears = true
+		countdown = BUBBLE_COUNTDOWN
+		has_radio = true
+		return true
+	
 	
 	
 func _check_collisions():

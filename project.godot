@@ -10,11 +10,10 @@ config_version=3
 
 [application]
 
+config/name="RebelBroadcast"
 run/main_scene="res://scenes/Game.tscn"
-boot_splash="res://resources/images/splash_screen.png"
-icon="res://logo_mini.png"
-main_scene="res://scenes/Game.tscn"
-name="RadioResistance"
+boot_splash/image="res://resources/images/splash_screen.png"
+config/icon="res://logo_mini.png"
 
 [autoload]
 
@@ -30,10 +29,6 @@ stretch/mode="2d"
 window/fullscreen=true
 window/height=1080
 window/width=1920
-
-[fullscreen]
-
-=false
 
 [input]
 

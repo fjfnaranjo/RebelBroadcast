@@ -10,7 +10,7 @@ source_file="res://resources/sounds/building_converted.wav"
 source_md5="90b6bf7b89e30f290880bdedae04198e"
 
 dest_files=[ "res://.import/building_converted.wav-7a3b8cbcc8fa1cdfc67a9d3e51b8508e.sample" ]
-dest_md5="1cc12d0bd2c5b387278833a351c880d6"
+dest_md5="22e19a7c9b4e49291d4ab5fb266ed911"
 
 [params]
 

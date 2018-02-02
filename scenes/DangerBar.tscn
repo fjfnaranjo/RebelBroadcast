@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://resources/images/danger_bar_box.png" type="Texture" id=1]
 [ext_resource path="res://scenes/DangerBar.gd" type="Script" id=2]
@@ -10,11 +10,12 @@ texture = ExtResource( 1 )
 centered = false
 script = ExtResource( 2 )
 
-[node name="Bar" type="Sprite" parent="."]
+[node name="Bar" type="Sprite" parent="." index="0"]
 
-scale = Vector2( 1, 1 )
+self_modulate = Color( 0.929688, 0.915161, 0.915161, 1 )
 texture = ExtResource( 3 )
 centered = false
-self_modulate = Color( 0.929688, 0.915161, 0.915161, 1 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 90, 8 )
+
+

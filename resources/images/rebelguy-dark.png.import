@@ -10,7 +10,7 @@ source_file="res://resources/images/rebelguy-dark.png"
 source_md5="dac9906152411866d5167e2e988277e1"
 
 dest_files=[ "res://.import/rebelguy-dark.png-0f19120b5ea3a1d38aa2be963bd2238f.stex" ]
-dest_md5="e41d44bb43b9460d2707011c2b03a975"
+dest_md5="f1dad0590814110252b5419b30e1d32e"
 
 [params]
 
@@ -18,7 +18,7 @@ compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/normal_map=0
-flags/repeat=0
+flags/repeat=1
 flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false

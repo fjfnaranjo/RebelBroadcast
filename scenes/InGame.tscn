@@ -1,4 +1,4 @@
-[gd_scene load_steps=110 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://scenes/InGame.gd" type="Script" id=1]
 [ext_resource path="res://resources/images/bglevel1.png" type="Texture" id=2]
@@ -35,371 +35,426 @@ extents = Vector2( 10, 10 )
 
 script = ExtResource( 1 )
 
-[node name="Background" type="Sprite" parent="."]
+[node name="Background" type="Sprite" parent="." index="0"]
 
 position = Vector2( 960, 539 )
 texture = ExtResource( 2 )
 
-[node name="Perspective" type="Node2D" parent="."]
+[node name="Perspective" type="Node2D" parent="." index="1"]
 
-editor/display_folded = true
+[node name="Buildings" type="Node" parent="Perspective" index="0"]
 
-[node name="Buildings" type="Node" parent="Perspective"]
-
-editor/display_folded = true
-
-[node name="B1" parent="Perspective/Buildings" instance=ExtResource( 3 )]
+[node name="B1" parent="Perspective/Buildings" index="0" instance=ExtResource( 3 )]
 
 position = Vector2( 1386.51, 520.002 )
 
-[node name="B2" parent="Perspective/Buildings" instance=ExtResource( 3 )]
+[node name="B2" parent="Perspective/Buildings" index="1" instance=ExtResource( 3 )]
 
 editor/display_folded = true
 position = Vector2( 1928.33, 1080.75 )
 
-[node name="Flag" parent="Perspective/Buildings/B2/Flags"]
+[node name="Flag" parent="Perspective/Buildings/B2/Flags" index="0"]
 
 position = Vector2( -23, -39.072 )
 
-[node name="Flag 2" parent="Perspective/Buildings/B2/Flags"]
+[node name="Flag 2" parent="Perspective/Buildings/B2/Flags" index="1"]
 
 position = Vector2( -23, -15 )
 
-[node name="B3" parent="Perspective/Buildings" instance=ExtResource( 3 )]
+[node name="B3" parent="Perspective/Buildings" index="2" instance=ExtResource( 3 )]
 
 position = Vector2( 840.339, 887.929 )
 
-[node name="B4" parent="Perspective/Buildings" instance=ExtResource( 3 )]
+[node name="B4" parent="Perspective/Buildings" index="3" instance=ExtResource( 3 )]
 
 position = Vector2( 1384.27, 1017.75 )
 
-[node name="B5" parent="Perspective/Buildings" instance=ExtResource( 3 )]
+[node name="B5" parent="Perspective/Buildings" index="4" instance=ExtResource( 3 )]
 
 editor/display_folded = true
 position = Vector2( 1927.75, 888.324 )
 
-[node name="Flag" parent="Perspective/Buildings/B5/Flags"]
+[node name="Flag" parent="Perspective/Buildings/B5/Flags" index="0"]
 
 position = Vector2( -20, -39.072 )
 
-[node name="Flag 2" parent="Perspective/Buildings/B5/Flags"]
+[node name="Flag 2" parent="Perspective/Buildings/B5/Flags" index="1"]
 
 position = Vector2( -20, -15 )
 
-[node name="B6" parent="Perspective/Buildings" instance=ExtResource( 4 )]
+[node name="B6" parent="Perspective/Buildings" index="5" instance=ExtResource( 4 )]
 
 editor/display_folded = true
 position = Vector2( 1926.17, 584.024 )
 
-[node name="Flag" parent="Perspective/Buildings/B6/Flags"]
+[node name="Flag" parent="Perspective/Buildings/B6/Flags" index="0"]
 
 position = Vector2( -25, -9.51889 )
 
-[node name="Flag 2" parent="Perspective/Buildings/B6/Flags"]
+[node name="Flag 2" parent="Perspective/Buildings/B6/Flags" index="1"]
 
 position = Vector2( -25, 20 )
 
-[node name="Flag 3" parent="Perspective/Buildings/B6/Flags"]
+[node name="Flag 3" parent="Perspective/Buildings/B6/Flags" index="2"]
 
 position = Vector2( -25, -70.061 )
 
-[node name="B7" parent="Perspective/Buildings" instance=ExtResource( 4 )]
+[node name="B7" parent="Perspective/Buildings" index="6" instance=ExtResource( 4 )]
 
 position = Vector2( 326.177, 822.251 )
 
-[node name="B8" parent="Perspective/Buildings" instance=ExtResource( 4 )]
+[node name="B8" parent="Perspective/Buildings" index="7" instance=ExtResource( 4 )]
 
 position = Vector2( 1267.88, 263.513 )
 
-[node name="B9" parent="Perspective/Buildings" instance=ExtResource( 5 )]
+[node name="B9" parent="Perspective/Buildings" index="8" instance=ExtResource( 5 )]
 
 position = Vector2( 1015.77, 70.2063 )
 
-[node name="B10" parent="Perspective/Buildings" instance=ExtResource( 5 )]
+[node name="B10" parent="Perspective/Buildings" index="9" instance=ExtResource( 5 )]
 
 position = Vector2( 1524.4, 262.218 )
 
-[node name="B11" parent="Perspective/Buildings" instance=ExtResource( 5 )]
+[node name="B11" parent="Perspective/Buildings" index="10" instance=ExtResource( 5 )]
 
 position = Vector2( 1847.96, 262.219 )
 
-[node name="B12" parent="Perspective/Buildings" instance=ExtResource( 6 )]
+[node name="B12" parent="Perspective/Buildings" index="11" instance=ExtResource( 6 )]
 
 position = Vector2( 1913.43, 8.02652 )
 
-[node name="B13" parent="Perspective/Buildings" instance=ExtResource( 6 )]
+[node name="Flag" parent="Perspective/Buildings/B12/Flags" index="0"]
+
+position = Vector2( -10, 15 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="Flag 2" parent="Perspective/Buildings/B12/Flags" index="1"]
+
+position = Vector2( -40, 0.399523 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Flag 3" parent="Perspective/Buildings/B12/Flags" index="2"]
+
+position = Vector2( -70, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="B13" parent="Perspective/Buildings" index="12" instance=ExtResource( 6 )]
 
 position = Vector2( 1015.57, 327.943 )
 
-[node name="B14" parent="Perspective/Buildings" instance=ExtResource( 6 )]
+[node name="B14" parent="Perspective/Buildings" index="13" instance=ExtResource( 6 )]
 
 editor/display_folded = true
 position = Vector2( 1336.93, 6.3881 )
 
-[node name="Flag" parent="Perspective/Buildings/B14/Flags"]
+[node name="Flag" parent="Perspective/Buildings/B14/Flags" index="0"]
 
 position = Vector2( 10.0343, 10 )
 
-[node name="Flag 3" parent="Perspective/Buildings/B14/Flags"]
+[node name="Flag 3" parent="Perspective/Buildings/B14/Flags" index="2"]
 
 position = Vector2( -50.2802, 0 )
 
-[node name="B15" parent="Perspective/Buildings" instance=ExtResource( 6 )]
+[node name="B15" parent="Perspective/Buildings" index="14" instance=ExtResource( 6 )]
 
 editor/display_folded = true
 position = Vector2( 1625.05, 7.04678 )
 
-[node name="Flag" parent="Perspective/Buildings/B15/Flags"]
+[node name="Flag" parent="Perspective/Buildings/B15/Flags" index="0"]
 
 position = Vector2( 10.0343, 10 )
 
-[node name="Flag 3" parent="Perspective/Buildings/B15/Flags"]
+[node name="Flag 3" parent="Perspective/Buildings/B15/Flags" index="2"]
 
 position = Vector2( -50.2802, 0 )
 
-[node name="Building" parent="Perspective/Buildings" instance=ExtResource( 7 )]
+[node name="Building" parent="Perspective/Buildings" index="15" instance=ExtResource( 7 )]
 
 position = Vector2( 1672.78, 584.15 )
 
-[node name="Building 2" parent="Perspective/Buildings" instance=ExtResource( 8 )]
+[node name="Building 2" parent="Perspective/Buildings" index="16" instance=ExtResource( 8 )]
 
 position = Vector2( 1098.16, 583.775 )
 
-[node name="Building 3" parent="Perspective/Buildings" instance=ExtResource( 9 )]
+[node name="Building 3" parent="Perspective/Buildings" index="17" instance=ExtResource( 9 )]
 
 position = Vector2( 1673.34, 951.173 )
 
-[node name="Building 4" parent="Perspective/Buildings" instance=ExtResource( 10 )]
+[node name="Building 4" parent="Perspective/Buildings" index="18" instance=ExtResource( 10 )]
 
 position = Vector2( 1096.21, 951.925 )
 
-[node name="Building 5" parent="Perspective/Buildings" instance=ExtResource( 3 )]
+[node name="Building 5" parent="Perspective/Buildings" index="19" instance=ExtResource( 3 )]
 
 position = Vector2( 842.459, 1079.53 )
 
-[node name="Building 6" parent="Perspective/Buildings" instance=ExtResource( 5 )]
+[node name="Building 6" parent="Perspective/Buildings" index="20" instance=ExtResource( 5 )]
 
 position = Vector2( 583.3, 822.759 )
 
-[node name="Building 7" parent="Perspective/Buildings" instance=ExtResource( 6 )]
+[node name="Building 7" parent="Perspective/Buildings" index="21" instance=ExtResource( 6 )]
 
 position = Vector2( 586.058, 1080.16 )
 
-[node name="Building 8" parent="Perspective/Buildings" instance=ExtResource( 6 )]
+[node name="Building 8" parent="Perspective/Buildings" index="22" instance=ExtResource( 6 )]
 
 position = Vector2( 265.965, 1079.71 )
 
-[node name="Building 9" parent="Perspective/Buildings" instance=ExtResource( 3 )]
+[node name="Building 9" parent="Perspective/Buildings" index="23" instance=ExtResource( 3 )]
 
 position = Vector2( 9.09891, 1078.8 )
 
-[node name="Building 10" parent="Perspective/Buildings" instance=ExtResource( 5 )]
+[node name="Building 10" parent="Perspective/Buildings" index="24" instance=ExtResource( 5 )]
 
 position = Vector2( 71.4267, 820.989 )
 
-[node name="Building 12" parent="Perspective/Buildings" instance=ExtResource( 5 )]
+[node name="Building 12" parent="Perspective/Buildings" index="25" instance=ExtResource( 5 )]
 
 position = Vector2( 71.9277, 470.53 )
 
-[node name="Building 13" parent="Perspective/Buildings" instance=ExtResource( 4 )]
+[node name="Building 13" parent="Perspective/Buildings" index="26" instance=ExtResource( 4 )]
 
 position = Vector2( 326.932, 471.344 )
 
-[node name="Building 14" parent="Perspective/Buildings" instance=ExtResource( 3 )]
+[node name="Building 14" parent="Perspective/Buildings" index="27" instance=ExtResource( 3 )]
 
 position = Vector2( 853.722, 534.659 )
 
-[node name="Building 15" parent="Perspective/Buildings" instance=ExtResource( 6 )]
+[node name="Building 15" parent="Perspective/Buildings" index="28" instance=ExtResource( 6 )]
 
 editor/display_folded = true
 position = Vector2( 695, 23 )
 
-[node name="Flag" parent="Perspective/Buildings/Building 15/Flags"]
+[node name="Flag" parent="Perspective/Buildings/Building 15/Flags" index="0"]
 
 position = Vector2( 10.0343, 10 )
 
-[node name="Flag 3" parent="Perspective/Buildings/Building 15/Flags"]
+[node name="Flag 3" parent="Perspective/Buildings/Building 15/Flags" index="2"]
 
 position = Vector2( -50.2802, 0 )
 
-[node name="Building 16" parent="Perspective/Buildings" instance=ExtResource( 6 )]
+[node name="Building 16" parent="Perspective/Buildings" index="29" instance=ExtResource( 6 )]
 
 position = Vector2( 697, 213 )
 
-[node name="Building 17" parent="Perspective/Buildings" instance=ExtResource( 8 )]
+[node name="Building 17" parent="Perspective/Buildings" index="30" instance=ExtResource( 8 )]
 
 position = Vector2( 377, 88.0001 )
 
-[node name="Building 18" parent="Perspective/Buildings" instance=ExtResource( 5 )]
+[node name="Building 18" parent="Perspective/Buildings" index="31" instance=ExtResource( 5 )]
 
 position = Vector2( 72.0001, 88.0001 )
 
-[node name="Building 11" parent="Perspective/Buildings" instance=ExtResource( 11 )]
+[node name="Flag" parent="Perspective/Buildings/Building 18/Flags" index="0"]
+
+position = Vector2( -22.4671, 55 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Flag 2" parent="Perspective/Buildings/Building 18/Flags" index="1"]
+
+position = Vector2( 110, 50 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Flag 3" parent="Perspective/Buildings/Building 18/Flags" index="2"]
+
+position = Vector2( -65, 35 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Flag 4" parent="Perspective/Buildings/Building 18/Flags" index="3"]
+
+position = Vector2( 60, 105 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="FlagRebels" parent="Perspective/Buildings/Building 18/FlagRebels" index="0"]
+
+position = Vector2( 5, 105 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Building 11" parent="Perspective/Buildings" index="32" instance=ExtResource( 11 )]
 
 position = Vector2( 582.894, 469.322 )
 
-[node name="RebelGuy" parent="Perspective" instance=ExtResource( 12 )]
+[node name="RebelGuy" parent="Perspective" index="1" instance=ExtResource( 12 )]
 
 position = Vector2( 29.2346, 266.702 )
 
-[node name="Badguy" parent="Perspective" instance=ExtResource( 13 )]
+[node name="Badguy" parent="Perspective" index="2" instance=ExtResource( 13 )]
 
 position = Vector2( 847.407, 978.256 )
 _route = [ "RG1/RP1", "RG1/RP2", "RG1/RP3", "RG1/RP4", "RG1/RP5", "RG1/RP6", "RG1/RP2" ]
 
-[node name="Badguy 2" parent="Perspective" instance=ExtResource( 13 )]
+[node name="Badguy 2" parent="Perspective" index="3" instance=ExtResource( 13 )]
 
 position = Vector2( 596.122, 971.258 )
 collision_layer = 2
 collision_mask = 2
 _route = [ "RG1/RP1", "RG1/RP7", "RG1/RP8", "RG1/RP9", "RG1/RP10" ]
 
-[node name="Badguy 3" parent="Perspective" instance=ExtResource( 13 )]
+[node name="Badguy 3" parent="Perspective" index="4" instance=ExtResource( 13 )]
 
 position = Vector2( 1015.09, 217.643 )
 collision_layer = 4
 collision_mask = 4
 _route = [ "RG1/RP11", "RG1/RP12", "RG1/RP13", "RG1/RP14", "RG1/RP15", "RG1/RP14", "RG1/RP13", "RG1/RP12" ]
 
-[node name="Badguy 4" parent="Perspective" instance=ExtResource( 13 )]
+[node name="Badguy 4" parent="Perspective" index="5" instance=ExtResource( 13 )]
 
 position = Vector2( 472.325, 202.091 )
 collision_layer = 8
 collision_mask = 8
 _route = [ "RG1/RP18", "RG1/RP17", "RG1/RP16", "RG1/RP21", "RG1/RP20", "RG1/RP19", "RG1/RP21", "RG1/RP16" ]
 
-[node name="Badguy 5" parent="Perspective" instance=ExtResource( 13 )]
+[node name="Badguy 5" parent="Perspective" index="6" instance=ExtResource( 13 )]
 
 position = Vector2( 419.216, 647.062 )
 collision_layer = 16
 collision_mask = 16
 _route = [ "RG1/RP23", "RG1/RP22", "RG1/RP24", "RG1/RP22" ]
 
-[node name="Badguy 6" parent="Perspective" instance=ExtResource( 13 )]
+[node name="Badguy 6" parent="Perspective" index="7" instance=ExtResource( 13 )]
 
 position = Vector2( 1271.34, 513.041 )
 collision_layer = 32
 collision_mask = 32
 _route = [ "RG1/RP25", "RG1/RP26", "RG1/RP27", "RG1/RP28" ]
 
-[node name="RadioPickUpArea 2" parent="Perspective" instance=ExtResource( 14 )]
+[node name="RadioPickUpArea 2" parent="Perspective" index="8" instance=ExtResource( 14 )]
 
 position = Vector2( 1835.18, 1046.88 )
 scale = Vector2( 1.28071, 1.48432 )
 
-[node name="RadioPickUpArea 2 2" parent="Perspective" instance=ExtResource( 14 )]
+[node name="RadioPickUpArea 2 2" parent="Perspective" index="9" instance=ExtResource( 14 )]
 
 position = Vector2( 103.401, 1052.6 )
 scale = Vector2( 1.28071, 1.48432 )
 
-[node name="RadioPickUpArea 3" parent="Perspective" instance=ExtResource( 14 )]
+[node name="RadioPickUpArea 3" parent="Perspective" index="10" instance=ExtResource( 14 )]
 
 position = Vector2( 223.169, 28.9266 )
 scale = Vector2( 1.19295, 1.16348 )
 
-[node name="RadioPickUpArea" parent="Perspective" instance=ExtResource( 14 )]
+[node name="RadioPickUpArea" parent="Perspective" index="11" instance=ExtResource( 14 )]
 
 position = Vector2( 1769.2, 10.1737 )
 scale = Vector2( 0.859353, 1.00015 )
 
-[node name="Interface" type="CanvasLayer" parent="."]
+[node name="Interface" type="CanvasLayer" parent="." index="2"]
 
 editor/display_folded = true
 layer = 1
 offset = Vector2( 0, 0 )
 rotation = 0.0
 scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 
-[node name="Panel" type="Panel" parent="Interface"]
+[node name="Panel" type="Panel" parent="Interface" index="0"]
 
-visibility/self_opacity = 0.7
-focus_ignore_mouse = true
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
-margin_left = 0.0
-margin_top = 0.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_right = 202.0
 margin_bottom = 111.0
-
-[node name="Label" type="Label" parent="Interface"]
-
-focus_ignore_mouse = true
-focus_stop_mouse = true
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+mouse_default_cursor_shape = 0
 size_flags_horizontal = 2
-size_flags_vertical = 0
+size_flags_vertical = 2
+
+[node name="Label" type="Label" parent="Interface" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 19.0
 margin_top = 82.0
 margin_right = 85.0
 margin_bottom = 96.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 0
 text = "Alert level"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="RadioFrame" type="Sprite" parent="Interface"]
+[node name="RadioFrame" type="Sprite" parent="Interface" index="2"]
 
 position = Vector2( 163.771, 34.8861 )
 scale = Vector2( 1, 1.07439 )
 texture = ExtResource( 15 )
 
-[node name="RadioIcon" type="Sprite" parent="Interface"]
+[node name="RadioIcon" type="Sprite" parent="Interface" index="3"]
 
 position = Vector2( 164.363, 34.8283 )
 texture = ExtResource( 16 )
 
-[node name="DangerBar" parent="Interface" instance=ExtResource( 17 )]
+[node name="DangerBar" parent="Interface" index="4" instance=ExtResource( 17 )]
 
 position = Vector2( 19.5599, 70.4401 )
 scale = Vector2( 0.726611, 1 )
 
-[node name="Timer" parent="Interface" instance=ExtResource( 18 )]
+[node name="Timer" parent="Interface" index="5" instance=ExtResource( 18 )]
 
 position = Vector2( 81.6796, 41 )
 scale = Vector2( 2.0625, 0.78125 )
 
-[node name="PanelBroadcast" type="Panel" parent="Interface"]
+[node name="PanelBroadcast" type="Panel" parent="Interface" index="6"]
 
 visible = false
-visibility/opacity = 0.7
-focus_ignore_mouse = true
-focus_stop_mouse = true
-size_flags_horizontal = 2
-size_flags_vertical = 2
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 379.0
 margin_top = 985.0
 margin_right = 1641.0
 margin_bottom = 1061.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 
-[node name="BroadcastMessage" type="RichTextLabel" parent="Interface"]
+[node name="BroadcastMessage" type="RichTextLabel" parent="Interface" index="7"]
 
-rect_scale = Vector2( 1.5, 1.5 )
-focus_ignore_mouse = false
-focus_stop_mouse = true
-size_flags_horizontal = 1
-size_flags_vertical = 1
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
 margin_left = 397.0
 margin_top = 1002.0
 margin_right = 1225.0
 margin_bottom = 1032.0
+rect_scale = Vector2( 1.5, 1.5 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
 bbcode_enabled = false
 bbcode_text = ""
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = ""
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 script = ExtResource( 19 )
 
-[node name="Limits" type="Node" parent="."]
+[node name="Limits" type="Node" parent="." index="3"]
 
-editor/display_folded = true
+[node name="StaticBody2D" type="StaticBody2D" parent="Limits" index="0"]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Limits"]
-
-editor/display_folded = true
 position = Vector2( 1005.45, -133.615 )
 input_pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Transform2D( 100, 0, 0, 1, -12.9543, 120.291 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -407,22 +462,17 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Limits/StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limits/StaticBody2D" index="0"]
 
 position = Vector2( -12.9543, 120.291 )
 scale = Vector2( 100, 1 )
 shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
 
-[node name="StaticBody2D 1" type="StaticBody2D" parent="Limits"]
+[node name="StaticBody2D 1" type="StaticBody2D" parent="Limits" index="1"]
 
 editor/display_folded = true
 position = Vector2( 1016.15, 1207.73 )
 input_pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Transform2D( 100, 0, 0, 1, -12.9543, -120.291 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -430,22 +480,17 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Limits/StaticBody2D 1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limits/StaticBody2D 1" index="0"]
 
 position = Vector2( -12.9543, -120.291 )
 scale = Vector2( 100, 1 )
 shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
 
-[node name="StaticBody2D 2" type="StaticBody2D" parent="Limits"]
+[node name="StaticBody2D 2" type="StaticBody2D" parent="Limits" index="2"]
 
 editor/display_folded = true
 position = Vector2( 468.997, 446.898 )
 input_pickable = false
-shapes/0/shape = SubResource( 2 )
-shapes/0/transform = Transform2D( 1, 0, 0, 50, -478.346, 81.6612 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -453,22 +498,16 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Limits/StaticBody2D 2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limits/StaticBody2D 2" index="0"]
 
 position = Vector2( -478.346, 81.6612 )
 scale = Vector2( 1, 50 )
 shape = SubResource( 2 )
-trigger = false
-_update_shape_index = 0
 
-[node name="StaticBody2D 3" type="StaticBody2D" parent="Limits"]
+[node name="StaticBody2D 3" type="StaticBody2D" parent="Limits" index="3"]
 
-editor/display_folded = true
 position = Vector2( 1930.95, 40.2806 )
 input_pickable = false
-shapes/0/shape = SubResource( 2 )
-shapes/0/transform = Transform2D( 1, 0, 0, 50, -7.55261, 523.648 )
-shapes/0/trigger = false
 collision_layer = 1
 collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
@@ -476,132 +515,190 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Limits/StaticBody2D 3"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limits/StaticBody2D 3" index="0"]
 
 position = Vector2( -7.55261, 523.648 )
 scale = Vector2( 1, 50 )
 shape = SubResource( 2 )
-trigger = false
-_update_shape_index = 0
 
-[node name="RG1" type="Node" parent="."]
+[node name="RG1" type="Node" parent="." index="4"]
 
 editor/display_folded = true
 
-[node name="RP1" parent="RG1" instance=ExtResource( 20 )]
+[node name="RP1" parent="RG1" index="0" instance=ExtResource( 20 )]
 
 position = Vector2( 745.266, 980.192 )
+audio_bus_override = false
+audio_bus_name = "Master"
 
-[node name="RP2" parent="RG1" instance=ExtResource( 20 )]
+[node name="RP2" parent="RG1" index="1" instance=ExtResource( 20 )]
 
 position = Vector2( 935.013, 983.085 )
+audio_bus_override = false
+audio_bus_name = "Master"
 
-[node name="RP3" parent="RG1" instance=ExtResource( 20 )]
+[node name="RP3" parent="RG1" index="2" instance=ExtResource( 20 )]
 
 position = Vector2( 944.788, 424.952 )
+audio_bus_override = false
+audio_bus_name = "Master"
 
-[node name="RP4" parent="RG1" instance=ExtResource( 20 )]
+[node name="RP4" parent="RG1" index="3" instance=ExtResource( 20 )]
 
 position = Vector2( 1828.92, 424.27 )
+audio_bus_override = false
+audio_bus_name = "Master"
 
-[node name="RP5" parent="RG1" instance=ExtResource( 20 )]
+[node name="RP5" parent="RG1" index="4" instance=ExtResource( 20 )]
 
 position = Vector2( 1837.43, 770.807 )
+audio_bus_override = false
+audio_bus_name = "Master"
 
-[node name="RP6" parent="RG1" instance=ExtResource( 20 )]
+[node name="RP6" parent="RG1" index="5" instance=ExtResource( 20 )]
 
 position = Vector2( 935.497, 772.283 )
+audio_bus_override = false
+audio_bus_name = "Master"
 
-[node name="RP7" parent="RG1" instance=ExtResource( 20 )]
+[node name="RP7" parent="RG1" index="6" instance=ExtResource( 20 )]
 
 position = Vector2( 427.234, 983.033 )
+audio_bus_override = false
+audio_bus_name = "Master"
 
-[node name="RP8" parent="RG1" instance=ExtResource( 20 )]
+[node name="RP8" parent="RG1" index="7" instance=ExtResource( 20 )]
 
 position = Vector2( 412.083, 275.529 )
+audio_bus_override = false
+audio_bus_name = "Master"
 
-[node name="RP9" parent="RG1" instance=ExtResource( 20 )]
+[node name="RP9" parent="RG1" index="8" instance=ExtResource( 20 )]
 
 position = Vector2( 231.963, 276.396 )
+audio_bus_override = false
+audio_bus_name = "Master"
 
-[node name="RP10" parent="RG1" instance=ExtResource( 20 )]
+[node name="RP10" parent="RG1" index="9" instance=ExtResource( 20 )]
 
 position = Vector2( 229.914, 982.084 )
+audio_bus_override = false
+audio_bus_name = "Master"
 
-[node name="RP11" parent="RG1" instance=ExtResource( 20 )]
+[node name="RP11" parent="RG1" index="10" instance=ExtResource( 20 )]
 
 position = Vector2( 853.444, 228.588 )
+audio_bus_override = false
+audio_bus_name = "Master"
 
-[node name="RP12" parent="RG1" instance=ExtResource( 20 )]
+[node name="RP12" parent="RG1" index="11" instance=ExtResource( 20 )]
 
 position = Vector2( 1171.51, 231.883 )
+audio_bus_override = false
+audio_bus_name = "Master"
 
-[node name="RP13" parent="RG1" instance=ExtResource( 20 )]
+[node name="RP13" parent="RG1" index="12" instance=ExtResource( 20 )]
 
 position = Vector2( 1178.29, 101.303 )
+audio_bus_override = false
+audio_bus_name = "Master"
 
-[node name="RP14" parent="RG1" instance=ExtResource( 20 )]
+[node name="RP14" parent="RG1" index="13" instance=ExtResource( 20 )]
 
 position = Vector2( 1680.39, 103.324 )
+audio_bus_override = false
+audio_bus_name = "Master"
 
-[node name="RP15" parent="RG1" instance=ExtResource( 20 )]
+[node name="RP15" parent="RG1" index="14" instance=ExtResource( 20 )]
 
 position = Vector2( 1687.96, 356.683 )
+audio_bus_override = false
+audio_bus_name = "Master"
 
-[node name="RP16" parent="RG1" instance=ExtResource( 20 )]
+[node name="RP16" parent="RG1" index="15" instance=ExtResource( 20 )]
 
 position = Vector2( 501.939, 298.061 )
+audio_bus_override = false
+audio_bus_name = "Master"
 
-[node name="RP17" parent="RG1" instance=ExtResource( 20 )]
+[node name="RP17" parent="RG1" index="16" instance=ExtResource( 20 )]
 
 position = Vector2( 527.424, 136.288 )
+audio_bus_override = false
+audio_bus_name = "Master"
 
-[node name="RP18" parent="RG1" instance=ExtResource( 20 )]
+[node name="RP18" parent="RG1" index="17" instance=ExtResource( 20 )]
 
 position = Vector2( 418.837, 136.288 )
+audio_bus_override = false
+audio_bus_name = "Master"
 
-[node name="RP19" parent="RG1" instance=ExtResource( 20 )]
+[node name="RP19" parent="RG1" index="18" instance=ExtResource( 20 )]
 
 position = Vector2( 766.759, 423.269 )
+audio_bus_override = false
+audio_bus_name = "Master"
 
-[node name="RP20" parent="RG1" instance=ExtResource( 20 )]
+[node name="RP20" parent="RG1" index="19" instance=ExtResource( 20 )]
 
 position = Vector2( 828.809, 421.053 )
+audio_bus_override = false
+audio_bus_name = "Master"
 
-[node name="RP21" parent="RG1" instance=ExtResource( 20 )]
+[node name="RP21" parent="RG1" index="20" instance=ExtResource( 20 )]
 
 position = Vector2( 763.435, 310.249 )
+audio_bus_override = false
+audio_bus_name = "Master"
 
-[node name="RP22" parent="RG1" instance=ExtResource( 20 )]
+[node name="RP22" parent="RG1" index="21" instance=ExtResource( 20 )]
 
 position = Vector2( 749.473, 644.72 )
+audio_bus_override = false
+audio_bus_name = "Master"
 
-[node name="RP23" parent="RG1" instance=ExtResource( 20 )]
+[node name="RP23" parent="RG1" index="22" instance=ExtResource( 20 )]
 
 position = Vector2( 31.8636, 648.536 )
+audio_bus_override = false
+audio_bus_name = "Master"
 
-[node name="RP24" parent="RG1" instance=ExtResource( 20 )]
+[node name="RP24" parent="RG1" index="23" instance=ExtResource( 20 )]
 
 position = Vector2( 753.831, 783.297 )
+audio_bus_override = false
+audio_bus_name = "Master"
 
-[node name="RP25" parent="RG1" instance=ExtResource( 20 )]
+[node name="RP25" parent="RG1" index="24" instance=ExtResource( 20 )]
 
 position = Vector2( 1268.47, 417.583 )
+audio_bus_override = false
+audio_bus_name = "Master"
 
-[node name="RP26" parent="RG1" instance=ExtResource( 20 )]
+[node name="RP26" parent="RG1" index="25" instance=ExtResource( 20 )]
 
 position = Vector2( 1494.46, 417.947 )
+audio_bus_override = false
+audio_bus_name = "Master"
 
-[node name="RP27" parent="RG1" instance=ExtResource( 20 )]
+[node name="RP27" parent="RG1" index="26" instance=ExtResource( 20 )]
 
 position = Vector2( 1494.27, 918.412 )
+audio_bus_override = false
+audio_bus_name = "Master"
 
-[node name="RP28" parent="RG1" instance=ExtResource( 20 )]
+[node name="RP28" parent="RG1" index="27" instance=ExtResource( 20 )]
 
 position = Vector2( 1273.39, 918.993 )
+audio_bus_override = false
+audio_bus_name = "Master"
+
+
 [editable path="Perspective/Buildings/B2"]
 [editable path="Perspective/Buildings/B5"]
 [editable path="Perspective/Buildings/B6"]
+[editable path="Perspective/Buildings/B12"]
 [editable path="Perspective/Buildings/B14"]
 [editable path="Perspective/Buildings/B15"]
 [editable path="Perspective/Buildings/Building 15"]
+[editable path="Perspective/Buildings/Building 18"]

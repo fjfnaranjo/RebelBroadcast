@@ -10,7 +10,7 @@ source_file="res://resources/sounds/radio_chatter.wav"
 source_md5="8807b112031a89f3e333b43553a353ba"
 
 dest_files=[ "res://.import/radio_chatter.wav-8d6e1b90f3230278a41a4bd3a199848f.sample" ]
-dest_md5="cf2af3607bc0b272d5f646c6bd918212"
+dest_md5="5d446b02b2b49a6570e80b953d797a6e"
 
 [params]
 

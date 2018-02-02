@@ -43,20 +43,26 @@ position = Vector2( 13.956, -44.1547 )
 scale = Vector2( 0.513174, 0.513174 )
 texture = ExtResource( 4 )
 
-[node name="PickRadio" type="AudioStreamPlayer" parent="." index="3"]
+[node name="PickRadio" type="AudioStreamPlayer2D" parent="." index="3"]
 
 stream = ExtResource( 5 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = false
-mix_target = 0
+max_distance = 2000.0
+attenuation = 1.0
 bus = "Master"
+area_mask = 1
 
-[node name="RadioChatter" type="AudioStreamPlayer" parent="." index="4"]
+[node name="RadioChatter" type="AudioStreamPlayer2D" parent="." index="4"]
 
 stream = ExtResource( 6 )
 volume_db = 0.0
+pitch_scale = 1.0
 autoplay = false
-mix_target = 0
+max_distance = 2000.0
+attenuation = 1.0
 bus = "Master"
+area_mask = 1
 
 
