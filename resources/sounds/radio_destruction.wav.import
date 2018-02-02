@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/radio_destruction.wav-ddab6a44d2cc7438df95b13077accd08.sample"
+
+[deps]
+
+source_file="res://resources/sounds/radio_destruction.wav"
+source_md5="c5e4fc39c806caf3ad327928ab52e872"
+
+dest_files=[ "res://.import/radio_destruction.wav-ddab6a44d2cc7438df95b13077accd08.sample" ]
+dest_md5="63de6d168a4403b4958d0cbf550fa81c"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

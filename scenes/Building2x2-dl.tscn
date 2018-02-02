@@ -1,71 +1,62 @@
-[gd_scene load_steps=7 format=1]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/Building.gd" type="Script" id=1]
 [ext_resource path="res://resources/images/building2x2-dl.png" type="Texture" id=2]
 [ext_resource path="res://scenes/Flag.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/FlagRebels.tscn" type="PackedScene" id=4]
-
-[sub_resource type="ConvexPolygonShape2D" id=1]
-
-custom_solver_bias = 0.0
-points = Vector2Array( 124.511, -126.293, 128.194, 130.305, 0.509308, 129.077, 0.509308, -1.06342 )
-
-[sub_resource type="ConvexPolygonShape2D" id=2]
-
-custom_solver_bias = 0.0
-points = Vector2Array( -128.403, -126.293, 124.511, -126.293, 0.509308, -1.06342, -128.403, 1.39206 )
+[ext_resource path="res://resources/sounds/building_converted.wav" type="AudioStream" id=5]
 
 [node name="Building" type="StaticBody2D"]
 
-transform/pos = Vector2( 560, 610 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/0/trigger = false
-shapes/1/shape = SubResource( 2 )
-shapes/1/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
-shapes/1/trigger = false
-collision/layers = 1048575
-collision/mask = 1048575
+position = Vector2( 560, 610 )
+input_pickable = false
+collision_layer = 1048575
+collision_mask = 1048575
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-script/script = ExtResource( 1 )
+script = ExtResource( 1 )
 base_diff = 0
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Sprite" type="Sprite" parent="." index="0"]
 
-transform/pos = Vector2( 8.73872, -5.79443 )
+position = Vector2( 8.73872, -5.79443 )
 texture = ExtResource( 2 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="1"]
 
 build_mode = 0
-polygon = Vector2Array( -128.403, 1.39206, -128.403, -126.293, 124.511, -126.293, 128.194, 130.305, 0.509308, 129.077, 0.509308, -1.06342 )
-shape_range = Vector2( 0, 1 )
-trigger = false
+polygon = PoolVector2Array( -128.403, 1.39206, -128.403, -126.293, 124.511, -126.293, 128.194, 130.305, 0.509308, 129.077, 0.509308, -1.06342 )
 
-[node name="Flags" type="Node2D" parent="."]
+[node name="Flags" type="Node2D" parent="." index="2"]
 
-[node name="Flag" parent="Flags" instance=ExtResource( 3 )]
+[node name="Flag" parent="Flags" index="0" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 50, -70 )
+position = Vector2( 50, -70 )
 
-[node name="Flag 2" parent="Flags" instance=ExtResource( 3 )]
+[node name="Flag 2" parent="Flags" index="1" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 100, -10 )
+position = Vector2( 100, -10 )
 
-[node name="Flag 3" parent="Flags" instance=ExtResource( 3 )]
+[node name="Flag 3" parent="Flags" index="2" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( -80, -100 )
+position = Vector2( -80, -100 )
 
-[node name="FlagRebels" type="Node2D" parent="."]
+[node name="FlagRebels" type="Node2D" parent="." index="3"]
 
-visibility/visible = false
+visible = false
 
-[node name="FlagRebels" parent="FlagRebels" instance=ExtResource( 4 )]
+[node name="FlagRebels" parent="FlagRebels" index="0" instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 50, -70 )
+position = Vector2( 50, -70 )
+
+[node name="BuildingConverted" type="AudioStreamPlayer" parent="." index="4"]
+
+stream = ExtResource( 5 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
 

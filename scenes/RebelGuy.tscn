@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=1]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scenes/RebelGuy.gd" type="Script" id=1]
 [ext_resource path="res://resources/images/rebelguy-dark.png" type="Texture" id=2]
 [ext_resource path="res://scenes/GuyAnimation.gd" type="Script" id=3]
 [ext_resource path="res://resources/images/bubble.png" type="Texture" id=4]
+[ext_resource path="res://resources/sounds/pick_radio.wav" type="AudioStream" id=5]
+[ext_resource path="res://resources/sounds/radio_chatter.wav" type="AudioStream" id=6]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -12,38 +14,49 @@ radius = 10.0
 
 [node name="RebelGuy" type="KinematicBody2D"]
 
-transform/pos = Vector2( 0, -16 )
-transform/scale = Vector2( 0.84265, 0.84265 )
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 24 )
-shapes/0/trigger = false
-collision/layers = 1048575
-collision/mask = 1048575
-collision/margin = 0.08
-script/script = ExtResource( 1 )
+position = Vector2( 0, -16 )
+scale = Vector2( 0.84265, 0.84265 )
+input_pickable = false
+collision_layer = 1048575
+collision_mask = 1048575
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
 speed = Vector2( 0, 0 )
 has_radio = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
-transform/pos = Vector2( 0, 24 )
+position = Vector2( 0, 24 )
 shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Sprite" type="Sprite" parent="." index="1"]
 
 texture = ExtResource( 2 )
-region = true
+region_enabled = true
 region_rect = Rect2( 0, 0, 64, 64 )
-script/script = ExtResource( 3 )
+script = ExtResource( 3 )
 
-[node name="Bubble" type="Sprite" parent="."]
+[node name="Bubble" type="Sprite" parent="." index="2"]
 
-visibility/visible = false
-transform/pos = Vector2( 13.956, -44.1547 )
-transform/scale = Vector2( 0.513174, 0.513174 )
+visible = false
+position = Vector2( 13.956, -44.1547 )
+scale = Vector2( 0.513174, 0.513174 )
 texture = ExtResource( 4 )
+
+[node name="PickRadio" type="AudioStreamPlayer" parent="." index="3"]
+
+stream = ExtResource( 5 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="RadioChatter" type="AudioStreamPlayer" parent="." index="4"]
+
+stream = ExtResource( 6 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
 

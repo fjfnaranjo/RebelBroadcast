@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/radio_chatter.wav-8d6e1b90f3230278a41a4bd3a199848f.sample"
+
+[deps]
+
+source_file="res://resources/sounds/radio_chatter.wav"
+source_md5="8807b112031a89f3e333b43553a353ba"
+
+dest_files=[ "res://.import/radio_chatter.wav-8d6e1b90f3230278a41a4bd3a199848f.sample" ]
+dest_md5="cf2af3607bc0b272d5f646c6bd918212"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

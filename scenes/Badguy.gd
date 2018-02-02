@@ -17,7 +17,7 @@ func _ready():
 	_next_destination_idx = 0
 	_vision = get_node("Vision")
 	set_process(true)
-	set_z(get_pos().y+base_diff)
+	set_z_index(get_position().y+base_diff)
 	get_node("Exclamation").hide()
 
 func _process(delta):
@@ -29,12 +29,12 @@ func _process(delta):
 		target = spotted_radio.get_ref()
 	else:
 		target = State.active_scene.get_node(_route[_next_destination_idx])
-	var direction = (target.get_pos()-get_pos()).normalized()
-	move(direction*delta*speed)
-	get_node("Vision").set_rot(direction.angle() + PI)
+	var direction = (target.get_position()-get_position()).normalized()
+	move_and_collide(direction*delta*speed)
+	get_node("Vision").set_rotation(direction.angle() + PI)
 	get_node("Sprite").update_animation(direction, delta)
 
-	set_z(get_pos().y+base_diff)
+	set_z_index(get_position().y+base_diff)
 	
 	var radio_spotted = false
 	var rebel_spotted = false

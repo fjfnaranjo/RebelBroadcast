@@ -22,15 +22,15 @@ func _ready():
 	add_to_group("rebel_guys")
 	set_process(true)
 	set_process_input(true)
-	set_z(get_pos().y+base_diff)
+	set_z_index(get_position().y+base_diff)
 
 func _process(delta):
 	_check_controls()
 	_check_collisions()
 
-	set_z(get_pos().y+base_diff)
+	set_z_index(get_position().y+base_diff)
 
-	move( speed*delta )
+	move_and_collide( speed*delta )
 	get_node("Sprite").update_animation(speed.normalized(), delta)
 	
 	if (bubble_appears and countdown > 0 ):
@@ -59,12 +59,12 @@ func _check_controls():
 func _place_radio():
 	var radio_instance = load("res://scenes/Radio.tscn").instance()
 	get_parent().add_child(radio_instance)
-	radio_instance.set_pos(get_pos())
+	radio_instance.set_position(get_position())
 	has_radio = false
-	State.play_sample("radio_chatter")
+	get_node("RadioChatter").play()
 
 func obtain_radio():
-	State.play_sample("pick_radio")
+	get_node("PickRadio").play()
 	get_node("Bubble").show()
 	bubble_appears = true
 	countdown = BUBBLE_COUNTDOWN

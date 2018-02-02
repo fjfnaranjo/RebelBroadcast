@@ -11,7 +11,6 @@ func _ready():
 	set_process_input(true)
 	get_node("Controls").hide()
 	get_node("Helper").hide()
-	State.play_sample("newspaper_deployed")
 	if State.active_scene == null:
 		State.active_scene = self
 

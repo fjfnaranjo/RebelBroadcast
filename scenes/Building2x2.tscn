@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=1]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/Building.gd" type="Script" id=1]
 [ext_resource path="res://resources/images/building2x2.png" type="Texture" id=2]
 [ext_resource path="res://scenes/Flag.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/FlagRebels.tscn" type="PackedScene" id=4]
+[ext_resource path="res://resources/sounds/building_converted.wav" type="AudioStream" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -12,55 +13,58 @@ extents = Vector2( 12.8911, 12.8789 )
 
 [node name="Building" type="StaticBody2D"]
 
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 10, 0, 0, 10, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1048575
-collision/mask = 1048575
+input_pickable = false
+collision_layer = 1048575
+collision_mask = 1048575
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-script/script = ExtResource( 1 )
+script = ExtResource( 1 )
 base_diff = 128
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Sprite" type="Sprite" parent="." index="0"]
 
-transform/pos = Vector2( 3.59241, -5 )
+position = Vector2( 3.59241, -5 )
 texture = ExtResource( 2 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
-transform/scale = Vector2( 10, 10 )
+scale = Vector2( 10, 10 )
 shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
 
-[node name="Flags" type="Node2D" parent="."]
+[node name="Flags" type="Node2D" parent="." index="2"]
 
-[node name="Flag" parent="Flags" instance=ExtResource( 3 )]
+[node name="Flag" parent="Flags" index="0" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( -22.4671, -10.0349 )
+position = Vector2( -22.4671, -10.0349 )
 
-[node name="Flag 2" parent="Flags" instance=ExtResource( 3 )]
+[node name="Flag 2" parent="Flags" index="1" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 106.694, -8.5917 )
+position = Vector2( 106.694, -8.5917 )
 
-[node name="Flag 3" parent="Flags" instance=ExtResource( 3 )]
+[node name="Flag 3" parent="Flags" index="2" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( -73.7676, -71.571 )
+position = Vector2( -73.7676, -71.571 )
 
-[node name="Flag 4" parent="Flags" instance=ExtResource( 3 )]
+[node name="Flag 4" parent="Flags" index="3" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 53.7559, -71.8883 )
+position = Vector2( 53.7559, -71.8883 )
 
-[node name="FlagRebels" type="Node2D" parent="."]
+[node name="FlagRebels" type="Node2D" parent="." index="3"]
 
-visibility/visible = false
+visible = false
 
-[node name="FlagRebels" parent="FlagRebels" instance=ExtResource( 4 )]
+[node name="FlagRebels" parent="FlagRebels" index="0" instance=ExtResource( 4 )]
 
-transform/pos = Vector2( -22.5494, -9.36972 )
+position = Vector2( -22.5494, -9.36972 )
+
+[node name="BuildingConverted" type="AudioStreamPlayer" parent="." index="4"]
+
+stream = ExtResource( 5 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
 

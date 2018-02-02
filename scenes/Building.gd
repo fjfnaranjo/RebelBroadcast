@@ -18,7 +18,7 @@ func _ready():
 	else:
 		loyalty = 0
 		still_loyal = false
-	set_z(get_pos().y+base_diff)
+	set_z_index(get_position().y+base_diff)
 
 func _process(delta):
 	if get_node("Flags").get_children().size() > loyalty:
@@ -32,7 +32,7 @@ func hurt():
 
 func _capture_building():
 	get_node("FlagRebels").show()
-	State.play_sample("building_converted") 
+	get_node("BuildingConverted").play()
 	if (State.active_scene.has_method("reduce_victory_points")):
 		State.active_scene.reduce_victory_points()
 		State.add_score_point()

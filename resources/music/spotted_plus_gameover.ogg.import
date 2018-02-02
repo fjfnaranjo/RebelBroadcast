@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/spotted_plus_gameover.ogg-9d264cec85ab2ae4f88b53a6188eaf3a.oggstr"
+
+[deps]
+
+source_file="res://resources/music/spotted_plus_gameover.ogg"
+source_md5="3fd5bfde95ee89338f593e481dafb816"
+
+dest_files=[ "res://.import/spotted_plus_gameover.ogg-9d264cec85ab2ae4f88b53a6188eaf3a.oggstr" ]
+dest_md5="bbbcdd0bc1b3cbfe1b9aed04e6aab6b6"
+
+[params]
+
+loop=true
+loop_offset=0

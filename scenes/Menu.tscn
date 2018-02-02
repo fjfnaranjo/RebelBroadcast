@@ -1,80 +1,108 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scenes/Menu.gd" type="Script" id=1]
 [ext_resource path="res://resources/images/newspaper.png" type="Texture" id=2]
+[ext_resource path="res://resources/sounds/newspaper_deployed.wav" type="AudioStream" id=3]
 
 [node name="Menu" type="Node"]
 
-script/script = ExtResource( 1 )
+script = ExtResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Sprite" type="Sprite" parent="." index="0"]
 
-transform/pos = Vector2( 960, 540 )
+position = Vector2( 960, 540 )
 texture = ExtResource( 2 )
 
-[node name="Controls" type="Node2D" parent="."]
+[node name="Controls" type="Node2D" parent="." index="1"]
 
-transform/pos = Vector2( 669, 946 )
-transform/scale = Vector2( 1.8, 1.8 )
+position = Vector2( 669, 946 )
+scale = Vector2( 1.8, 1.8 )
 
-[node name="Panel" type="Panel" parent="Controls"]
+[node name="Panel" type="Panel" parent="Controls" index="0"]
 
-visibility/opacity = 0.8
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 55.0
-margin/top = 18.0
-margin/right = 290.0
-margin/bottom = 58.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 55.0
+margin_top = 18.0
+margin_right = 290.0
+margin_bottom = 58.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 
-[node name="Text" type="RichTextLabel" parent="Controls"]
+[node name="Text" type="RichTextLabel" parent="Controls" index="1"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 58.0
-margin/top = 22.0
-margin/right = 305.0
-margin/bottom = 63.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 58.0
+margin_top = 22.0
+margin_right = 305.0
+margin_bottom = 63.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_colors/default_color = Color( 0.843137, 0.294118, 0.294118, 1 )
-bbcode/enabled = true
-bbcode/bbcode = "[center]Press H for briefing[/center]"
+bbcode_enabled = true
+bbcode_text = "[center]Press H for briefing[/center]"
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Press H for briefing"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="Helper" type="Node2D" parent="."]
+[node name="Helper" type="Node2D" parent="." index="2"]
 
-transform/pos = Vector2( 462.949, 357.285 )
-transform/scale = Vector2( 1.8, 1.8 )
+position = Vector2( 462.949, 357.285 )
+scale = Vector2( 1.8, 1.8 )
 
-[node name="Panel" type="Panel" parent="Helper"]
+[node name="Panel" type="Panel" parent="Helper" index="0"]
 
-visibility/opacity = 0.9
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 51.0
-margin/top = -54.0
-margin/right = 529.0
-margin/bottom = 308.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 51.0
+margin_top = -54.0
+margin_right = 529.0
+margin_bottom = 308.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 
-[node name="Text" type="RichTextLabel" parent="Helper"]
+[node name="Text" type="RichTextLabel" parent="Helper" index="1"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 67.0
-margin/top = -40.0
-margin/right = 526.0
-margin/bottom = 328.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 67.0
+margin_top = -40.0
+margin_right = 526.0
+margin_bottom = 328.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_colors/default_color = Color( 0.843137, 0.294118, 0.294118, 1 )
-bbcode/enabled = true
-bbcode/bbcode = "Rebel!
+bbcode_enabled = true
+bbcode_text = "Rebel!
 
 We have managed to get you behind enemy lines, with an almost perfect disguise, but be careful! if the enemy spot you, it will increase the global alert level, and they will search the city faster. If it reach the maximum alert level, they will catch you as soon as they put eyes on you, and trust me, you wouldn’t like the Dictator hospitality.
 
@@ -88,5 +116,31 @@ Good luck soldier!
 "
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Rebel!
+
+We have managed to get you behind enemy lines, with an almost perfect disguise, but be careful! if the enemy spot you, it will increase the global alert level, and they will search the city faster. If it reach the maximum alert level, they will catch you as soon as they put eyes on you, and trust me, you wouldn’t like the Dictator hospitality.
+
+Your mission is to spread the rebel message. For that purpose, we have prepared for you an unlimited quantity of radio beacons deployed in the suburbs's sewer, but you could carry only one, they are heavy machines. Place it (SPACEBAR) near a loyalist building (the ones with red flags) to convert them (they will rise our flag). If they catch you near a radio beacon, you would be as good as dead.
+
+If you manage to convert all loyalist buildings to our cause, it would be a tremendous victory for our cause!
+
+You will only have until morning to carry out this mission, your disguise won’t hold with day light.
+
+Good luck soldier!
+"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+
+[node name="Sound" type="AudioStreamPlayer" parent="." index="3"]
+
+stream = ExtResource( 3 )
+volume_db = 0.0
+autoplay = true
+mix_target = 0
+bus = "Master"
 
 

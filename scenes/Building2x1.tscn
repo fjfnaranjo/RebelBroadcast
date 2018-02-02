@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=1]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/Building.gd" type="Script" id=1]
 [ext_resource path="res://resources/images/building2x1.png" type="Texture" id=2]
 [ext_resource path="res://scenes/Flag.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/FlagRebels.tscn" type="PackedScene" id=4]
+[ext_resource path="res://resources/sounds/building_converted.wav" type="AudioStream" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -12,68 +13,76 @@ extents = Vector2( 12.8911, 12.8789 )
 
 [node name="Building" type="StaticBody2D"]
 
-input/pickable = false
-shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 10, 0, 0, 5, 0, 0 )
-shapes/0/trigger = false
-collision/layers = 1048575
-collision/mask = 1048575
+input_pickable = false
+collision_layer = 1048575
+collision_mask = 1048575
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
-script/script = ExtResource( 1 )
+script = ExtResource( 1 )
 base_diff = 64
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Sprite" type="Sprite" parent="." index="0"]
 
-transform/pos = Vector2( -2.26472, -10.3235 )
+position = Vector2( -2.26472, -10.3235 )
 texture = ExtResource( 2 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
 
-transform/scale = Vector2( 10, 5 )
+scale = Vector2( 10, 5 )
 shape = SubResource( 1 )
-trigger = false
-_update_shape_index = 0
 
-[node name="Loyalty" type="Label" parent="."]
+[node name="Loyalty" type="Label" parent="." index="2"]
 
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-size_flags/stretch_ratio = 0.0
-margin/left = -10.0
-margin/top = -10.0
-margin/right = 10.0
-margin/bottom = 10.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -10.0
+margin_top = -10.0
+margin_right = 10.0
+margin_bottom = 10.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.0
 align = 1
 valign = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 
-[node name="Flags" type="Node2D" parent="."]
+[node name="Flags" type="Node2D" parent="." index="3"]
 
-[node name="Flag" parent="Flags" instance=ExtResource( 3 )]
+[node name="Flag" parent="Flags" index="0" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 10.0343, -49.7788 )
+position = Vector2( 10.0343, -49.7788 )
 
-[node name="Flag 2" parent="Flags" instance=ExtResource( 3 )]
+[node name="Flag 2" parent="Flags" index="1" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 92.9914, 0.399523 )
+position = Vector2( 92.9914, 0.399523 )
 
-[node name="Flag 3" parent="Flags" instance=ExtResource( 3 )]
+[node name="Flag 3" parent="Flags" index="2" instance=ExtResource( 3 )]
 
-transform/pos = Vector2( -50.2802, -38.5839 )
+position = Vector2( -50.2802, -38.5839 )
 
-[node name="FlagRebels" type="Node2D" parent="."]
+[node name="FlagRebels" type="Node2D" parent="." index="4"]
 
-visibility/visible = false
+visible = false
 
-[node name="FlagRebels" parent="FlagRebels" instance=ExtResource( 4 )]
+[node name="FlagRebels" parent="FlagRebels" index="0" instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 9.86542, -49.0367 )
+position = Vector2( 9.86542, -49.0367 )
+
+[node name="BuildingConverted" type="AudioStreamPlayer" parent="." index="5"]
+
+stream = ExtResource( 5 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
 

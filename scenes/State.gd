@@ -35,10 +35,6 @@ func change_scene(scene_path):
 	active_scene = scene_instance
 	get_tree().get_root().get_node("Game").add_child(scene_instance)
 
-func play_sample(sample_name):
-	var player = get_tree().get_root().get_node("Game").get_node("SamplePlayer2D")
-	player.play(sample_name)
-
 func play_song(song_name):
 	var music_player = get_tree().get_root().get_node("Game").get_node("Music")
 	music_player.stop()

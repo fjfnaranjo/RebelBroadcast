@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scenes/Aftergame.gd" type="Script" id=1]
 [ext_resource path="res://resources/images/defeat.jpg" type="Texture" id=2]
@@ -6,150 +6,218 @@
 
 [node name="Aftergame" type="Node"]
 
-script/script = ExtResource( 1 )
+script = ExtResource( 1 )
 
-[node name="DefeatSprite" type="Sprite" parent="."]
+[node name="DefeatSprite" type="Sprite" parent="." index="0"]
 
-visibility/visible = false
-transform/pos = Vector2( 960, 540 )
+visible = false
+position = Vector2( 960, 540 )
 texture = ExtResource( 2 )
 
-[node name="VictorySprite" type="Sprite" parent="."]
+[node name="VictorySprite" type="Sprite" parent="." index="1"]
 
-visibility/visible = false
-transform/pos = Vector2( 960, 540 )
+visible = false
+position = Vector2( 960, 540 )
 texture = ExtResource( 3 )
 
-[node name="Result" type="Node2D" parent="."]
+[node name="Result" type="Node2D" parent="." index="2"]
 
-transform/pos = Vector2( 936.299, 3.76785 )
-transform/scale = Vector2( 3, 3 )
+position = Vector2( 936.299, 3.76785 )
+scale = Vector2( 3, 3 )
 
-[node name="Panel" type="Panel" parent="Result"]
+[node name="Panel" type="Panel" parent="Result" index="0"]
 
-visibility/opacity = 0.9
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -43.0
-margin/top = 7.0
-margin/right = 70.0
-margin/bottom = 30.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -43.0
+margin_top = 7.0
+margin_right = 70.0
+margin_bottom = 30.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 
-[node name="Text" type="RichTextLabel" parent="Result"]
+[node name="Text" type="RichTextLabel" parent="Result" index="1"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -29.0
-margin/top = 11.0
-margin/right = 56.0
-margin/bottom = 27.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -29.0
+margin_top = 11.0
+margin_right = 56.0
+margin_bottom = 27.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_colors/default_color = Color( 0.929412, 0.105882, 0.141176, 1 )
-bbcode/enabled = false
-bbcode/bbcode = ""
+bbcode_enabled = false
+bbcode_text = ""
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = ""
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="Text" type="Node2D" parent="."]
+[node name="Text" type="Node2D" parent="." index="3"]
 
-transform/pos = Vector2( 960, 530 )
-transform/scale = Vector2( 1.8, 1.8 )
+position = Vector2( 960, 530 )
+scale = Vector2( 1.8, 1.8 )
 
-[node name="Panel" type="Panel" parent="Text"]
+[node name="Panel" type="Panel" parent="Text" index="0"]
 
-visibility/opacity = 0.9
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -175.0
-margin/top = 28.0
-margin/right = 207.0
-margin/bottom = 97.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -175.0
+margin_top = 28.0
+margin_right = 207.0
+margin_bottom = 97.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 
-[node name="Text" type="RichTextLabel" parent="Text"]
+[node name="Text" type="RichTextLabel" parent="Text" index="1"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -136.0
-margin/top = 36.0
-margin/right = 169.0
-margin/bottom = 88.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -136.0
+margin_top = 36.0
+margin_right = 169.0
+margin_bottom = 88.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_colors/default_color = Color( 0.741176, 0.282353, 0.4, 1 )
-bbcode/enabled = false
-bbcode/bbcode = ""
+bbcode_enabled = false
+bbcode_text = ""
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = ""
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="Score" type="Node2D" parent="."]
+[node name="Score" type="Node2D" parent="." index="4"]
 
-transform/pos = Vector2( 958.149, 455.976 )
-transform/scale = Vector2( 1.8, 1.8 )
+position = Vector2( 958.149, 455.976 )
+scale = Vector2( 1.8, 1.8 )
 
-[node name="Panel" type="Panel" parent="Score"]
+[node name="Panel" type="Panel" parent="Score" index="0"]
 
-visibility/opacity = 0.9
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -81.0
-margin/top = -198.0
-margin/right = 104.0
-margin/bottom = -127.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -81.0
+margin_top = -198.0
+margin_right = 104.0
+margin_bottom = -127.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 
-[node name="Text" type="RichTextLabel" parent="Score"]
+[node name="Text" type="RichTextLabel" parent="Score" index="1"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -80.0
-margin/top = -189.0
-margin/right = 103.0
-margin/bottom = -127.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -80.0
+margin_top = -189.0
+margin_right = 103.0
+margin_bottom = -127.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_colors/default_color = Color( 0.741176, 0.282353, 0.4, 1 )
-bbcode/enabled = true
-bbcode/bbcode = ""
+bbcode_enabled = true
+bbcode_text = ""
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = ""
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
-[node name="Controls" type="Node2D" parent="."]
+[node name="Controls" type="Node2D" parent="." index="5"]
 
-transform/pos = Vector2( 960, 900 )
-transform/scale = Vector2( 1.8, 1.8 )
+position = Vector2( 960, 900 )
+scale = Vector2( 1.8, 1.8 )
 
-[node name="Panel" type="Panel" parent="Controls"]
+[node name="Panel" type="Panel" parent="Controls" index="0"]
 
-visibility/opacity = 0.9
-focus/ignore_mouse = false
-focus/stop_mouse = false
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -159.0
-margin/top = 11.0
-margin/right = 200.0
-margin/bottom = 41.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -159.0
+margin_top = 11.0
+margin_right = 200.0
+margin_bottom = 41.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 
-[node name="Text" type="RichTextLabel" parent="Controls"]
+[node name="Text" type="RichTextLabel" parent="Controls" index="1"]
 
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = -288.0
-margin/top = 19.0
-margin/right = 328.0
-margin/bottom = 40.0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -288.0
+margin_top = 19.0
+margin_right = 328.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 2
+size_flags_vertical = 2
 custom_colors/default_color = Color( 0.929412, 0.105882, 0.141176, 1 )
-bbcode/enabled = false
-bbcode/bbcode = "                                          R - Reload                                     ESC - Exit                        "
+bbcode_enabled = false
+bbcode_text = "                                          R - Reload                                     ESC - Exit                        "
 visible_characters = -1
 percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "                                          R - Reload                                     ESC - Exit                        "
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
 
 

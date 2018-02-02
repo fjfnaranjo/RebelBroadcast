@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://resources/images/statue.png" type="Texture" id=1]
 
@@ -9,12 +9,12 @@ extents = Vector2( 10, 10 )
 
 [node name="Statue" type="StaticBody2D"]
 
-input/pickable = false
+input_pickable = false
 shapes/0/shape = SubResource( 1 )
-shapes/0/transform = Matrix32( 1.85478, 0, 0, 1.58899, 2.03057, 49.5271 )
+shapes/0/transform = Transform2D( 1.85478, 0, 0, 1.58899, 2.03057, 49.5271 )
 shapes/0/trigger = false
-collision/layers = 1
-collision/mask = 1
+collision_layer = 1
+collision_mask = 1
 constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
@@ -22,8 +22,8 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
-transform/pos = Vector2( 2.03057, 49.5271 )
-transform/scale = Vector2( 1.85478, 1.58899 )
+position = Vector2( 2.03057, 49.5271 )
+scale = Vector2( 1.85478, 1.58899 )
 shape = SubResource( 1 )
 trigger = false
 _update_shape_index = 0
@@ -31,5 +31,3 @@ _update_shape_index = 0
 [node name="Sprite" type="Sprite" parent="."]
 
 texture = ExtResource( 1 )
-
-

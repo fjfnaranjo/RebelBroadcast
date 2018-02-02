@@ -1,4 +1,4 @@
-[gd_resource type="SampleLibrary" load_steps=6 format=1]
+[gd_resource type="Resource" load_steps=1 format=2]
 
 [ext_resource path="res://resources/sounds/building_converted.wav" type="Sample" id=1]
 [ext_resource path="res://resources/sounds/newspaper_deployed.wav" type="Sample" id=2]
@@ -8,7 +8,7 @@
 
 [resource]
 
-resource/name = "SampleLibrary"
+resource_name = "SampleLibrary"
 samples/building_converted = {
 "db": 0.0,
 "pitch": 1.0,
@@ -39,4 +39,3 @@ samples/radio_destruction = {
 "priority": 0,
 "sample": ExtResource( 5 )
 }
-

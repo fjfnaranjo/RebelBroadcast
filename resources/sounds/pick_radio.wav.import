@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/pick_radio.wav-8f5d3ae63674278cfa8cb30730924e3e.sample"
+
+[deps]
+
+source_file="res://resources/sounds/pick_radio.wav"
+source_md5="94794bc92f38d63af9b1873be8e9ff0c"
+
+dest_files=[ "res://.import/pick_radio.wav-8f5d3ae63674278cfa8cb30730924e3e.sample" ]
+dest_md5="cd3268df2132db03d3e7ea80eeb2242e"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
