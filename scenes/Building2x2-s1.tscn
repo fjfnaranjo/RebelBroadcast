@@ -1,17 +1,18 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scenes/Building.gd" type="Script" id=1]
 [ext_resource path="res://resources/images/building2x2-s1.png" type="Texture" id=2]
-[ext_resource path="res://scenes/Flag.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/FlagRebels.tscn" type="PackedScene" id=4]
-[ext_resource path="res://resources/sounds/building_converted.wav" type="AudioStream" id=5]
+[ext_resource path="res://resources/images/long_flag_perspective.png" type="Texture" id=3]
+[ext_resource path="res://scenes/Flag.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/FlagRebels.tscn" type="PackedScene" id=5]
+[ext_resource path="res://resources/sounds/building_converted.wav" type="AudioStream" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="Building" type="StaticBody2D"]
+[node name="Building" type="StaticBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1048575
@@ -28,42 +29,57 @@ base_diff = 128
 position = Vector2( 5.40359, -5.54036 )
 texture = ExtResource( 2 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+[node name="DictatorFlag1" type="Sprite" parent="." index="1"]
 
+position = Vector2( -47.0193, 41.6849 )
+z_index = 5
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Z Index" ]
+
+[node name="DictatorFlag2" type="Sprite" parent="." index="2"]
+
+position = Vector2( 73.7968, 41.6013 )
+z_index = 1000
+z_as_relative = false
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Z Index" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="3"]
+
+visible = false
 scale = Vector2( 12.6, 12.6 )
 shape = SubResource( 1 )
 
-[node name="Flags" type="Node2D" parent="." index="2"]
+[node name="Flags" type="Node2D" parent="." index="4"]
 
-[node name="Flag" parent="Flags" index="0" instance=ExtResource( 3 )]
+[node name="Flag" parent="Flags" index="0" instance=ExtResource( 4 )]
 
 position = Vector2( -24.6114, -9.82147 )
 
-[node name="Flag 2" parent="Flags" index="1" instance=ExtResource( 3 )]
+[node name="Flag 2" parent="Flags" index="1" instance=ExtResource( 4 )]
 
 position = Vector2( 105.529, -9.64727 )
 
-[node name="Flag 3" parent="Flags" index="2" instance=ExtResource( 3 )]
+[node name="Flag 3" parent="Flags" index="2" instance=ExtResource( 4 )]
 
 position = Vector2( 55.4699, -73.432 )
 
-[node name="Flag 4" parent="Flags" index="3" instance=ExtResource( 3 )]
+[node name="Flag 4" parent="Flags" index="3" instance=ExtResource( 4 )]
 
 position = Vector2( -72.8033, -76.5425 )
 
-[node name="FlagRebels" type="Node2D" parent="." index="3"]
+[node name="FlagRebels" type="Node2D" parent="." index="5"]
 
 visible = false
 
-[node name="FlagRebels" parent="FlagRebels" index="0" instance=ExtResource( 4 )]
+[node name="FlagRebels" parent="FlagRebels" index="0" instance=ExtResource( 5 )]
 
 position = Vector2( -24.65, -10.6904 )
 
-[node name="BuildingConverted" type="AudioStreamPlayer2D" parent="." index="4"]
+[node name="BuildingConverted" type="AudioStreamPlayer2D" parent="." index="6"]
 
-stream = ExtResource( 5 )
+stream = ExtResource( 6 )
 volume_db = 0.0
-pitch_scale = 1.0
 autoplay = false
 max_distance = 2000.0
 attenuation = 1.0

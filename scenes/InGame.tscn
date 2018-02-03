@@ -34,9 +34,13 @@ extents = Vector2( 10, 10 )
 custom_solver_bias = 0.0
 extents = Vector2( 10, 10 )
 
-[node name="InGame" type="Node" index="0"]
+[node name="InGame" type="Node"]
 
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 343.185 ],
+"_edit_vertical_guides_": [ 457.065 ]
+}
 
 [node name="Perspective" type="Node2D" parent="." index="0"]
 
@@ -271,10 +275,9 @@ _sections_unfolded = [ "Transform" ]
 position = Vector2( 5, 105 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="Building 11" parent="Perspective/Buildings" index="32" instance=ExtResource( 10 )]
+[node name="BuildingDictator" parent="Perspective/Buildings" index="32" instance=ExtResource( 10 )]
 
-position = Vector2( 582.894, 469.322 )
-_sections_unfolded = [ "Transform", "Z Index" ]
+position = Vector2( 583.155, 469.289 )
 
 [node name="Statue" parent="Perspective/Buildings" index="33" instance=ExtResource( 11 )]
 
