@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://resources/images/statue.png" type="Texture" id=1]
+[ext_resource path="res://scenes/Statue.gd" type="Script" id=1]
+[ext_resource path="res://resources/images/statue.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -16,15 +17,22 @@ constant_linear_velocity = Vector2( 0, 0 )
 constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 33.2792, 65.1652 ],
+"_edit_vertical_guides_": [  ]
+}
+base_diff = 30
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
 
 position = Vector2( 2.03057, 49.5271 )
 scale = Vector2( 1.85478, 1.58899 )
 shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Sprite" type="Sprite" parent="." index="1"]
 
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://scenes/InGame.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Building1x1.tscn" type="PackedScene" id=2]
@@ -10,18 +10,19 @@
 [ext_resource path="res://scenes/Building2x2-tl.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/Building2x2-tr.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/Building2x2-s1.tscn" type="PackedScene" id=10]
-[ext_resource path="res://scenes/RebelGuy.tscn" type="PackedScene" id=11]
-[ext_resource path="res://scenes/Badguy.tscn" type="PackedScene" id=12]
-[ext_resource path="res://scenes/RadioPickUpArea.tscn" type="PackedScene" id=13]
-[ext_resource path="res://resources/images/bglevel1.png" type="Texture" id=14]
-[ext_resource path="res://resources/images/square.png" type="Texture" id=15]
-[ext_resource path="res://resources/images/zebra1.png" type="Texture" id=16]
-[ext_resource path="res://resources/images/no-radio-icon.png" type="Texture" id=17]
-[ext_resource path="res://resources/images/radio-icon.png" type="Texture" id=18]
-[ext_resource path="res://scenes/DangerBar.tscn" type="PackedScene" id=19]
-[ext_resource path="res://scenes/Timer.tscn" type="PackedScene" id=20]
-[ext_resource path="res://scenes/BroadcastMessage.gd" type="Script" id=21]
-[ext_resource path="res://scenes/RoutePoint.tscn" type="PackedScene" id=22]
+[ext_resource path="res://scenes/Statue.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/RebelGuy.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenes/Badguy.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scenes/RadioPickUpArea.tscn" type="PackedScene" id=14]
+[ext_resource path="res://resources/images/bglevel1.png" type="Texture" id=15]
+[ext_resource path="res://resources/images/square.png" type="Texture" id=16]
+[ext_resource path="res://resources/images/zebra1.png" type="Texture" id=17]
+[ext_resource path="res://resources/images/no-radio-icon.png" type="Texture" id=18]
+[ext_resource path="res://resources/images/radio-icon.png" type="Texture" id=19]
+[ext_resource path="res://scenes/DangerBar.tscn" type="PackedScene" id=20]
+[ext_resource path="res://scenes/Timer.tscn" type="PackedScene" id=21]
+[ext_resource path="res://scenes/BroadcastMessage.gd" type="Script" id=22]
+[ext_resource path="res://scenes/RoutePoint.tscn" type="PackedScene" id=23]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -40,8 +41,6 @@ script = ExtResource( 1 )
 [node name="Perspective" type="Node2D" parent="." index="0"]
 
 [node name="Buildings" type="Node" parent="Perspective" index="0"]
-
-editor/display_folded = true
 
 [node name="B1" parent="Perspective/Buildings" index="0" instance=ExtResource( 2 )]
 
@@ -244,6 +243,7 @@ position = Vector2( 377, 88.0001 )
 
 [node name="Building 18" parent="Perspective/Buildings" index="31" instance=ExtResource( 4 )]
 
+editor/display_folded = true
 position = Vector2( 72.0001, 88.0001 )
 
 [node name="Flag" parent="Perspective/Buildings/Building 18/Flags" index="0"]
@@ -274,67 +274,72 @@ _sections_unfolded = [ "Transform" ]
 [node name="Building 11" parent="Perspective/Buildings" index="32" instance=ExtResource( 10 )]
 
 position = Vector2( 582.894, 469.322 )
+_sections_unfolded = [ "Transform", "Z Index" ]
 
-[node name="RebelGuy" parent="Perspective" index="1" instance=ExtResource( 11 )]
+[node name="Statue" parent="Perspective/Buildings" index="33" instance=ExtResource( 11 )]
+
+position = Vector2( 1382.78, 782.834 )
+
+[node name="RebelGuy" parent="Perspective" index="1" instance=ExtResource( 12 )]
 
 position = Vector2( 29.2346, 266.702 )
 
-[node name="Badguy" parent="Perspective" index="2" instance=ExtResource( 12 )]
+[node name="Badguy" parent="Perspective" index="2" instance=ExtResource( 13 )]
 
 position = Vector2( 847.407, 978.256 )
 _route = [ "RG1/RP1", "RG1/RP2", "RG1/RP3", "RG1/RP4", "RG1/RP5", "RG1/RP6", "RG1/RP2" ]
 
-[node name="Badguy 2" parent="Perspective" index="3" instance=ExtResource( 12 )]
+[node name="Badguy 2" parent="Perspective" index="3" instance=ExtResource( 13 )]
 
 position = Vector2( 596.122, 971.258 )
 collision_layer = 2
 collision_mask = 2
 _route = [ "RG1/RP1", "RG1/RP7", "RG1/RP8", "RG1/RP9", "RG1/RP10" ]
 
-[node name="Badguy 3" parent="Perspective" index="4" instance=ExtResource( 12 )]
+[node name="Badguy 3" parent="Perspective" index="4" instance=ExtResource( 13 )]
 
 position = Vector2( 1015.09, 217.643 )
 collision_layer = 4
 collision_mask = 4
 _route = [ "RG1/RP11", "RG1/RP12", "RG1/RP13", "RG1/RP14", "RG1/RP15", "RG1/RP14", "RG1/RP13", "RG1/RP12" ]
 
-[node name="Badguy 4" parent="Perspective" index="5" instance=ExtResource( 12 )]
+[node name="Badguy 4" parent="Perspective" index="5" instance=ExtResource( 13 )]
 
 position = Vector2( 472.325, 202.091 )
 collision_layer = 8
 collision_mask = 8
 _route = [ "RG1/RP18", "RG1/RP17", "RG1/RP16", "RG1/RP21", "RG1/RP20", "RG1/RP19", "RG1/RP21", "RG1/RP16" ]
 
-[node name="Badguy 5" parent="Perspective" index="6" instance=ExtResource( 12 )]
+[node name="Badguy 5" parent="Perspective" index="6" instance=ExtResource( 13 )]
 
 position = Vector2( 419.216, 647.062 )
 collision_layer = 16
 collision_mask = 16
 _route = [ "RG1/RP23", "RG1/RP22", "RG1/RP24", "RG1/RP22" ]
 
-[node name="Badguy 6" parent="Perspective" index="7" instance=ExtResource( 12 )]
+[node name="Badguy 6" parent="Perspective" index="7" instance=ExtResource( 13 )]
 
 position = Vector2( 1271.34, 513.041 )
 collision_layer = 32
 collision_mask = 32
 _route = [ "RG1/RP25", "RG1/RP26", "RG1/RP27", "RG1/RP28" ]
 
-[node name="RadioPickUpArea 2" parent="Perspective" index="8" instance=ExtResource( 13 )]
+[node name="RadioPickUpArea 2" parent="Perspective" index="8" instance=ExtResource( 14 )]
 
 position = Vector2( 1835.18, 1046.88 )
 scale = Vector2( 1.28071, 1.48432 )
 
-[node name="RadioPickUpArea 2 2" parent="Perspective" index="9" instance=ExtResource( 13 )]
+[node name="RadioPickUpArea 2 2" parent="Perspective" index="9" instance=ExtResource( 14 )]
 
 position = Vector2( 103.401, 1052.6 )
 scale = Vector2( 1.28071, 1.48432 )
 
-[node name="RadioPickUpArea 3" parent="Perspective" index="10" instance=ExtResource( 13 )]
+[node name="RadioPickUpArea 3" parent="Perspective" index="10" instance=ExtResource( 14 )]
 
 position = Vector2( 223.169, 28.9266 )
 scale = Vector2( 1.19295, 1.16348 )
 
-[node name="RadioPickUpArea" parent="Perspective" index="11" instance=ExtResource( 13 )]
+[node name="RadioPickUpArea" parent="Perspective" index="11" instance=ExtResource( 14 )]
 
 position = Vector2( 1769.2, 10.1737 )
 scale = Vector2( 0.859353, 1.00015 )
@@ -345,29 +350,31 @@ scale = Vector2( 0.859353, 1.00015 )
 
 position = Vector2( 960, 539 )
 z_index = -5
-texture = ExtResource( 14 )
+texture = ExtResource( 15 )
 _sections_unfolded = [ "Z Index" ]
 
 [node name="SquareFloor" type="Sprite" parent="Ornaments" index="1"]
 
 position = Vector2( 1386.24, 778.575 )
 z_index = -4
-texture = ExtResource( 15 )
+texture = ExtResource( 16 )
 _sections_unfolded = [ "Z Index" ]
 
 [node name="Zebras" type="Node" parent="Ornaments" index="2"]
+
+editor/display_folded = true
 
 [node name="Zebra1" type="Sprite" parent="Ornaments/Zebras" index="0"]
 
 position = Vector2( 1042.08, 774.865 )
 z_index = -1
-texture = ExtResource( 16 )
+texture = ExtResource( 17 )
 _sections_unfolded = [ "Material", "Offset", "Transform", "Visibility", "Z Index" ]
 
 [node name="Zebra2" type="Sprite" parent="Ornaments/Zebras" index="1"]
 
 position = Vector2( 1740.34, 765.707 )
-texture = ExtResource( 16 )
+texture = ExtResource( 17 )
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
 [node name="Zebra3" type="Sprite" parent="Ornaments/Zebras" index="2"]
@@ -375,7 +382,7 @@ _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 position = Vector2( 1271.48, 533.235 )
 rotation = 1.5708
 z_index = -1
-texture = ExtResource( 16 )
+texture = ExtResource( 17 )
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
 [node name="Zebra4" type="Sprite" parent="Ornaments/Zebras" index="3"]
@@ -383,7 +390,7 @@ _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 position = Vector2( 1493.3, 531.915 )
 rotation = 1.5708
 z_index = -1
-texture = ExtResource( 16 )
+texture = ExtResource( 17 )
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
 [node name="Zebra5" type="Sprite" parent="Ornaments/Zebras" index="4"]
@@ -391,7 +398,7 @@ _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 position = Vector2( 1498.14, 1020.02 )
 rotation = 1.5708
 z_index = -1
-texture = ExtResource( 16 )
+texture = ExtResource( 17 )
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
 [node name="Zebra6" type="Sprite" parent="Ornaments/Zebras" index="5"]
@@ -399,7 +406,7 @@ _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 position = Vector2( 1260.47, 1020.9 )
 rotation = 1.5708
 z_index = -1
-texture = ExtResource( 16 )
+texture = ExtResource( 17 )
 _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
 [node name="Interface" type="CanvasLayer" parent="." index="2"]
@@ -449,19 +456,19 @@ max_lines_visible = -1
 
 position = Vector2( 163.771, 34.8861 )
 scale = Vector2( 1, 1.07439 )
-texture = ExtResource( 17 )
+texture = ExtResource( 18 )
 
 [node name="RadioIcon" type="Sprite" parent="Interface" index="3"]
 
 position = Vector2( 164.363, 34.8283 )
-texture = ExtResource( 18 )
+texture = ExtResource( 19 )
 
-[node name="DangerBar" parent="Interface" index="4" instance=ExtResource( 19 )]
+[node name="DangerBar" parent="Interface" index="4" instance=ExtResource( 20 )]
 
 position = Vector2( 19.5599, 70.4401 )
 scale = Vector2( 0.726611, 1 )
 
-[node name="Timer" parent="Interface" index="5" instance=ExtResource( 20 )]
+[node name="Timer" parent="Interface" index="5" instance=ExtResource( 21 )]
 
 position = Vector2( 81.6796, 41 )
 scale = Vector2( 2.0625, 0.78125 )
@@ -511,7 +518,7 @@ scroll_active = true
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
-script = ExtResource( 21 )
+script = ExtResource( 22 )
 
 [node name="Limits" type="Node" parent="." index="3"]
 
@@ -590,169 +597,169 @@ shape = SubResource( 2 )
 
 editor/display_folded = true
 
-[node name="RP1" parent="RG1" index="0" instance=ExtResource( 22 )]
+[node name="RP1" parent="RG1" index="0" instance=ExtResource( 23 )]
 
 position = Vector2( 745.266, 980.192 )
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="RP2" parent="RG1" index="1" instance=ExtResource( 22 )]
+[node name="RP2" parent="RG1" index="1" instance=ExtResource( 23 )]
 
 position = Vector2( 935.013, 983.085 )
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="RP3" parent="RG1" index="2" instance=ExtResource( 22 )]
+[node name="RP3" parent="RG1" index="2" instance=ExtResource( 23 )]
 
 position = Vector2( 944.788, 424.952 )
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="RP4" parent="RG1" index="3" instance=ExtResource( 22 )]
+[node name="RP4" parent="RG1" index="3" instance=ExtResource( 23 )]
 
 position = Vector2( 1828.92, 424.27 )
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="RP5" parent="RG1" index="4" instance=ExtResource( 22 )]
+[node name="RP5" parent="RG1" index="4" instance=ExtResource( 23 )]
 
 position = Vector2( 1837.43, 770.807 )
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="RP6" parent="RG1" index="5" instance=ExtResource( 22 )]
+[node name="RP6" parent="RG1" index="5" instance=ExtResource( 23 )]
 
 position = Vector2( 935.497, 772.283 )
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="RP7" parent="RG1" index="6" instance=ExtResource( 22 )]
+[node name="RP7" parent="RG1" index="6" instance=ExtResource( 23 )]
 
 position = Vector2( 427.234, 983.033 )
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="RP8" parent="RG1" index="7" instance=ExtResource( 22 )]
+[node name="RP8" parent="RG1" index="7" instance=ExtResource( 23 )]
 
 position = Vector2( 412.083, 275.529 )
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="RP9" parent="RG1" index="8" instance=ExtResource( 22 )]
+[node name="RP9" parent="RG1" index="8" instance=ExtResource( 23 )]
 
 position = Vector2( 231.963, 276.396 )
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="RP10" parent="RG1" index="9" instance=ExtResource( 22 )]
+[node name="RP10" parent="RG1" index="9" instance=ExtResource( 23 )]
 
 position = Vector2( 229.914, 982.084 )
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="RP11" parent="RG1" index="10" instance=ExtResource( 22 )]
+[node name="RP11" parent="RG1" index="10" instance=ExtResource( 23 )]
 
 position = Vector2( 853.444, 228.588 )
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="RP12" parent="RG1" index="11" instance=ExtResource( 22 )]
+[node name="RP12" parent="RG1" index="11" instance=ExtResource( 23 )]
 
 position = Vector2( 1171.51, 231.883 )
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="RP13" parent="RG1" index="12" instance=ExtResource( 22 )]
+[node name="RP13" parent="RG1" index="12" instance=ExtResource( 23 )]
 
 position = Vector2( 1178.29, 101.303 )
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="RP14" parent="RG1" index="13" instance=ExtResource( 22 )]
+[node name="RP14" parent="RG1" index="13" instance=ExtResource( 23 )]
 
 position = Vector2( 1680.39, 103.324 )
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="RP15" parent="RG1" index="14" instance=ExtResource( 22 )]
+[node name="RP15" parent="RG1" index="14" instance=ExtResource( 23 )]
 
 position = Vector2( 1687.96, 356.683 )
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="RP16" parent="RG1" index="15" instance=ExtResource( 22 )]
+[node name="RP16" parent="RG1" index="15" instance=ExtResource( 23 )]
 
 position = Vector2( 501.939, 298.061 )
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="RP17" parent="RG1" index="16" instance=ExtResource( 22 )]
+[node name="RP17" parent="RG1" index="16" instance=ExtResource( 23 )]
 
 position = Vector2( 527.424, 136.288 )
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="RP18" parent="RG1" index="17" instance=ExtResource( 22 )]
+[node name="RP18" parent="RG1" index="17" instance=ExtResource( 23 )]
 
 position = Vector2( 418.837, 136.288 )
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="RP19" parent="RG1" index="18" instance=ExtResource( 22 )]
+[node name="RP19" parent="RG1" index="18" instance=ExtResource( 23 )]
 
 position = Vector2( 766.759, 423.269 )
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="RP20" parent="RG1" index="19" instance=ExtResource( 22 )]
+[node name="RP20" parent="RG1" index="19" instance=ExtResource( 23 )]
 
 position = Vector2( 828.809, 421.053 )
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="RP21" parent="RG1" index="20" instance=ExtResource( 22 )]
+[node name="RP21" parent="RG1" index="20" instance=ExtResource( 23 )]
 
 position = Vector2( 763.435, 310.249 )
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="RP22" parent="RG1" index="21" instance=ExtResource( 22 )]
+[node name="RP22" parent="RG1" index="21" instance=ExtResource( 23 )]
 
 position = Vector2( 749.473, 644.72 )
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="RP23" parent="RG1" index="22" instance=ExtResource( 22 )]
+[node name="RP23" parent="RG1" index="22" instance=ExtResource( 23 )]
 
 position = Vector2( 31.8636, 648.536 )
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="RP24" parent="RG1" index="23" instance=ExtResource( 22 )]
+[node name="RP24" parent="RG1" index="23" instance=ExtResource( 23 )]
 
 position = Vector2( 753.831, 783.297 )
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="RP25" parent="RG1" index="24" instance=ExtResource( 22 )]
+[node name="RP25" parent="RG1" index="24" instance=ExtResource( 23 )]
 
 position = Vector2( 1268.47, 417.583 )
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="RP26" parent="RG1" index="25" instance=ExtResource( 22 )]
+[node name="RP26" parent="RG1" index="25" instance=ExtResource( 23 )]
 
 position = Vector2( 1494.46, 417.947 )
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="RP27" parent="RG1" index="26" instance=ExtResource( 22 )]
+[node name="RP27" parent="RG1" index="26" instance=ExtResource( 23 )]
 
 position = Vector2( 1494.27, 918.412 )
 audio_bus_override = false
 audio_bus_name = "Master"
 
-[node name="RP28" parent="RG1" index="27" instance=ExtResource( 22 )]
+[node name="RP28" parent="RG1" index="27" instance=ExtResource( 23 )]
 
 position = Vector2( 1273.39, 918.993 )
 audio_bus_override = false
